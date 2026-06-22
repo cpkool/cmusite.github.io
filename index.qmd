@@ -6,3 +6,7 @@ subtitle: "Chiang Mai University | School of Public Policy | Summer 2026"
 Welcome to the course website for Research Methodology for Public Policy.
 
 This course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.
+
+Please check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.
+
+If you have questions please email Dr. Colin at ckuehl\@niu.edu

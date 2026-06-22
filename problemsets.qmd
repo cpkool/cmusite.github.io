@@ -1,8 +1,16 @@
 ---
 title: "Problem Sets"
-subtitle: "Five problem sets due throughout the semester. Submit all work through Canvas."
+subtitle: "Problems sets are your opportunity to work on the skills discussed in class."
 ---
 
+
+ - **Problem Set Due Dates**
+       -   **Problem Set #1:** July 8th
+        -   **Problem Set #2:** July 10th
+       -   **Problem Set #3:** July 15th
+        -   **Problem Set #4:** July 17th
+       -   **Problem Set #5:** Nov. 22nd
+       
 <!--
 
 Problem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file on Canvas by **11:59pm** on the due date.

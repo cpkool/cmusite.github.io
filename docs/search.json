@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "Check back soon for details of your final project"
+  },
+  {
+    "objectID": "project.html#key-dates",
+    "href": "project.html#key-dates",
+    "title": "Final Project",
+    "section": "Key Dates",
+    "text": "Key Dates\n\n\n\nMilestone\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nFriday, July 24\n\n\nPresentations\nFriday, July 24"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -7,11 +21,39 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "Slides are in PDF format. Click a link to open or right-click to download."
+  },
+  {
+    "objectID": "problemsets.html",
+    "href": "problemsets.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set Due Dates - Problem Set #1: July 8th - Problem Set #2: July 10th - Problem Set #3: July 15th - Problem Set #4: July 17th - Problem Set #5: Nov. 22nd"
+  },
+  {
+    "objectID": "rcode.html",
+    "href": "rcode.html",
+    "title": "R Code",
+    "section": "",
+    "text": "Code used in class will be posted here. Download to your own computer for use in class"
+  },
+  {
+    "objectID": "rcode.html#setup-installing-r-rstudio",
+    "href": "rcode.html#setup-installing-r-rstudio",
+    "title": "R Code",
+    "section": "Setup: Installing R & RStudio",
+    "text": "Setup: Installing R & RStudio\n\nInstall R from cran.r-project.org\nInstall RStudio from posit.co"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Research for Public Policy - Dr. Colin Kuehl",
     "section": "",
-    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required."
+    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
   },
   {
     "objectID": "syllabus.html",
@@ -81,202 +123,6 @@
     "href": "syllabus.html#section",
     "title": "Research Methodology for Public Policy",
     "section": "",
-    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: June 21, 2026"
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Lecture Slides",
-    "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download."
-  },
-  {
-    "objectID": "slides.html#unit-1-introduction-to-data-r",
-    "href": "slides.html#unit-1-introduction-to-data-r",
-    "title": "Lecture Slides",
-    "section": "Unit 1: Introduction to Data & R",
-    "text": "Unit 1: Introduction to Data & R\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n1\nWhat is Statistics?\nPDF\n\n\n2\nTypes of Variables & Studies\nPDF\n\n\n3\nGetting Started with R\nPDF"
-  },
-  {
-    "objectID": "slides.html#unit-2-descriptive-statistics",
-    "href": "slides.html#unit-2-descriptive-statistics",
-    "title": "Lecture Slides",
-    "section": "Unit 2: Descriptive Statistics",
-    "text": "Unit 2: Descriptive Statistics\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n4\nSummarizing Numerical Data\nPDF\n\n\n5\nHistograms & Boxplots\nPDF\n\n\n6\nSummarizing Categorical Data\nPDF\n\n\n7\nRelationships Between Variables\nPDF"
-  },
-  {
-    "objectID": "slides.html#unit-3-probability",
-    "href": "slides.html#unit-3-probability",
-    "title": "Lecture Slides",
-    "section": "Unit 3: Probability",
-    "text": "Unit 3: Probability\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n8\nBasic Probability Rules\nPDF\n\n\n9\nConditional Probability & Bayes\nPDF\n\n\n10\nRandom Variables\nPDF\n\n\n11\nNormal Distribution\nPDF"
-  },
-  {
-    "objectID": "slides.html#unit-4-sampling-distributions-estimation",
-    "href": "slides.html#unit-4-sampling-distributions-estimation",
-    "title": "Lecture Slides",
-    "section": "Unit 4: Sampling Distributions & Estimation",
-    "text": "Unit 4: Sampling Distributions & Estimation\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n12\nSampling Variability\nPDF\n\n\n13\nCentral Limit Theorem\nPDF\n\n\n14\nConfidence Intervals for a Mean\nPDF\n\n\n15\nConfidence Intervals for a Proportion\nPDF"
-  },
-  {
-    "objectID": "slides.html#unit-5-hypothesis-testing",
-    "href": "slides.html#unit-5-hypothesis-testing",
-    "title": "Lecture Slides",
-    "section": "Unit 5: Hypothesis Testing",
-    "text": "Unit 5: Hypothesis Testing\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n16\nLogic of Hypothesis Testing\nPDF\n\n\n17\nOne-Sample t-Test\nPDF\n\n\n18\nTwo-Sample Tests\nPDF\n\n\n19\nTests for Proportions\nPDF\n\n\n20\nChi-Square Tests\nPDF"
-  },
-  {
-    "objectID": "slides.html#unit-6-regression",
-    "href": "slides.html#unit-6-regression",
-    "title": "Lecture Slides",
-    "section": "Unit 6: Regression",
-    "text": "Unit 6: Regression\n\n\n\nLecture\nTopic\nSlides\n\n\n\n\n21\nCorrelation\nPDF\n\n\n22\nSimple Linear Regression\nPDF\n\n\n23\nInference for Regression\nPDF\n\n\n24\nIntroduction to Multiple Regression\nPDF\n\n\n\n\n\n\n\n\n\n\nNoteSlide Creation\n\n\n\nCourse slides are built with Quarto Reveal.js. The .qmd source files for each lecture are available on the course GitHub repository."
-  },
-  {
-    "objectID": "rcode.html",
-    "href": "rcode.html",
-    "title": "R Code",
-    "section": "",
-    "text": "Code used in class will be posted here. Download to your own computer for use in class"
-  },
-  {
-    "objectID": "rcode.html#setup-installing-r-rstudio",
-    "href": "rcode.html#setup-installing-r-rstudio",
-    "title": "R Code",
-    "section": "Setup: Installing R & RStudio",
-    "text": "Setup: Installing R & RStudio\n\nInstall R from cran.r-project.org\nInstall RStudio from posit.co"
-  },
-  {
-    "objectID": "rcode.html#week-12-getting-started-with-r",
-    "href": "rcode.html#week-12-getting-started-with-r",
-    "title": "R Code",
-    "section": "Week 1–2: Getting Started with R",
-    "text": "Week 1–2: Getting Started with R\nDownload script\n# ── Basics ──────────────────────────────────────────────────────────────\n2 + 2          # arithmetic\nsqrt(144)      # functions\nx &lt;- 42        # assignment\nx * 2\n\n# ── Vectors ─────────────────────────────────────────────────────────────\nscores &lt;- c(88, 92, 75, 98, 61, 84)\nlength(scores)\nmean(scores)\nsd(scores)\nsummary(scores)\n\n# ── Loading data ─────────────────────────────────────────────────────────\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data/survey.csv\")\nglimpse(data)\nhead(data)"
-  },
-  {
-    "objectID": "rcode.html#week-34-descriptive-statistics-visualization",
-    "href": "rcode.html#week-34-descriptive-statistics-visualization",
-    "title": "R Code",
-    "section": "Week 3–4: Descriptive Statistics & Visualization",
-    "text": "Week 3–4: Descriptive Statistics & Visualization\nDownload script\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data/survey.csv\")\n\n# ── Histogram ────────────────────────────────────────────────────────────\nggplot(data, aes(x = age)) +\n  geom_histogram(binwidth = 5, fill = \"steelblue\", color = \"white\") +\n  labs(title = \"Age Distribution\", x = \"Age\", y = \"Count\") +\n  theme_minimal()\n\n# ── Boxplot ──────────────────────────────────────────────────────────────\nggplot(data, aes(x = major, y = gpa, fill = major)) +\n  geom_boxplot(show.legend = FALSE) +\n  labs(title = \"GPA by Major\", x = \"Major\", y = \"GPA\") +\n  theme_minimal()\n\n# ── Bar chart ────────────────────────────────────────────────────────────\nggplot(data, aes(x = year)) +\n  geom_bar(fill = \"coral\") +\n  labs(title = \"Students by Year\", x = \"Year\", y = \"Count\") +\n  theme_minimal()\n\n# ── Numerical summaries by group ─────────────────────────────────────────\ndata |&gt;\n  group_by(major) |&gt;\n  summarise(\n    n    = n(),\n    mean = mean(gpa, na.rm = TRUE),\n    sd   = sd(gpa,   na.rm = TRUE),\n    med  = median(gpa, na.rm = TRUE)\n  )"
-  },
-  {
-    "objectID": "rcode.html#week-56-probability-distributions",
-    "href": "rcode.html#week-56-probability-distributions",
-    "title": "R Code",
-    "section": "Week 5–6: Probability & Distributions",
-    "text": "Week 5–6: Probability & Distributions\nDownload script\n# ── Normal distribution ───────────────────────────────────────────────────\n# P(X &lt; 70) where X ~ N(75, 10)\npnorm(70, mean = 75, sd = 10)\n\n# Find the 90th percentile\nqnorm(0.90, mean = 75, sd = 10)\n\n# ── Visualize normal curve ────────────────────────────────────────────────\nx_vals &lt;- seq(40, 110, length.out = 300)\ny_vals &lt;- dnorm(x_vals, mean = 75, sd = 10)\ncurve_df &lt;- data.frame(x = x_vals, y = y_vals)\n\nggplot(curve_df, aes(x, y)) +\n  geom_line(linewidth = 1, color = \"steelblue\") +\n  geom_area(data = subset(curve_df, x &lt; 70),\n            fill = \"steelblue\", alpha = 0.3) +\n  labs(title = \"P(X &lt; 70) shaded\", x = \"Score\", y = \"Density\") +\n  theme_minimal()\n\n# ── Binomial ─────────────────────────────────────────────────────────────\n# P(X = 3) where X ~ Binom(10, 0.4)\ndbinom(3, size = 10, prob = 0.4)\n\n# P(X &lt;= 5)\npbinom(5, size = 10, prob = 0.4)"
-  },
-  {
-    "objectID": "rcode.html#week-810-confidence-intervals-hypothesis-testing",
-    "href": "rcode.html#week-810-confidence-intervals-hypothesis-testing",
-    "title": "R Code",
-    "section": "Week 8–10: Confidence Intervals & Hypothesis Testing",
-    "text": "Week 8–10: Confidence Intervals & Hypothesis Testing\nDownload script\nlibrary(tidyverse)\n\n# ── One-sample t-test & confidence interval ───────────────────────────────\nscores &lt;- c(72, 85, 91, 68, 79, 88, 74, 95, 83, 77)\n\nt.test(scores, mu = 75, conf.level = 0.95)\n\n# ── Two-sample t-test ─────────────────────────────────────────────────────\ngroup_a &lt;- c(82, 88, 74, 91, 79, 85)\ngroup_b &lt;- c(70, 75, 68, 80, 72, 77)\n\nt.test(group_a, group_b, var.equal = FALSE)\n\n# ── Proportion test ───────────────────────────────────────────────────────\n# 54 successes out of 100 trials; test H0: p = 0.5\nprop.test(x = 54, n = 100, p = 0.5)\n\n# ── Chi-square test ───────────────────────────────────────────────────────\nobserved &lt;- matrix(c(30, 20, 25, 35, 15, 25), nrow = 2)\nchisq.test(observed)"
-  },
-  {
-    "objectID": "rcode.html#week-1314-linear-regression",
-    "href": "rcode.html#week-1314-linear-regression",
-    "title": "R Code",
-    "section": "Week 13–14: Linear Regression",
-    "text": "Week 13–14: Linear Regression\nDownload script\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data/survey.csv\")\n\n# ── Scatterplot ───────────────────────────────────────────────────────────\nggplot(data, aes(x = study_hours, y = exam_score)) +\n  geom_point(alpha = 0.6, color = \"steelblue\") +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"coral\") +\n  labs(title = \"Exam Score vs. Study Hours\",\n       x = \"Hours Studied per Week\", y = \"Exam Score\") +\n  theme_minimal()\n\n# ── Fit model ─────────────────────────────────────────────────────────────\nmodel &lt;- lm(exam_score ~ study_hours, data = data)\nsummary(model)\n\n# ── Diagnostic plots ──────────────────────────────────────────────────────\npar(mfrow = c(2, 2))\nplot(model)\npar(mfrow = c(1, 1))\n\n# ── Prediction ────────────────────────────────────────────────────────────\nnew_data &lt;- data.frame(study_hours = c(5, 10, 15))\npredict(model, newdata = new_data, interval = \"confidence\")\n\n\n\n\n\n\n\nTipUsing These Scripts\n\n\n\nSave each .R file in your project folder alongside your data/ directory. Open in RStudio and run line-by-line with Ctrl+Enter (Windows/Linux) or Cmd+Enter (Mac)."
-  },
-  {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Final Project",
-    "section": "",
-    "text": "Check back soon for details of your final project"
-  },
-  {
-    "objectID": "project.html#key-dates",
-    "href": "project.html#key-dates",
-    "title": "Final Project",
-    "section": "Key Dates",
-    "text": "Key Dates\n\n\n\nMilestone\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nFriday, July 24\n\n\nPresentations\nFriday, July 24"
-  },
-  {
-    "objectID": "project.html#project-requirements",
-    "href": "project.html#project-requirements",
-    "title": "Final Project",
-    "section": "Project Requirements",
-    "text": "Project Requirements\n\nDataset\n\nAt least 100 observations and 5 variables\nMust be real data (not simulated)\nSuggested sources: TidyTuesday, Kaggle, UCI ML Repository, government open data portals\nYou must have a research question your analysis addresses\n\n\n\nReport (rendered as HTML from .qmd)\nYour Quarto report must include all of the following sections:\n\nIntroduction — Background, research question, and why it matters.\nData — Source, collection method, variables of interest, and any cleaning steps.\nExploratory Analysis — At least 3 visualizations with written interpretation.\nInferential Analysis — At least one formal statistical test or model (confidence interval, hypothesis test, or regression).\nConclusion — Summary of findings, limitations, and potential next steps.\nReferences — Dataset citation and any other sources.\n\nAll code must appear in the rendered document (echo: true).\n\n\nPresentation (10 minutes)\n\nSlides built in Quarto (format: revealjs recommended)\nCover your question, key findings, and one visualization\n7 minutes presenting + 3 minutes Q&A"
-  },
-  {
-    "objectID": "project.html#grading-rubric",
-    "href": "project.html#grading-rubric",
-    "title": "Final Project",
-    "section": "Grading Rubric",
-    "text": "Grading Rubric\n\n\n\nComponent\nPoints\n\n\n\n\nProposal (clear question + viable dataset)\n10\n\n\nExploratory analysis (3+ visualizations, interpretation)\n20\n\n\nInferential analysis (correct method, interpretation)\n25\n\n\nWriting quality (clarity, structure, flow)\n15\n\n\nReproducibility (renders without errors, code shown)\n15\n\n\nPresentation (clarity, visuals, Q&A)\n15\n\n\nTotal\n100"
-  },
-  {
-    "objectID": "project.html#report-template",
-    "href": "project.html#report-template",
-    "title": "Final Project",
-    "section": "Report Template",
-    "text": "Report Template\nStart from this template to ensure your report has the required structure.\n---\ntitle: \"Your Project Title\"\nauthor: \"Your Name\"\ndate: today\nformat:\n  html:\n    toc: true\n    code-fold: false\n    echo: true\nexecute:\n  warning: false\n  message: false\n---\n\n## Introduction\n\n[Describe your research question and why it is interesting.]\n\n## Data\n\n```{r}\nlibrary(tidyverse)\ndata &lt;- read_csv(\"your_data.csv\")\nglimpse(data)\n```\n\n[Describe the dataset: source, variables, observations.]\n\n## Exploratory Analysis\n\n```{r}\n# Visualization 1\n```\n\n[Interpret the plot.]\n\n## Inferential Analysis\n\n```{r}\n# Your statistical test or model\n```\n\n[Interpret results in context.]\n\n## Conclusion\n\n[Summarize findings, discuss limitations, suggest future work.]\n\n## References\n\n- Dataset: [Source name and URL]"
-  },
-  {
-    "objectID": "project.html#proposal-guidelines",
-    "href": "project.html#proposal-guidelines",
-    "title": "Final Project",
-    "section": "Proposal Guidelines",
-    "text": "Proposal Guidelines\nYour one-page proposal should answer:\n\nWhat is your research question? Be specific (e.g., “Is there a relationship between sleep hours and GPA among college students?” rather than “I want to study sleep”).\nWhat dataset will you use? Provide the source URL and describe the key variables.\nWhat statistical methods do you plan to use? Reference specific methods from class.\n\nSubmit as a PDF on Canvas by March 28 at 11:59pm.\n\n\n\n\n\n\n\nImportantAcademic Integrity\n\n\n\nAll analysis must be your own work. Properly cite your data source. If you use code from external sources (Stack Overflow, documentation, etc.), include a comment with the URL. Passing off others’ analysis or AI-generated code as your own is a violation of the academic integrity policy."
-  },
-  {
-    "objectID": "project.html#past-project-examples",
-    "href": "project.html#past-project-examples",
-    "title": "Final Project",
-    "section": "Past Project Examples",
-    "text": "Past Project Examples\nBelow are a few examples of strong projects from previous semesters (shared with permission):\n\nPredicting Avocado Prices with Linear Regression — used USDA retail price data\nRacial Disparities in Traffic Stops: A Hypothesis Testing Approach — used Stanford Open Policing Project data\nDoes Weather Affect Bike-Share Ridership? — used Chicago Divvy trip data with NOAA weather data"
-  },
-  {
-    "objectID": "problemsets.html",
-    "href": "problemsets.html",
-    "title": "Problem Sets",
-    "section": "",
-    "text": "Problem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file on Canvas by 11:59pm on the due date."
-  },
-  {
-    "objectID": "problemsets.html#problem-set-1",
-    "href": "problemsets.html#problem-set-1",
-    "title": "Problem Sets",
-    "section": "Problem Set 1",
-    "text": "Problem Set 1\nDue: Tuesday, July 8\nTopics: Data types, variable classification, importing data into R, exploratory summaries.\n\n\n\nResource\nLink\n\n\n\n\nInstructions (PDF)\nps1_instructions.pdf\n\n\nStarter R script\nps1_starter.R\n\n\nData\nps1_data.csv"
-  },
-  {
-    "objectID": "problemsets.html#problem-set-2",
-    "href": "problemsets.html#problem-set-2",
-    "title": "Problem Sets",
-    "section": "Problem Set 2",
-    "text": "Problem Set 2\nDue: Thursday, July 10\nTopics: Descriptive statistics, histograms, boxplots, and bar charts with ggplot2.\n\n\n\nResource\nLink\n\n\n\n\nInstructions (PDF)\nps2_instructions.pdf\n\n\nStarter R script\nps2_starter.R\n\n\nData\nps2_data.csv"
-  },
-  {
-    "objectID": "problemsets.html#problem-set-3",
-    "href": "problemsets.html#problem-set-3",
-    "title": "Problem Sets",
-    "section": "Problem Set 3",
-    "text": "Problem Set 3\nDue: Tuesday, July 15\nTopics: Probability rules, normal distribution, z-scores, and binomial probabilities.\n\n\n\nResource\nLink\n\n\n\n\nInstructions (PDF)\nps3_instructions.pdf\n\n\nStarter R script\nps3_starter.R\n\n\nData\nps3_data.csv"
-  },
-  {
-    "objectID": "problemsets.html#problem-set-4",
-    "href": "problemsets.html#problem-set-4",
-    "title": "Problem Sets",
-    "section": "Problem Set 4",
-    "text": "Problem Set 4\nDue: Thursday, July 17\nTopics: Sampling distributions, Central Limit Theorem, and confidence intervals.\n\n\n\nResource\nLink\n\n\n\n\nInstructions (PDF)\nps4_instructions.pdf\n\n\nStarter R script\nps4_starter.R\n\n\nData\nps4_data.csv"
-  },
-  {
-    "objectID": "problemsets.html#problem-set-5",
-    "href": "problemsets.html#problem-set-5",
-    "title": "Problem Sets",
-    "section": "Problem Set 5",
-    "text": "Problem Set 5\nDue: Saturday, November 22\nTopics: Hypothesis testing, linear regression, and interpretation of model output.\n\n\n\nResource\nLink\n\n\n\n\nInstructions (PDF)\nps5_instructions.pdf\n\n\nStarter R script\nps5_starter.R\n\n\nData\nps5_data.csv"
-  },
-  {
-    "objectID": "problemsets.html#submission-guidelines",
-    "href": "problemsets.html#submission-guidelines",
-    "title": "Problem Sets",
-    "section": "Submission Guidelines",
-    "text": "Submission Guidelines\n\nRender your completed .qmd file to HTML and submit the .html output on Canvas.\nInclude your name and problem set number in the YAML header of your document.\nShow all code (echo: true). Answers without supporting code will not receive credit.\nLate submissions are accepted up to 48 hours after the deadline with a 20% deduction. Work submitted after 48 hours will not be graded.\n\n\n\n\n\n\n\nTipStarter File YAML Header\n\n\n\nAdd this to the top of your .qmd file before submitting:\n---\ntitle: \"Problem Set 1\"\nauthor: \"Your Name\"\ndate: today\nformat:\n  html:\n    echo: true\n    toc: true\nexecute:\n  warning: false\n  message: false\n---"
+    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: June 22, 2026"
   }
 ]

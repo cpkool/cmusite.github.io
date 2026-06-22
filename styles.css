@@ -1,116 +1,26 @@
-/* ── Typography ─────────────────────────────────────────────────────────── */
-body {
-  font-family: "Source Serif 4", Georgia, serif;
-}
-
-.navbar-brand, h1, h2, h3 {
-  font-family: "Inter", system-ui, sans-serif;
-  letter-spacing: -0.01em;
-}
-
-/* ── Hero banner on homepage ─────────────────────────────────────────────── */
-.hero-banner {
-  background: linear-gradient(135deg, #1a3a5c 0%, #2563a8 100%);
-  color: #ffffff;
-  padding: 2rem 2.5rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 2rem;
-}
-
-.hero-banner strong {
-  color: #93c5fd;
-}
-
 /* ── Navbar ──────────────────────────────────────────────────────────────── */
-.navbar {
-  background-color: #1a3a5c !important;
-  border-bottom: 3px solid #2563a8;
-}
+.navbar { background-color: #1a3d2b !important; border-bottom: 3px solid #52b788 !important; }
+.navbar-brand { color: #ffffff !important; }
+.nav-link { color: #a7d9b8 !important; }
+.nav-link:hover, .nav-link.active { color: #ffffff !important; }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: #cbd5e1 !important;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
+/* ── Page background & text ──────────────────────────────────────────────── */
+body { background-color: #f4f9f6 !important; color: #0d1f17 !important; }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #ffffff !important;
-  border-bottom: 2px solid #93c5fd;
-}
+/* ── Headings ────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 { color: #1a3d2b !important; }
+h2 { border-left: 5px solid #52b788 !important; padding-left: 0.75rem !important; border-bottom: none !important; }
 
-.navbar-brand {
-  color: #ffffff !important;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-/* ── Section headings ────────────────────────────────────────────────────── */
-h2 {
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 0.4rem;
-  margin-top: 2.5rem;
-  color: #1a3a5c;
-}
-
-h3 {
-  color: #2563a8;
-  margin-top: 1.5rem;
-}
+/* ── Links ───────────────────────────────────────────────────────────────── */
+a { color: #2d6a4f !important; }
+a:hover { color: #52b788 !important; }
 
 /* ── Tables ──────────────────────────────────────────────────────────────── */
-table {
-  width: 100%;
-  font-size: 0.92rem;
-}
+thead, thead tr, thead th { background-color: #1a3d2b !important; color: #ffffff !important; }
+tbody tr:nth-child(even) { background-color: #d8f3dc !important; }
 
-thead {
-  background-color: #1a3a5c;
-  color: #ffffff;
-}
-
-thead th {
-  padding: 0.6rem 0.8rem;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f1f5f9;
-}
-
-/* ── Quick-link cards on homepage ────────────────────────────────────────── */
-.g-col-6 h3, .g-col-md-3 h3 {
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  color: #1a3a5c;
-}
-
-.grid {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-/* ── Callout tweaks ───────────────────────────────────────────────────────── */
-.callout {
-  border-radius: 6px;
-}
+/* ── Code ────────────────────────────────────────────────────────────────── */
+pre.sourceCode { border-left: 4px solid #52b788 !important; }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */
-.nav-footer {
-  background-color: #1a3a5c;
-  color: #94a3b8;
-  font-size: 0.85rem;
-  font-family: "Inter", system-ui, sans-serif;
-}
-
-/* ── Code blocks ─────────────────────────────────────────────────────────── */
-pre.sourceCode {
-  border-left: 4px solid #2563a8;
-  border-radius: 4px;
-}
+.nav-footer { background-color: #1a3d2b !important; color: #a7d9b8 !important; }
