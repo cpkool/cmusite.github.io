@@ -1,11 +1,8 @@
 ---
-title: "cmucourse26"
+title: "Research for Public Policy - Dr. Colin Kuehl"
+subtitle: "Chiang Mai University | School of Public Policy | Summer 2026"
 ---
 
-This is a Quarto website.
+Welcome to the course website for Research Methodology for Public Policy.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+This course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.

@@ -1,0 +1,105 @@
+---
+title: "Problem Sets"
+subtitle: "Five problem sets due throughout the semester. Submit all work through Canvas."
+---
+
+Problem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file on Canvas by **11:59pm** on the due date.
+
+---
+
+## Problem Set 1
+
+**Due: Tuesday, July 8**
+
+Topics: Data types, variable classification, importing data into R, exploratory summaries.
+
+| Resource | Link |
+|---|---|
+| Instructions (PDF) | [ps1_instructions.pdf](problemsets/ps1_instructions.pdf) |
+| Starter R script | [ps1_starter.R](problemsets/ps1_starter.R) |
+| Data | [ps1_data.csv](problemsets/ps1_data.csv) |
+
+---
+
+## Problem Set 2
+
+**Due: Thursday, July 10**
+
+Topics: Descriptive statistics, histograms, boxplots, and bar charts with `ggplot2`.
+
+| Resource | Link |
+|---|---|
+| Instructions (PDF) | [ps2_instructions.pdf](problemsets/ps2_instructions.pdf) |
+| Starter R script | [ps2_starter.R](problemsets/ps2_starter.R) |
+| Data | [ps2_data.csv](problemsets/ps2_data.csv) |
+
+---
+
+## Problem Set 3
+
+**Due: Tuesday, July 15**
+
+Topics: Probability rules, normal distribution, z-scores, and binomial probabilities.
+
+| Resource | Link |
+|---|---|
+| Instructions (PDF) | [ps3_instructions.pdf](problemsets/ps3_instructions.pdf) |
+| Starter R script | [ps3_starter.R](problemsets/ps3_starter.R) |
+| Data | [ps3_data.csv](problemsets/ps3_data.csv) |
+
+---
+
+## Problem Set 4
+
+**Due: Thursday, July 17**
+
+Topics: Sampling distributions, Central Limit Theorem, and confidence intervals.
+
+| Resource | Link |
+|---|---|
+| Instructions (PDF) | [ps4_instructions.pdf](problemsets/ps4_instructions.pdf) |
+| Starter R script | [ps4_starter.R](problemsets/ps4_starter.R) |
+| Data | [ps4_data.csv](problemsets/ps4_data.csv) |
+
+---
+
+## Problem Set 5
+
+**Due: Saturday, November 22**
+
+Topics: Hypothesis testing, linear regression, and interpretation of model output.
+
+| Resource | Link |
+|---|---|
+| Instructions (PDF) | [ps5_instructions.pdf](problemsets/ps5_instructions.pdf) |
+| Starter R script | [ps5_starter.R](problemsets/ps5_starter.R) |
+| Data | [ps5_data.csv](problemsets/ps5_data.csv) |
+
+---
+
+## Submission Guidelines
+
+- Render your completed `.qmd` file to HTML and submit the `.html` output on Canvas.
+- Include your **name and problem set number** in the YAML header of your document.
+- Show all code (`echo: true`). Answers without supporting code will not receive credit.
+- Late submissions are accepted up to 48 hours after the deadline with a **20% deduction**. Work submitted after 48 hours will not be graded.
+
+::: {.callout-tip}
+## Starter File YAML Header
+Add this to the top of your `.qmd` file before submitting:
+
+```yaml
+---
+title: "Problem Set 1"
+author: "Your Name"
+date: today
+format:
+  html:
+    echo: true
+    toc: true
+execute:
+  warning: false
+  message: false
+---
+```
+:::

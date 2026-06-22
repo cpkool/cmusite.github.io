@@ -3,20 +3,31 @@ project:
   output-dir: docs
 
 website:
-  title: "cmucourse26"
+  title: "Research for Public Policy"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: slides.qmd
+        text: Lecture Slides
+      - href: rcode.qmd
+        text: R Code
+      - href: problemsets.qmd
+        text: Problem Sets
+      - href: project.qmd
+        text: Final Project
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
+    toc-depth: 3
+    highlight-style: github
+    code-copy: true
+    code-overflow: wrap
 
 editor: visual
 

@@ -1,0 +1,159 @@
+---
+title: "Final Project"
+subtitle: "An original piece of research conducted in R "
+---
+
+Check back soon for details of your final project
+
+------------------------------------------------------------------------
+
+## Key Dates
+
+| Milestone         | Due Date        |
+|-------------------|-----------------|
+| Research Proposal | Friday, July 10 |
+| Initial Analysis  | Monday, July 20 |
+| Final report      | Friday, July 24 |
+| Presentations     | Friday, July 24 |
+
+
+<!--
+
+All written submissions are due by **11:59pm** and submitted through google docs.
+
+------------------------------------------------------------------------
+
+## Project Requirements
+
+### Dataset
+
+-   At least **100 observations** and **5 variables**
+-   Must be real data (not simulated)
+-   Suggested sources: [TidyTuesday](https://github.com/rfordatascience/tidytuesday), [Kaggle](https://www.kaggle.com), [UCI ML Repository](https://archive.ics.uci.edu/ml/index.php), government open data portals
+-   You must have a **research question** your analysis addresses
+
+### Report (rendered as HTML from `.qmd`)
+
+Your Quarto report must include all of the following sections:
+
+1.  **Introduction** — Background, research question, and why it matters.
+2.  **Data** — Source, collection method, variables of interest, and any cleaning steps.
+3.  **Exploratory Analysis** — At least 3 visualizations with written interpretation.
+4.  **Inferential Analysis** — At least one formal statistical test or model (confidence interval, hypothesis test, or regression).
+5.  **Conclusion** — Summary of findings, limitations, and potential next steps.
+6.  **References** — Dataset citation and any other sources.
+
+All code must appear in the rendered document (`echo: true`).
+
+### Presentation (10 minutes)
+
+-   Slides built in Quarto (`format: revealjs` recommended)
+-   Cover your question, key findings, and one visualization
+-   7 minutes presenting + 3 minutes Q&A
+
+------------------------------------------------------------------------
+
+## Grading Rubric
+
+| Component                                                | Points  |
+|----------------------------------------------------------|---------|
+| Proposal (clear question + viable dataset)               | 10      |
+| Exploratory analysis (3+ visualizations, interpretation) | 20      |
+| Inferential analysis (correct method, interpretation)    | 25      |
+| Writing quality (clarity, structure, flow)               | 15      |
+| Reproducibility (renders without errors, code shown)     | 15      |
+| Presentation (clarity, visuals, Q&A)                     | 15      |
+| **Total**                                                | **100** |
+
+------------------------------------------------------------------------
+
+## Report Template
+
+Start from this template to ensure your report has the required structure.
+
+```` markdown
+---
+title: "Your Project Title"
+author: "Your Name"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: false
+    echo: true
+execute:
+  warning: false
+  message: false
+---
+
+## Introduction
+
+[Describe your research question and why it is interesting.]
+
+## Data
+
+```{{r}}
+library(tidyverse)
+data <- read_csv("your_data.csv")
+glimpse(data)
+```
+
+[Describe the dataset: source, variables, observations.]
+
+## Exploratory Analysis
+
+```{{r}}
+# Visualization 1
+```
+
+[Interpret the plot.]
+
+## Inferential Analysis
+
+```{{r}}
+# Your statistical test or model
+```
+
+[Interpret results in context.]
+
+## Conclusion
+
+[Summarize findings, discuss limitations, suggest future work.]
+
+## References
+
+- Dataset: [Source name and URL]
+````
+
+------------------------------------------------------------------------
+
+## Proposal Guidelines
+
+Your one-page proposal should answer:
+
+1.  **What is your research question?** Be specific (e.g., "Is there a relationship between sleep hours and GPA among college students?" rather than "I want to study sleep").
+2.  **What dataset will you use?** Provide the source URL and describe the key variables.
+3.  **What statistical methods do you plan to use?** Reference specific methods from class.
+
+Submit as a PDF on Canvas by **March 28 at 11:59pm**.
+
+------------------------------------------------------------------------
+
+::: callout-important
+## Academic Integrity
+
+All analysis must be your own work. Properly cite your data source. If you use code from external sources (Stack Overflow, documentation, etc.), include a comment with the URL. Passing off others' analysis or AI-generated code as your own is a violation of the academic integrity policy.
+:::
+
+------------------------------------------------------------------------
+
+## Past Project Examples
+
+Below are a few examples of strong projects from previous semesters (shared with permission):
+
+-   *Predicting Avocado Prices with Linear Regression* — used USDA retail price data
+-   *Racial Disparities in Traffic Stops: A Hypothesis Testing Approach* — used Stanford Open Policing Project data
+-   *Does Weather Affect Bike-Share Ridership?* — used Chicago Divvy trip data with NOAA weather data
+
+-->
+

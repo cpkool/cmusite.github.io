@@ -1,0 +1,84 @@
+---
+title: "Lecture Slides"
+subtitle: "Slides are posted after each class meeting."
+---
+
+Slides are in PDF format. Click a link to open or right-click to download.
+
+<!--
+
+------------------------------------------------------------------------
+
+## Unit 1: Introduction to Data & R
+
+| Lecture | Topic                        | Slides                  |
+|---------|------------------------------|-------------------------|
+| 1       | What is Statistics?          | [PDF](slides/lec01.pdf) |
+| 2       | Types of Variables & Studies | [PDF](slides/lec02.pdf) |
+| 3       | Getting Started with R       | [PDF](slides/lec03.pdf) |
+
+------------------------------------------------------------------------
+
+## Unit 2: Descriptive Statistics
+
+| Lecture | Topic                           | Slides                  |
+|---------|---------------------------------|-------------------------|
+| 4       | Summarizing Numerical Data      | [PDF](slides/lec04.pdf) |
+| 5       | Histograms & Boxplots           | [PDF](slides/lec05.pdf) |
+| 6       | Summarizing Categorical Data    | [PDF](slides/lec06.pdf) |
+| 7       | Relationships Between Variables | [PDF](slides/lec07.pdf) |
+
+------------------------------------------------------------------------
+
+## Unit 3: Probability
+
+| Lecture | Topic                           | Slides                  |
+|---------|---------------------------------|-------------------------|
+| 8       | Basic Probability Rules         | [PDF](slides/lec08.pdf) |
+| 9       | Conditional Probability & Bayes | [PDF](slides/lec09.pdf) |
+| 10      | Random Variables                | [PDF](slides/lec10.pdf) |
+| 11      | Normal Distribution             | [PDF](slides/lec11.pdf) |
+
+------------------------------------------------------------------------
+
+## Unit 4: Sampling Distributions & Estimation
+
+| Lecture | Topic                                 | Slides                  |
+|---------|---------------------------------------|-------------------------|
+| 12      | Sampling Variability                  | [PDF](slides/lec12.pdf) |
+| 13      | Central Limit Theorem                 | [PDF](slides/lec13.pdf) |
+| 14      | Confidence Intervals for a Mean       | [PDF](slides/lec14.pdf) |
+| 15      | Confidence Intervals for a Proportion | [PDF](slides/lec15.pdf) |
+
+------------------------------------------------------------------------
+
+## Unit 5: Hypothesis Testing
+
+| Lecture | Topic                       | Slides                  |
+|---------|-----------------------------|-------------------------|
+| 16      | Logic of Hypothesis Testing | [PDF](slides/lec16.pdf) |
+| 17      | One-Sample t-Test           | [PDF](slides/lec17.pdf) |
+| 18      | Two-Sample Tests            | [PDF](slides/lec18.pdf) |
+| 19      | Tests for Proportions       | [PDF](slides/lec19.pdf) |
+| 20      | Chi-Square Tests            | [PDF](slides/lec20.pdf) |
+
+------------------------------------------------------------------------
+
+## Unit 6: Regression
+
+| Lecture | Topic                               | Slides                  |
+|---------|-------------------------------------|-------------------------|
+| 21      | Correlation                         | [PDF](slides/lec21.pdf) |
+| 22      | Simple Linear Regression            | [PDF](slides/lec22.pdf) |
+| 23      | Inference for Regression            | [PDF](slides/lec23.pdf) |
+| 24      | Introduction to Multiple Regression | [PDF](slides/lec24.pdf) |
+
+------------------------------------------------------------------------
+
+::: callout-note
+## Slide Creation
+
+Course slides are built with [Quarto Reveal.js](https://quarto.org/docs/presentations/revealjs/). The `.qmd` source files for each lecture are available on the course GitHub repository.
+:::
+
+-->
