@@ -99,7 +99,7 @@ The tentative schedule for the course is below. Some topics will take just a wee
 ### Tentative Course Outline
 
 | **Date** | **Interactive Lecture - Morning Session** | **Practicum - Afternoon Session** | **Homework** |
-|:-----------------:|:----------------|:----------------|:-----------------:|
+|:--:|:---|:---|:--:|
 |  |  |  |  |
 | *Week 1* |  |  |  |
 | 6-Jul | Introductions, syllabus, Research | R download and basics, writing code |  |
