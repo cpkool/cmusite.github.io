@@ -7,7 +7,8 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
+        text: " "
+        icon: house
       - href: syllabus.qmd
         text: Syllabus
       - href: slides.qmd
@@ -18,6 +19,9 @@ website:
         text: Problem Sets
       - href: project.qmd
         text: Final Project
+      - href: resources.qmd
+        text: Resources
+  favicon: /images/Clipboard.svg
 
 format:
   html:

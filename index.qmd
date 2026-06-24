@@ -10,3 +10,8 @@ This course introduces the fundamental concepts of research design and data anal
 Please check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.
 
 If you have questions please email Dr. Colin at ckuehl\@niu.edu
+
+::: bigskip
+:::
+
+![](images/correlationclass.png)

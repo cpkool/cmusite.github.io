@@ -1,6 +1,6 @@
 ---
 title: "Lecture Slides"
-subtitle: "Slides are posted after each class meeting."
+subtitle: "Slides will posted after each class meeting."
 ---
 
 Slides are in PDF format. Click a link to open or right-click to download.

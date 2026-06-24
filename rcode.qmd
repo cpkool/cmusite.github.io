@@ -5,6 +5,7 @@ subtitle: "Annotated scripts from lecture, organized by topic."
 
 Code used in class will be posted here. Download to your own computer for use in class
 
+![](images/R.png){width="40%"}
 ------------------------------------------------------------------------
 
 ## Setup: Installing R & RStudio

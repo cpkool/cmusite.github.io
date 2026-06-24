@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "project.html",
-    "href": "project.html",
-    "title": "Final Project",
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Additional Resources",
     "section": "",
-    "text": "Check back soon for details of your final project"
-  },
-  {
-    "objectID": "project.html#key-dates",
-    "href": "project.html#key-dates",
-    "title": "Final Project",
-    "section": "Key Dates",
-    "text": "Key Dates\n\n\n\nMilestone\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nFriday, July 24\n\n\nPresentations\nFriday, July 24"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Lecture Slides",
-    "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download."
-  },
-  {
-    "objectID": "problemsets.html",
-    "href": "problemsets.html",
-    "title": "Problem Sets",
-    "section": "",
-    "text": "Problem Set Due Dates - Problem Set #1: July 8th - Problem Set #2: July 10th - Problem Set #3: July 15th - Problem Set #4: July 17th - Problem Set #5: Nov. 22nd"
-  },
-  {
-    "objectID": "rcode.html",
-    "href": "rcode.html",
-    "title": "R Code",
-    "section": "",
-    "text": "Code used in class will be posted here. Download to your own computer for use in class"
-  },
-  {
-    "objectID": "rcode.html#setup-installing-r-rstudio",
-    "href": "rcode.html#setup-installing-r-rstudio",
-    "title": "R Code",
-    "section": "Setup: Installing R & RStudio",
-    "text": "Setup: Installing R & RStudio\n\nInstall R from cran.r-project.org\nInstall RStudio from posit.co"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Research for Public Policy - Dr. Colin Kuehl",
-    "section": "",
-    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
+    "text": "Open Access Methods Textbooks\n\nThe Effect: An Introduction to Research Design and Causality\nEmpirical Methods in Political Science\nQuantitative Research Methods (QRM Book)\nQuantitative Political Science\n\n\n\nR Books and other stuff\n\nR for Data Science (2e)\nIntroduction to Data Science: Data Wrangling and Visualization with R\nYaRrr! The Pirate’s Guide to R\nR Companion to Real Econometrics\nR Cheat Sheets\nR Youtube Tutorials from NIU Graduate Students\n\n\n\nData Visualization\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction\n\n\n\nMore Books to Read\n\n“Pop” data science books:\n\nCarl Bergstrom & Jevin West – Calling Bullshit\nNate Silver – The Signal and the Noise\nCharles Wheelan – Naked Statistics\nTim Harford – The Data Detective\n\n\n\nBasic Introductions\n\nNeil Salkind – Statistics for People who (think they) Hate Statistics\nScott Cunningham – Causal Inference: The Mixtape\nGary Klass – Just Plain Data Analysis\n\n\n\nAdvanced Texts\nFor students looking to go beyond what is taught in the course:\n\nAndrew Gelman and Jennifer Hill – Data Analysis Using Regression and Multilevel/Hierarchical Models\nDamodar N. Gujarati – Essentials of Econometrics\nJeffrey Wooldridge – Introductory Econometrics\nElena Llaudet and Kosuke Imai – Data Analysis for Social Science\nJenine Harris – Statistics with R\nGuido Imbens and Donald Rubin – Causal Inference for Statistics, Social, and Biomedical Sciences"
   },
   {
     "objectID": "syllabus.html",
@@ -123,6 +74,69 @@
     "href": "syllabus.html#section",
     "title": "Research Methodology for Public Policy",
     "section": "",
-    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: June 22, 2026"
+    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: June 23, 2026"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Research for Public Policy - Dr. Colin Kuehl",
+    "section": "",
+    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
+  },
+  {
+    "objectID": "rcode.html",
+    "href": "rcode.html",
+    "title": "R Code",
+    "section": "",
+    "text": "Code used in class will be posted here. Download to your own computer for use in class"
+  },
+  {
+    "objectID": "rcode.html#setup-installing-r-rstudio",
+    "href": "rcode.html#setup-installing-r-rstudio",
+    "title": "R Code",
+    "section": "Setup: Installing R & RStudio",
+    "text": "Setup: Installing R & RStudio\n\nInstall R from cran.r-project.org\nInstall RStudio from posit.co"
+  },
+  {
+    "objectID": "problemsets.html",
+    "href": "problemsets.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set Due Dates\n\nProblem Set #1: July 8th\nProblem Set #2: July 10th\nProblem Set #3: July 15th\nProblem Set #4: July 17th\nProblem Set #5: Nov. 22nd\n\nProblem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "Slides are in PDF format. Click a link to open or right-click to download."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "project.html",
+    "href": "project.html",
+    "title": "Final Project",
+    "section": "",
+    "text": "Check back soon for details of your final project"
+  },
+  {
+    "objectID": "project.html#key-dates",
+    "href": "project.html#key-dates",
+    "title": "Final Project",
+    "section": "Key Dates",
+    "text": "Key Dates\n\n\n\nComponent\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nFriday, July 24\n\n\nPresentations\nFriday, July 24"
+  },
+  {
+    "objectID": "syllabus.html#our-classroom",
+    "href": "syllabus.html#our-classroom",
+    "title": "Research Methodology for Public Policy",
+    "section": "Our Classroom",
+    "text": "Our Classroom\nThis class is derived from courses I’ve taught at American universities for many years. As such, it will be taught using the American style of graduate education. That means an emphasis on high expectations, critical thinking, collective endeavor, and a blurring of academic rank. We are colleagues and so please help in creating an intellectually engaging, open, and, hopefully, fun, environment in which we all learn a great deal.\nIt is also important to note that quality social science research is more akin to art than a series of checklists. Accordingly, I will be emphasizing the intuition and logic of research over the minutia of statistical tests or specific processes. There are many ways to conduct quality research, often depending on the question,. This class is intended to provide an introduction to a wide variety of these approaches rather than being a guide to mastering a particular one."
   }
 ]

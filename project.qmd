@@ -9,7 +9,7 @@ Check back soon for details of your final project
 
 ## Key Dates
 
-| Milestone         | Due Date        |
+| Component        | Due Date        |
 |-------------------|-----------------|
 | Research Proposal | Friday, July 10 |
 | Initial Analysis  | Monday, July 20 |
