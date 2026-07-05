@@ -99,7 +99,7 @@ The tentative schedule for the course is below. Some topics will take just a wee
 ### Tentative Course Outline
 
 | **Date** | **Interactive Lecture - Morning Session** | **Practicum - Afternoon Session** | **Homework** |
-|:--:|:---|:---|:--:|
+|:----------------:|:-----------------|:-----------------|:----------------:|
 |  |  |  |  |
 | *Week 1* |  |  |  |
 | 6-Jul | Introductions, syllabus, Research | R download and basics, writing code |  |
@@ -131,7 +131,7 @@ Students are expected to complete all readings prior to the beginning of class e
 
 1.  **Mon, 6-Jul** — Introductions, syllabus, What is research?
     - EMPS – Ch 1 Introduction
-    - The Economist – [How to win the World Cup](https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=NDRmNDNiY2ItNDRiMi00OTk3LWI2ZmUtYTQ1MWQ5NTRlOTAw&utm_campaign=gifted_article)
+    - The Economist – [How to win the World Cup](https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=YWNlN2ZjYTYtN2NlYS00MjZkLThkOGYtMTg5ZWUwMTVmOTUw&utm_campaign=gifted_article)
 2.  **Tue, 7-Jul** — The Importance of Research: Causality and Inference
     - EMPS – Ch 2 Causal Inference and the Scientific Method
     - QRM – Ch 3 A Short Chapter on Epistemology

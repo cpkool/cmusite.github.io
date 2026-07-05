@@ -24,6 +24,11 @@ Code used in class will be posted here. Download to your own computer for use in
 [R Markdown](ClassCode/Week 1 - Intro/1 Intro.Rmd){download="1 Intro.Rmd"}
 
 [Data](ClassCode/Week 1 - Intro/wbdata.RData){download="wbdata.RData"}
+
+## Day 2: Data Management and more R basics
+
+
+
 <!--
 
 ``` r
