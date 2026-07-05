@@ -17,7 +17,7 @@ subtitle: "Problems sets are your opportunity to work on the skills discussed in
 
 Problem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file by **11:59pm** on the due date.
 
-Please submit all files HERE. Label your file with pset#\_name (ie pset1_colin.html)
+Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAyO02TtbQ_SZ1nIsckE0MSAfq8zKULBddf7N0KzuYouLk). Label your file with pset#\_name (ie pset1_colin.html)
 
 :::
 

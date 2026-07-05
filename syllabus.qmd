@@ -16,10 +16,10 @@ format:
 
 # Course Information
 
--   **Instructor:** Dr. Colin Kuehl (Northern Illinois University)
--   **Email:** [ckuehl\@niu.edu](mailto:ckuehl@niu.edu)
--   **Office Hours:** TBD and by appointment \| **Office:** TBD
--   **Course Meetings:** Monday-Thursday 10:30-12 & 1-2:230
+- **Instructor:** Dr. Colin Kuehl (Northern Illinois University)
+- **Email:** [ckuehl\@niu.edu](mailto:ckuehl@niu.edu)
+- **Office Hours:** TBD and by appointment \| **Office:** TBD
+- **Course Meetings:** Monday-Thursday 10:30-12 & 1-2:230
 
 ------------------------------------------------------------------------
 
@@ -55,40 +55,40 @@ Readings for the course will be a combination of open access textbook chapters a
 
 We will have three textbooks for the course. All three are open-access and available totally free at the following links. All books will be referred to
 
--   **EMPS** - Clipperton, et al (2022) [Empirical methods in political science: An introduction](https://nulib-oer.github.io/empirical-methods-polisci/index.html) Northwestern University
+- **EMPS** - Clipperton, et al (2022) [Empirical methods in political science: An introduction](https://nulib-oer.github.io/empirical-methods-polisci/index.html) Northwestern University
 
--   **QRM** - Hurst 2023 [Introduction to Qualitative Research Methods](https://open.oregonstate.education/qualresearchmethods/front-matter/preface//) Oregon State University
+- **QRM** - Hurst 2023 [Introduction to Qualitative Research Methods](https://open.oregonstate.education/qualresearchmethods/front-matter/preface//) Oregon State University
 
--   **QUANT** - Jenkins Smith, et al. [Quantitative Research Methods for Political Science, Public Policy and Public Administration: 4th Edition With Applications in R](https://arc.net/l/quote/tfjxyoyp) University of Oklahoma
+- **QUANT** - Jenkins Smith, et al. [Quantitative Research Methods for Political Science, Public Policy and Public Administration: 4th Edition With Applications in R](https://arc.net/l/quote/tfjxyoyp) University of Oklahoma
 
 All other course readings will be available on the course website or through email.
 
 ## Grading
 
--   **Final Project (40%):** Your final project will be an independent quantitative analysis of a public policy topic of your choosing. You will formulate a hypothesis, conduct basic exploratory data analysis and perform, as well as correctly interpret, a multivariate regression. You will present your results to the class at the end of the semester and write up what you found in the form of short report. A research proposal and preliminary analysis in earlier weeks will help you build toward your final paper. An assignment sheet will be provided and we will discuss details in the following weeks.
+- **Final Project (40%):** Your final project will be an independent quantitative analysis of a public policy topic of your choosing. You will formulate a hypothesis, conduct basic exploratory data analysis and perform, as well as correctly interpret, a multivariate regression. You will present your results to the class at the end of the semester and write up what you found in the form of short report. A research proposal and preliminary analysis in earlier weeks will help you build toward your final paper. An assignment sheet will be provided and we will discuss details in the following weeks.
 
--   **Problem Sets (20%):** Throughout the semester you will be expected to complete a number of problem sets. These exercises will give you a chance to apply the ideas and concepts using the R coding we are learning. Students are allowed, even encouraged, to help each other on problem sets. However, the work itself must done each individual student. Students will not be allowed to work together on the midterm or final paper.
+- **Problem Sets (20%):** Throughout the semester you will be expected to complete a number of problem sets. These exercises will give you a chance to apply the ideas and concepts using the R coding we are learning. Students are allowed, even encouraged, to help each other on problem sets. However, the work itself must done each individual student. Students will not be allowed to work together on the midterm or final paper.
 
-    -   **Problem Set Due Dates**
-        -   **Problem Set #1:** July 8th
-        -   **Problem Set #2:** July 10th
-        -   **Problem Set #3:** July 15th
-        -   **Problem Set #4:** July 17th
-        -   **Problem Set #5:** Nov. 22nd
+  - **Problem Set Due Dates**
+    - **Problem Set #1:** July 8th
+    - **Problem Set #2:** July 10th
+    - **Problem Set #3:** July 15th
+    - **Problem Set #4:** July 17th
+    - **Problem Set #5:** Nov. 22nd
 
--   **Midterm (20%):** July 16th - Morning Session Students will be expected to demonstrate understanding about both concepts in public policy research and coding independently in R. More details to follow.
+- **Midterm (20%):** July 16th - Morning Session Students will be expected to demonstrate understanding about both concepts in public policy research and coding independently in R. More details to follow.
 
--   **Participation (20%):** This is not a lecture course. Participation includes active class discussion and engagement during the practicum, including asking questions when you have them. Participation goes well beyond attendance. It includes thoughtful engagement with all parts of the class. This course is taught around class discussion, debate, and activities. This means we will all be dependent on each other’s efforts to prepare for and engage in class activities and have a worthwhile learning experience.Speaking the language of methodology is an essential component of your graduate training.
+- **Participation (20%):** This is not a lecture course. Participation includes active class discussion and engagement during the practicum, including asking questions when you have them. Participation goes well beyond attendance. It includes thoughtful engagement with all parts of the class. This course is taught around class discussion, debate, and activities. This means we will all be dependent on each other’s efforts to prepare for and engage in class activities and have a worthwhile learning experience.Speaking the language of methodology is an essential component of your graduate training.
 
 # Course Policies
 
--   **Attendance:** Attendance is mandatory without prior arrangement. If circumstances prevent you from attending please let me know by email prior to the beginning of class.. You will be responsible for covering the material you missed.
+- **Attendance:** Attendance is mandatory without prior arrangement. If circumstances prevent you from attending please let me know by email prior to the beginning of class.. You will be responsible for covering the material you missed.
 
--   **Academic Honesty:** Cheating will not be tolerated. All students will be held to the highest standards of NIU’s student code of conduct. All cases will be referred to campus authorities. As noted above, helping each other will be key to your sucess in this class, however the work you turn in must be your own.
+- **Academic Honesty:** Cheating will not be tolerated. All students will be held to the highest standards of NIU’s student code of conduct. All cases will be referred to campus authorities. As noted above, helping each other will be key to your sucess in this class, however the work you turn in must be your own.
 
--   **A Note on AI:** Large Language Models(like Chatgpt, Gemini, Clauade, etc) can be a power- ful tool for researchers, particularly in areas like helping to write code. However, I strongly encourage you to avoid using them while learning how to code in this class. Like other issues with AI, if you do not have a strong command of the basics you will not know when AI is hallucinating or not. As such, problem sets with code not consistent with that learned in class or that I suspect was derived from AI will be downgraded.
+- **A Note on AI:** Large Language Models(like Chatgpt, Gemini, Clauade, etc) can be a power- ful tool for researchers, particularly in areas like helping to write code. However, I strongly encourage you to avoid using them while learning how to code in this class. Like other issues with AI, if you do not have a strong command of the basics you will not know when AI is hallucinating or not. As such, problem sets with code not consistent with that learned in class or that I suspect was derived from AI will be downgraded.
 
--   **Email:** I am available through email M-F 8 am to 5 pm. I will respond to all emails within 24 hours during these times. If I forget, please send me a reminder. **Office Hours:** I recommend you come to office hours early and often. This will give me a chance to know you, your projects, etc. and give us a chance to talk about things beyond this course ---
+- **Email:** I am available through email M-F 8 am to 5 pm. I will respond to all emails within 24 hours during these times. If I forget, please send me a reminder. **Office Hours:** I recommend you come to office hours early and often. This will give me a chance to know you, your projects, etc. and give us a chance to talk about things beyond this course ---
 
 ## Course Structure
 
@@ -121,8 +121,6 @@ The tentative schedule for the course is below. Some topics will take just a wee
 | 23-Jul | Research Ethics and Bonus Material | Student Choice 2 |  |
 | 24-Jul | Final Project Presentations |  | Project Presentations and Paper |
 
-: {tbl-colwidths="\[10,35,35,20\]"}
-
 ------------------------------------------------------------------------
 
 ### Course Readings
@@ -132,52 +130,52 @@ Students are expected to complete all readings prior to the beginning of class e
 #### Week 1
 
 1.  **Mon, 6-Jul** — Introductions, syllabus, What is research?
-    -   EMPS – Ch 1 Introduction
-    -   The Economist – [How to win the World Cup](https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=NDRmNDNiY2ItNDRiMi00OTk3LWI2ZmUtYTQ1MWQ5NTRlOTAw&utm_campaign=gifted_article)
+    - EMPS – Ch 1 Introduction
+    - The Economist – [How to win the World Cup](https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=NDRmNDNiY2ItNDRiMi00OTk3LWI2ZmUtYTQ1MWQ5NTRlOTAw&utm_campaign=gifted_article)
 2.  **Tue, 7-Jul** — The Importance of Research: Causality and Inference
-    -   EMPS – Ch 2 Causal Inference and the Scientific Method
-    -   QRM – Ch 3 A Short Chapter on Epistemology
-    -   Slanchev, Branislav ["The Scientific Method"](http://slantchev.ucsd.edu/courses/ps12/01-scientific-method.pdf)
+    - EMPS – Ch 2 Causal Inference and the Scientific Method
+    - QRM – Ch 3 A Short Chapter on Epistemology
+    - Slanchev, Branislav ["The Scientific Method"](http://slantchev.ucsd.edu/courses/ps12/01-scientific-method.pdf)
 3.  **Wed, 8-Jul** — Research Questions and Literature reviews
-    -   EMPS – Ch 3 Theory
-    -   QRM – Ch 9 Reviewing the Literature
+    - EMPS – Ch 3 Theory
+    - QRM – Ch 9 Reviewing the Literature
 4.  **Thu, 9-Jul** — Hypotheses, Models and Choosing a Research Design
-    -   QRM – Ch 2 Research Design
-    -   QUANT - Ch 2 Research Design
-    -   Engler (2020) – [What all policy analysts need to know about data science](https://www.brookings.edu/articles/what-all-policy-analysts-need-to-know-about-data-science/)
+    - QRM – Ch 2 Research Design
+    - QUANT - Ch 2 Research Design
+    - Engler (2020) – [What all policy analysts need to know about data science](https://www.brookings.edu/articles/what-all-policy-analysts-need-to-know-about-data-science/)
 5.  **Fri, 10-Jul** — Student Independent Study
 
 #### Week 2
 
 6.  **Mon, 13-Jul** — Measurement 1: From Concepts to Variables
-    -   EMPS – Ch 3 Data
+    - EMPS – Ch 3 Data
 7.  **Tue, 14-Jul** — Measurement 2: Validity and Reliability, Distributions
 
--   QUANT - Ch 3, 4, and 5 Data, Probability,and Inference
--   Check Out: [seeing-theory.brown.edu](https://seeing-theory.brown.edu/)
--   Bakusevych (2021) – [20 Ideas for Better Data Visualization](https://uxdesign.cc/20-ideas-for-better-data-visualization-73f7e3c2782d)
+- QUANT - Ch 3, 4, and 5 Data, Probability,and Inference
+- Check Out: [seeing-theory.brown.edu](https://seeing-theory.brown.edu/)
+- Bakusevych (2021) – [20 Ideas for Better Data Visualization](https://uxdesign.cc/20-ideas-for-better-data-visualization-73f7e3c2782d)
 
 8.  **Wed, 15-Jul** — Thinking about Relationships and Regression
-    -   EMPS – Ch 5 Hypothesis Testing
-    -   QUANT Ch 7, 9, 10 – Regression
+    - EMPS – Ch 5 Hypothesis Testing
+    - QUANT Ch 7, 9, 10 – Regression
 9.  **Thu, 16-Jul** — Midterm Exam
-    -   (No Readings)
+    - (No Readings)
 10. **Fri, 17-Jul** — Student Independent Study
 
 #### Week 3
 
 11. **Mon, 20-Jul** — Experiments and Causation, Multivariate Regression
-    -   QUANT – Ch. 11 Multiple Regression
-    -   EMPS Ch. 7 and 8 Experiments and Large N
+    - QUANT – Ch. 11 Multiple Regression
+    - EMPS Ch. 7 and 8 Experiments and Large N
 12. **Tue, 21-Jul** — Qualitative Methods
-    -   EMPS – Ch 9 Small N
-    -   IQRM – Ch 10 Introduction to Data Collection Techniques
+    - EMPS – Ch 9 Small N
+    - IQRM – Ch 10 Introduction to Data Collection Techniques
 13. **Wed, 22-Jul** — Surveys and Interviews
-    -   EMPS – Ch 6 Survey
-    -   IQRM – Ch 10 Interviewing
+    - EMPS – Ch 6 Survey
+    - IQRM – Ch 10 Interviewing
 14. **Thu, 23-Jul** — Research Ethics and Bonus Material
-    -   IQRM – Ch 7 Ethics
-    -   Additional readings TBD
+    - IQRM – Ch 7 Ethics
+    - Additional readings TBD
 15. **Fri, 24-Jul** — Final Project Presentations
 
 {{< pagebreak >}}
@@ -188,31 +186,31 @@ Many students want to read more on these topics. For some, it is because they ar
 
 ### “Pop” data science books:
 
--   Carl Bergstrom & Jevin West – *Calling Bullshit*
--   Nate Silver – *The Signal and the Noise*
--   Charles Wheelan – *Naked Statistics*
--   Tim Harford – *The Data Detective*
+- Carl Bergstrom & Jevin West – *Calling Bullshit*
+- Nate Silver – *The Signal and the Noise*
+- Charles Wheelan – *Naked Statistics*
+- Tim Harford – *The Data Detective*
 
 ### Basic Introductions
 
--   Neil Salkind – *Statistics for People who (think they) Hate Statistics*
--   Scott Cunningham – *Causal Inference: The Mixtape*
--   Gary Klass – *Just Plain Data Analysis*
+- Neil Salkind – *Statistics for People who (think they) Hate Statistics*
+- Scott Cunningham – *Causal Inference: The Mixtape*
+- Gary Klass – *Just Plain Data Analysis*
 
 ### Advanced Texts
 
 *For students looking to go beyond what is taught in the course:*
 
--   Andrew Gelman and Jennifer Hill – *Data Analysis Using Regression and Multilevel/Hierarchical Models*
--   Damodar N. Gujarati – *Essentials of Econometrics*
--   Jeffrey Wooldridge – *Introductory Econometrics*
--   Elena Llaudet and Kosuke Imai – *Data Analysis for Social Science*
--   Jenine Harris – *Statistics with R*
--   Guido Imbens and Donald Rubin – *Causal Inference for Statistics, Social, and Biomedical Sciences*
+- Andrew Gelman and Jennifer Hill – *Data Analysis Using Regression and Multilevel/Hierarchical Models*
+- Damodar N. Gujarati – *Essentials of Econometrics*
+- Jeffrey Wooldridge – *Introductory Econometrics*
+- Elena Llaudet and Kosuke Imai – *Data Analysis for Social Science*
+- Jenine Harris – *Statistics with R*
+- Guido Imbens and Donald Rubin – *Causal Inference for Statistics, Social, and Biomedical Sciences*
 
 ## 
 
--   *Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science*
+- *Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science*
 
 ```{=latex}
 \vfill

@@ -13,13 +13,18 @@ Code used in class will be posted here. Download to your own computer for use in
 1.  Install R from [cran.r-project.org](https://cran.r-project.org)
 2.  Install RStudio from [posit.co](https://posit.co/download/rstudio-desktop/)
 
-<!--
+
 
 ------------------------------------------------------------------------
 
-## Week 1–2: Getting Started with R
+## Day 1: Getting Started with R
 
-[Download script](code/week01.R)
+[Week 1 Project](ClassCode/Week 1 - Intro/Week 1.Rproj){download="Week 1.Rproj"}
+
+[R Markdown](ClassCode/Week 1 - Intro/1 Intro.Rmd){download="1 Intro.Rmd"}
+
+[Data](ClassCode/Week 1 - Intro/wbdata.RData){download="wbdata.RData"}
+<!--
 
 ``` r
 # ── Basics ──────────────────────────────────────────────────────────────
