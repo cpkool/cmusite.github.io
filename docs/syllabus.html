@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Instructor:</strong> Dr.&nbsp;Colin Kuehl (Northern Illinois University)</li>
 <li><strong>Email:</strong> <a href="mailto:ckuehl@niu.edu">ckuehl@niu.edu</a></li>
-<li><strong>Office Hours:</strong> TBD and by appointment | <strong>Office:</strong> TBD</li>
+<li><strong>Office Hours:</strong> Tues and Thurs 930-1030 AM and by appointment | <strong>Office:</strong> 206</li>
 <li><strong>Course Meetings:</strong> Monday-Thursday 10:30-12 &amp; 1-2:230</li>
 </ul>
 <hr>
@@ -240,11 +240,10 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Problem Set Due Dates</strong>
 <ul>
-<li><strong>Problem Set #1:</strong> July 8th</li>
-<li><strong>Problem Set #2:</strong> July 10th</li>
-<li><strong>Problem Set #3:</strong> July 15th</li>
-<li><strong>Problem Set #4:</strong> July 17th</li>
-<li><strong>Problem Set #5:</strong> Nov.&nbsp;22nd</li>
+<li><strong>Problem Set #1:</strong> July 10th</li>
+<li><strong>Problem Set #2:</strong> July 14th</li>
+<li><strong>Problem Set #3:</strong> July 17th</li>
+<li><strong>Problem Set #4:</strong> July 21st</li>
 </ul></li>
 </ul></li>
 <li><p><strong>Midterm (20%):</strong> July 16th - Morning Session Students will be expected to demonstrate understanding about both concepts in public policy research and coding independently in R. More details to follow.</p></li>
@@ -415,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Mon, 6-Jul</strong> — Introductions, syllabus, What is research?
 <ul>
 <li>EMPS – Ch 1 Introduction</li>
-<li>The Economist – <a href="https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=NDRmNDNiY2ItNDRiMi00OTk3LWI2ZmUtYTQ1MWQ5NTRlOTAw&amp;utm_campaign=gifted_article">How to win the World Cup</a></li>
+<li>The Economist – <a href="https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=YWNlN2ZjYTYtN2NlYS00MjZkLThkOGYtMTg5ZWUwMTVmOTUw&amp;utm_campaign=gifted_article">How to win the World Cup</a></li>
 </ul></li>
 <li><strong>Tue, 7-Jul</strong> — The Importance of Research: Causality and Inference
 <ul>
@@ -531,7 +530,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><em>Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science</em></li>
 </ul>
-<p>Syllabus Last Updated: July 06, 2026</p>
+<p>Syllabus Last Updated: July 07, 2026</p>
 
 
 </section>
@@ -625,6 +624,11 @@ ul.task-list li input[type="checkbox"] {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {

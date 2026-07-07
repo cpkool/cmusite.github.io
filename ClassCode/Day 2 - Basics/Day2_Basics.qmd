@@ -2,9 +2,9 @@
 title: "Class 2"
 author: "Colin Kuehl"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output:
-  html_document:
-    code_download: true
+format: pdf
+editor_options: 
+  chunk_output_type: console
 ---
 
 Today we'll explore the gapminder data. It contains life expectancy, population, and GDP per capita for countries every five years from 1952 to 2007. The gapminder data comes from the Gapminder Foundation: <https://www.gapminder.org/data/> made famous by Hans Rosling's TED talks. We'll continue our exploration using R to understand and visualize data.
@@ -59,7 +59,7 @@ b)What country has the highest life expectancy?
 
 ```
 
-*It is best practice to "knit as you go." Try knitting now to make sure you don't have errors in your code.*
+*It is best practice to "render as you go." Try rendering now to make sure you don't have errors in your code.*
 
 
 Country and continent are not continuous(numeric in R speak) variables. They are categorical. We can get counts in each category.
