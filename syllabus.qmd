@@ -12,13 +12,14 @@ format:
   html: 
     mainfont: "Cambria"
     sansfont: "Arial"
+    link-external-newwindow: true
 ---
 
 # Course Information
 
 - **Instructor:** Dr. Colin Kuehl (Northern Illinois University)
 - **Email:** [ckuehl\@niu.edu](mailto:ckuehl@niu.edu)
-- **Office Hours:** TBD and by appointment \| **Office:** TBD
+- **Office Hours:** Tues and Thurs 930-1030 AM and by appointment \| **Office:** 206
 - **Course Meetings:** Monday-Thursday 10:30-12 & 1-2:230
 
 ------------------------------------------------------------------------
@@ -70,11 +71,11 @@ All other course readings will be available on the course website or through ema
 - **Problem Sets (20%):** Throughout the semester you will be expected to complete a number of problem sets. These exercises will give you a chance to apply the ideas and concepts using the R coding we are learning. Students are allowed, even encouraged, to help each other on problem sets. However, the work itself must done each individual student. Students will not be allowed to work together on the midterm or final paper.
 
   - **Problem Set Due Dates**
-    - **Problem Set #1:** July 8th
-    - **Problem Set #2:** July 10th
-    - **Problem Set #3:** July 15th
-    - **Problem Set #4:** July 17th
-    - **Problem Set #5:** Nov. 22nd
+    - **Problem Set #1:** July 10th
+    - **Problem Set #2:** July 14th
+    - **Problem Set #3:** July 17th
+    - **Problem Set #4:** July 21st
+   
 
 - **Midterm (20%):** July 16th - Morning Session Students will be expected to demonstrate understanding about both concepts in public policy research and coding independently in R. More details to follow.
 
@@ -132,6 +133,7 @@ Students are expected to complete all readings prior to the beginning of class e
 1.  **Mon, 6-Jul** — Introductions, syllabus, What is research?
     - EMPS – Ch 1 Introduction
     - The Economist – [How to win the World Cup](https://www.economist.com/international/2026/06/10/how-to-win-the-world-cup?giftId=YWNlN2ZjYTYtN2NlYS00MjZkLThkOGYtMTg5ZWUwMTVmOTUw&utm_campaign=gifted_article)
+    
 2.  **Tue, 7-Jul** — The Importance of Research: Causality and Inference
     - EMPS – Ch 2 Causal Inference and the Scientific Method
     - QRM – Ch 3 A Short Chapter on Epistemology

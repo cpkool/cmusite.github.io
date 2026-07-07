@@ -19,6 +19,8 @@ Code used in class will be posted here. Download to your own computer for use in
 
 ## Day 1: Getting Started with R
 
+Download these three files and put in their own folder. Assuming you have R and Rstudio installed, start by clicking on the "Project" file. 
+
 [Week 1 Project](ClassCode/Week 1 - Intro/Week 1.Rproj){download="Week 1.Rproj"}
 
 [R Markdown](ClassCode/Week 1 - Intro/1 Intro.Rmd){download="1 Intro.Rmd"}

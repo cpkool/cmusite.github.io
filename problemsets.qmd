@@ -9,13 +9,13 @@ subtitle: "Problems sets are your opportunity to work on the skills discussed in
 
 ### Problem Set Due Dates
 
--   Problem Set #1: July 8th
--   Problem Set #2: July 10th
--   Problem Set #3: July 15th
--   Problem Set #4: July 17th
--   Problem Set #5: Nov. 22nd
+ - **Problem Set #1:** July 10th
+ - **Problem Set #2:** July 14th
+ - **Problem Set #3:** July 17th
+ - **Problem Set #4:** July 21st
+   
 
-Problem sets are completed individually. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file by **11:59pm** on the due date.
+Problem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file by **11:59pm** on the due date.
 
 Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAyO02TtbQ_SZ1nIsckE0MSAfq8zKULBddf7N0KzuYouLk). Label your file with pset#\_name (ie pset1_colin.html)
 

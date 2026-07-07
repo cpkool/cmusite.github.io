@@ -1,0 +1,313 @@
+---
+title: "Class 2"
+author: "Colin Kuehl"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+Today we'll explore the gapminder data. It contains life expectancy, population, and GDP per capita for countries every five years from 1952 to 2007. We'll continue our exploration using R to understand and visualize data.
+
+# Part 1: Getting to Know Gapminder
+
+Make sure you have opened the Rproject first. 
+
+Today's data comes packaged inside R itself. Instead of loading a file, we install a package once, then load it with library() each session.
+
+Packages are like bonus material for R. We will use them all the time. Installing puts it on your computer. Library opens it(like a book) so everytime you use it you need library in your code first. 
+
+```{r}
+#install.packages("gapminder") #only run this once ever - then put the # back in front
+library(gapminder)
+data("gapminder") #Puts into our environment
+
+#install.packages("dplyr") #We'll use this package later, but always a good idea to load packages and data the beginning of your R script
+library(dplyr)
+
+```
+
+
+
+
+Looking over the data using commmands from yesterday
+
+(hint: use code from yesterday)
+```{r}
+head(gapminder)
+tail(gapminder)
+summary(gapminder)
+dim(gapminder) #Count of how many observations and variables
+
+str(gapminder) #This tells us what kind of data R thinks each variable is - we'll talk about this later
+length(unique(gapminder$country)) #gives a count of unique countrys
+```
+
+Checking in (with a partner)
+
+1) How many countries are in the dataset?
+2) What is the average life expectancy?
+3) What is the median GDP per capita? Average?
+Bonus:
+a) Create a scatterplot with the relationship between population and Life Expectancy. Add a trend line
+b)What country has the highest life expectancy?
+
+```{r}
+
+
+
+
+```
+
+
+Country and continent are not continuous(numeric in R speak) variables. They are categorical and we can get counts in each category.
+
+frequency tables:
+
+```{r}
+table(gapminder$continent) #gives count of different categories
+table(gapminder$year)
+
+prop.table(table(gapminder$continent)) #gives percentages
+```
+
+I use this command all the time to get a sense of the data.
+
+Check in: What percentage of the observations in the dataset are from Asia?
+
+```{r}
+
+```
+
+``
+
+Plot the relationship between GDP per capita and life expectancy
+
+```{r}
+plot(gapminder$gdpPercap, gapminder$lifeExp) #scatterplot (X then Y)
+abline(lm(gapminder$lifeExp~gapminder$gdpPercap)) #add trend line (Y then X) 
+```
+Notice how we always put the explanatory variable on the X axis(horizantal) and the outcome variable on the Y axis (vertical)
+
+Make plot look a bit more professional
+
+```{r}
+plot(gapminder$gdpPercap, gapminder$lifeExp, main="Relationship between Wealth and Life Expectancy", xlab="GDP per Capita", ylab="Life Expectancy")
+abline(lm(gapminder$lifeExp~gapminder$gdpPercap)) #and boom, you've already ran your 2nd regression
+```
+
+Does there appear to be a relationship in the sample?
+
+What about with just Asia? There are multiple ways to do this:
+
+
+We can create a new dataset ie a subset(I almost always choose this option)
+
+```{r}
+table(gapminder$continent)
+asia <- gapminder[which(gapminder$continent=="Asia"),]
+asia <- filter(gapminder, continent=="Asia") # This does the same thing using the dplyr package from tidyverse. I find it much more intuitive than "base R" so tend to use it more often. 
+
+
+
+plot(asia$gdpPercap, asia$lifeExp, main="Relationship between Wealth and Life Expectancy (Asia)", xlab="GDP per Capita", ylab="Life Expectancy")
+abline(lm(asia$lifeExp~asia$gdpPercap)) #and boom, another regression
+
+```
+
+
+Exclude Europe
+
+```{r}
+noteuro <- gapminder[which(gapminder$continent!="Europe"),] # the != does not equal
+```
+
+Exclude the super rich - use greater than or less than
+
+```{r}
+notrich <- gapminder[which(gapminder$gdpPercap< 50000),] # less than 50,000 - this drops oil-rich outliers like Kuwait
+```
+
+Check in: Try creating a scatterplot with just the 1) Afrida OR 2) country-years where life expectancy is less than 70.
+
+```{r}
+
+
+
+```
+
+##################################################################### 
+
+# Part 2: Life Expectancy Over Time
+
+#Looking at the data over time: Time to look at something a bit more fun. How has life expectancy changed across the world since the 1950s? The gapminder data comes from the Gapminder Foundation: <https://www.gapminder.org/data/> made famous by Hans Rosling's TED talks.
+
+
+
+As usual, look at the first and last lines of the data frame
+
+```{r}
+
+str(gapminder) #This tells us what kind of data R thinks each variable is - we'll talk about this later
+```
+
+Look at variable names
+
+```{r}
+names(gapminder)
+```
+
+Number of rows in your data? What is our unit of analysis? (Hint: it is not countries - each country shows up once for every year)
+
+```{r}
+nrow(gapminder)
+```
+
+Dimensions of your data? \# Observations then \# of Variables
+
+```{r}
+dim(gapminder)
+```
+
+year and continent
+
+```{r}
+table(gapminder$year)
+table(gapminder$continent)
+
+table(gapminder$continent, gapminder$year)
+```
+
+Count unique countries
+
+```{r}
+length(unique(gapminder$country))
+```
+
+Summary of the data will give you mean, minimum, maximum values, etc.
+
+```{r}
+summary(gapminder$lifeExp)
+summary(gapminder) # Runs for all numeric variables in the dataset
+```
+
+Mean life expectancy?
+
+```{r}
+mean(gapminder$lifeExp)
+```
+
+Minimum of life expectancy?
+
+```{r}
+min(gapminder$lifeExp)
+```
+
+Maximum life expectancy?
+
+```{r}
+max(gapminder$lifeExp) 
+```
+
+Range of life expectancies in this data
+
+```{r}
+range(gapminder$lifeExp) 
+```
+
+Check: What is the average population(pop)
+
+```{r}
+
+```
+
+Bonus check: Play around with the data and tell the class something interesting.
+
+```{r}
+
+```
+
+Create a histogram for life expectancy
+
+```{r}
+hist(gapminder$lifeExp)
+abline(v=mean(gapminder$lifeExp), col="blue", lwd=2)
+abline(v=median(gapminder$lifeExp), col="red", lwd=2)
+```
+
+abline gives us a line. v is for vertical
+
+Density plots and boxplots show us similar information
+
+```{r}
+boxplot(gapminder$lifeExp)
+
+plot(density(gapminder$lifeExp))
+
+#How can we find out which country-years are at the very bottom?
+```
+
+Check: How many observations are from Africa and how many are from Europe
+
+```{r}
+
+
+```
+
+```{r}
+mean(gapminder$lifeExp[gapminder$continent=="Africa"]) #average for Africa
+mean(gapminder$lifeExp[gapminder$continent=="Europe"]) #average for Europe
+
+#find the mean for Asia
+
+```
+
+Let's make a simple scatterplot with year on the horizontal axis, and life expectancy on the vertical axis. A regression allows us to look at the relationship between variables linear regression model, and you're looking at the effect of the IV on the DV
+
+```{r}
+plot(gapminder$year, gapminder$lifeExp, ylab = "Life Expectancy", xlab = "Year", main = "Life Expectancy Over Time")
+abline(lm(gapminder$lifeExp ~ gapminder$year), col="red", lwd=2) # What type of relationship is this?
+abline(h=mean(gapminder$lifeExp), col="blue", lwd=2)
+```
+
+That is a bit overwhelming lets just look at 2007 - ie lets create a subset
+
+```{r}
+g2007 <- gapminder[which(gapminder$year==2007),]
+
+#New Graph
+plot(g2007$gdpPercap, g2007$lifeExp, ylab = "Life Expectancy", xlab = "GDP per Capita", main = "Wealth and Life Expectancy in 2007", col=factor(g2007$continent))
+abline(lm(g2007$lifeExp ~ g2007$gdpPercap), col="red", lwd=2)
+legend("bottomright", legend = levels(factor(g2007$continent)), pch=19, col = factor(levels(factor(g2007$continent))))
+
+#I want to add labels for specific countries
+g2007$stars <- ifelse(g2007$country=="United States"|g2007$country=="China", as.character(g2007$country), "") #create a new variable for notable countries, all else will be empty. 
+text(g2007$gdpPercap, g2007$lifeExp-1, g2007$stars, cex=.4)
+```
+
+Check: Can you create the same for 1952
+
+```{r}
+
+```
+
+A boxplot for each year can show us how the distribution has changed over time
+
+```{r}
+boxplot(gapminder$lifeExp~gapminder$year, xlab = "Year", ylab="Life Expectancy", border = "steelblue")
+```
+
+I've clearly had too much fun. Your turn to make something interesting.
+
+```{r}
+
+
+
+```
+
+Since we've created some new variables we may want to save our data:
+
+```{r}
+write.csv(g2007, "g2007.csv") #writes a csv to your working directory that you can open in excel
+save(g2007, file="g2007.Rdata") #saves Rdata format to your working directory
+```
