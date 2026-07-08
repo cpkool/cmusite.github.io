@@ -37,10 +37,18 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 <a href="ClassCode/Day 2 - Basics/Day2_Basics.qmd" download>Updated Day 2 Quarto</a>
 
+
+
 *uses gapminder data so no need for rproject or dataset today
 
 
 ## Day 3: Getting to know your data
+
+<a href="ClassCode/Day 3 -/Class 3 code.Rmd" download>Class 3 code</a>
+
+[Pew Data](ClassCode/Day 3/PewData.csv){download="PewData.csv"}
+
+
 <!--
 
 ``` r
