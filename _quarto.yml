@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!files/"
 
 website:
   title: "Research for Public Policy"
@@ -34,4 +37,5 @@ format:
     code-overflow: wrap
 
 editor: visual
-
+resources:
+    - "/ClassCode"

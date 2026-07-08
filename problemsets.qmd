@@ -19,6 +19,17 @@ Problem sets are completed individually, but you can work with each other as you
 
 Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAyO02TtbQ_SZ1nIsckE0MSAfq8zKULBddf7N0KzuYouLk). Label your file with pset#\_name (ie pset1_colin.html)
 
+
+# Problem Set #1
+
+[Problem Set1](problemsets/ProblemSet1.qmd)   
+
+[Data](problemsets/development.Rdata)    
+
+[Codebook](problemsets/development_codebook.csv)
+
+
+
 :::
 
 ::: {.column width="40%"}

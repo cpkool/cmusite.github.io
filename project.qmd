@@ -1,9 +1,187 @@
 ---
-title: "Final Project"
+title: "Final Project - Policy Brief"
 subtitle: "An original piece of research conducted in R "
+format:
+  html:
+    toc: false
 ---
 
-Check back soon for details of your final project
+# **Overview**
+
+The aim of your final project is to complete a shortened version of a rigorous researched policy brief with a heavy emphasis on the methodology and results section. The focus will be on of methodology, description of data, and analysis of results. It will rely ability to complete your analysis using the R programming language and to communicate the results of your analysis to a professional audience. In other words, show off everything you've learned in this class. You will spend less time and energy on reviewing previous literature and cases or connections to theory.  Your are not expected to conduct novel research nor make a clear theoretical contribution, but you are expected to uphold social science standards of quantitative analysis. You will also present your results to the class during the final week. This project is worth 40% of your final grade.
+
+**Final Paper Due:** <u>Friday, July 24th</u>
+
+# **Grade Breakdown** 40% of Course grade
+
+1. Proposed Research Questions (July 13th)- 5 pts
+2. Abstract and Key Descriptive Statistics (July 20th) - 5 pts
+3. Class Presentation (July 24th) - 10 pts
+4. Policy Brief(July 24th) - 20 pts
+
+# **Component Tasks**
+
+1. **Proposed Research Questions** due July 13th
+
+   Finding an interesting, realistic, and important research question is often the hardest part of the research process. To that end, you will develop a basic research question and proposal for **two** potential projects. See below on expectations for your topic. Each proposal will ask you to answer the following questions:
+
+   - What is the research question?
+   - What is your dependent variable? How can you operationalize it?
+   - What is your independent variable? How can you operationalize it?
+   - What is your hypothesis?
+   - What are two articles/books that are related to this question? (provide APA citations)
+   - Where will you get the data?(See below for data ideas)
+
+   Submissions due through the website. 
+
+   It will then be up to you to decide which of these projects, or an alternative, you will pursue for your final paper. I recommend discussing your research question with your classmates and/or professor. 
+
+2. **Abstract and Initial Data** due July 20th
+
+   The next step will be to submit a 200 word abstract for your intended project and a knitted Rmarkdown file with descriptive statistics for your key variables. At that point you should have a clear idea of your project and most, if not all, of the necessary data collected. The abstract should be [professionaly written](https://www.isanet.org/Conferences/New-Orleans-2015/Information/Abstracts).
+
+   The idea here is to show me that you have truly "gotten to know" your data. At the minimum your Rmarkdown file should include:
+
+   - For your primary independent variable and dependent variables:
+     - *Description* Written narrative of how the variables are operationalized. If your using a non-intuitive measure please describe in detail how it is calculated. It should be clear how your measure captures the concept(ie valid estimate of the estimand)
+     - *Descriptive Statistics* Range, Mean, Median, Standard Deviation
+     - *Distributions* Histogram and/or Box plots
+   - *Bivariate Relationship* Scatter plot of DV and primary IV
+   - *Control Variables* Basic descriptives as necessary.
+
+   Think of this as the document you would send to a co-author or supervisor giving a broad overview of the quantitative portion of your paper. It does not have to be super polished, but should be clean enough that the concepts are clear to a non-expert. It should be well organized, include subheadings, and brief bullets of what data is suggesting. Feel free to notes-to-self about next steps. 
+*I will give you feedback on this document so the more you do now the more I can help you. If done right, this is actually the bulk of the work for the project. *
+
+3. **Presentation** July 24th
+
+   All students will give a 10 minute powerpoint style presentation of their results. This should reflect the basic components of the paper as discussed below. Think of this as a practice mini-conference. Slides should be consistent with organization discussed below. 
+
+4. **Final Paper Submission** Due Friday, July 24th at 23:50
+
+   Please turn in the 1) final document(in your chosen format, 2) the R code  and 3) the final clean dataset if other than those provided. Late assignments will not be accepted without prior approval of the instructor. Early submission is greatly appreciated.
+
+# **Topic and Data**
+
+Given time constraints I have made available a number of relevant datasets for you to use in your project. However, if you have a particular research question you are interested in or have data of your own you are welcome to use your own. Please just talk to me about it beforehand. 
+
+Otherwise look through the data below and find variables that align with your interests. Let your own intellectual curiousity guide your research. Ideally, this work will contribute to a future research project and further familiarize you with meaningful quantitative work in your chosen field. I encourage you to be strategic in your topic selection.
+
+- World Bank Development Data - This dataset contains a wide variety of economic, environmental, gender, and education variables for nearly 200 countries around the world. 
+
+[World Bank Data](Data/worldbank_dev_indicators.csv)
+
+[WVS Codebook](Data/worldbank_codebook.csv)
+
+- World Values Survey: Thailand - This extensive survey asks questions about a wide varity of attitudes and preferences among the residents of Thailand. 
+
+[WVS Data](Data/WVSData.csv)
+
+[WVS Codebook](Data/WVS_Thailand_codebook.docx)
+
+
+- Thailand Provincial Level data - Local government data within Thailand is hard to find (especially for a non-native speaker). This is constructed dataset of 77 Thai provinces combining registered population counts from the Department of Provincial Administration's civil registration system with gross provincial product per capita  from NESDC's 2023 preliminary provincial accounts. *If you have access to additional provincial data please let me know*
+
+[Province Data](Data/thai_provinces.csv)
+
+[Province Codebook](Data/thai_provinces_codebook.pdf)
+
+
+
+
+The topic and data need to be suitable for bivariate regression analysis(ie both the dependent and independent variables need to be continuous) and dataset must contain other variables(either binary or continuous) that can be used as control variables. If you're feeling ambitious you may want to combine additional datasets datasets(we will learn how to merge in R). For example, there is a great deal of country level data from other data sources.  
+
+
+
+# **Structure and Organization**
+The final paper will be organized much like a research paper. You are expected to complete the following sections.  All components must be present. In total, the report should be 10 to 15 pages(double spaced). I understand you have extreme time constraints so just try your best in each section and focus on components that demonstrate what you've learned in the course. 
+
+Your final presentation will include slides for each components.
+
+1. Introduction
+
+   Engage the reader and convince them of the importance of your research. Think carefully about how you frame your research question. The intro should include a clear research question and should include an overview of the rest of the paper.
+
+2. Puzzle
+
+A puzzle is something that is not only unanswered, but interesting. It can somehow tell us about the world in a broader way, even if the question itself is quite narrow. Ideally there is some looming question or a policy question that needs answering. 
+
+3. Brief Literature Review
+
+   Provide a brief introduction to the state of knowledge on your given issue. It should include the citations of at least 2 academic sources(a couple paragraphs). It does need to be comprehensive for this assignment, just a brief overview of where your research question fits within the literature. Make sure your literature review is well organized and that you use proper citation standards.
+
+4. Theory and Hypothesis
+
+   Use the literature and your own knowledge to provide a reasonable explanation why you expect to see the hypothesized relationship. Although you are not going to make causal claim(unless you have experimental data) think about this as explaining the plausable causal mechanisms. You do not need to fully immerse yourself in the literature, but do use some of the literature to make your argument. At the end of this section lay out your hypothesis or hypotheses formally (i.e. *H1:*).
+
+5. Methodology
+
+   Provide an overview of the the methodological approach and the choices made.In this case, why regression makes. Clearly articulate the reasons why you chose a particular procedure or technique given the limited background from the class.
+
+6. Data
+
+   Describe the dataset you are using. I.e. source, how collected, timing, structure, anything that is relevant. If combining datasets discuss that here. In addition, this is where you describe the measures relied on and the coding scheme. How are you measuring concepts? Convince the reader that the measures used are reasonable operationalizations of the abstract concept you are interested in. This section is your opportunity to convince reviewers/scholars that the data was collected or generated in a way that is consistent with accepted practice in the field of study. Be sure to cite where appropriate.
+
+7. Descriptive Statistics
+
+   Use tables, graphs, and text to describe your key variables. Be creative, but comprehensive. All tables and figures should be professional in appearance, be labeled(table 1 and figure 2 etc.), and have descriptive titles. Be creative and use your curiosity.
+
+   a. Dependent Variable
+   b. Primary Independent Variable
+   c. Control Variables
+
+Use data visualization skills and be creative. 
+
+8. Model
+
+   Describe your model choice and use mathematical script to lay out your bivariate and multivariate models(based on our core model). ie $Y_i = \beta_0 + \beta_1 X_i + \epsilon_i$
+
+9. Results
+
+   Walk the reader through your findings. Regression output should be printed out in table form. Coefficient plots, regression plots, and predicted probabilities are also encouraged. Discuss substantive as well as statistical impacts.
+
+10. Discussion
+
+   Discuss your results in a broader context. What do your results mean? Also acknowledge limitations in your approach. I.e. problematic assumptions, data and measurement issues, generalizability problems, etc. Please be extensive in this section. What night an improved research design would look like? Why might a cross-sectional linear model be limited? What might a better model(that you haven't learned yet look like)? This is a chance to really show your understanding of this class and your research project so don't skimp. 
+
+11. Future Research
+
+Include a brief discussion of how your results lead to additional research questions and, in particular, how qualitative methods could add to the research agenda. Be as specific as possible in what qualitative techniques would be used and how it might work. You don't have to do the work so be ambitious. 
+
+12. Conclusion
+    Provide a brief summary of your contribution and remind the reader why the research project is so important.
+
+## **Formatting**
+In all aspects, including appearance, this project resemble an report you would be using in a professional environment. Accordingly, it should look presentable with professional looking tables etc. An Rmarkdown created html will not suffice. Quarto would work well. Feel free to use Word or your preferred documentation software.  Be sure all figures and tables are professionally formatted. Screenshots are unacceptable.
+
+You will also will be expected to turn in the relevant R code and your data. Your code should be replicable and should include notes on what your code does and be in a similar order to how it is reported. The code should be clean. I.e. practice code or lines of code that didn't work should be eliminated. You should be able to return to this code years from now and be able to re-use it. That means including notes and annotations that explain what you are doing.
+
+## **Suggested Slides for Presentation**
+
+1. Title Page
+2. Research Puzzle
+3. Existing Literature
+4. Hypotheses
+5. Descriptive Statistics x 2
+6. Primary Regression Results
+7. Regression Robustness Checks
+8. Contributions and Qualitative Research Proposal
+9. Conclusion and Thank you
+
+## **Authorship and Plagiarism**
+You may use your notes, book, and any other non-human (printed or web-based) resource to complete this final project. However, **you may not work together.** I will gladly help with general tasks such as topic and hypothesis selection, but will not provide help on specifics. I will not help with specific coding tasks, particularly those that were covered in class or on problem sets. If you are really stuck reach out, but the expectation is that the course and problem sets have prepared you to complete the code.
+
+
+# **Unsolicited Advice**
+
+1. **Start early!!!**
+2. Take problem sets seriously, take good notes, and do your own work
+3. Don't procrastinate. Go above and beyond on each component task
+4. Get comfortable using online Resources
+5. Build in extra time for Rguments
+6. Be cuRious - take the time to teach yourself something new in R
+7. Give yourself time to edit and revise
+8. Channel your inner social scientist and have fun
+
 
 ------------------------------------------------------------------------
 
@@ -17,143 +195,4 @@ Check back soon for details of your final project
 | Presentations     | Friday, July 24 |
 
 
-<!--
-
-All written submissions are due by **11:59pm** and submitted through google docs.
-
-------------------------------------------------------------------------
-
-## Project Requirements
-
-### Dataset
-
--   At least **100 observations** and **5 variables**
--   Must be real data (not simulated)
--   Suggested sources: [TidyTuesday](https://github.com/rfordatascience/tidytuesday), [Kaggle](https://www.kaggle.com), [UCI ML Repository](https://archive.ics.uci.edu/ml/index.php), government open data portals
--   You must have a **research question** your analysis addresses
-
-### Report (rendered as HTML from `.qmd`)
-
-Your Quarto report must include all of the following sections:
-
-1.  **Introduction** — Background, research question, and why it matters.
-2.  **Data** — Source, collection method, variables of interest, and any cleaning steps.
-3.  **Exploratory Analysis** — At least 3 visualizations with written interpretation.
-4.  **Inferential Analysis** — At least one formal statistical test or model (confidence interval, hypothesis test, or regression).
-5.  **Conclusion** — Summary of findings, limitations, and potential next steps.
-6.  **References** — Dataset citation and any other sources.
-
-All code must appear in the rendered document (`echo: true`).
-
-### Presentation (10 minutes)
-
--   Slides built in Quarto (`format: revealjs` recommended)
--   Cover your question, key findings, and one visualization
--   7 minutes presenting + 3 minutes Q&A
-
-------------------------------------------------------------------------
-
-## Grading Rubric
-
-| Component                                                | Points  |
-|----------------------------------------------------------|---------|
-| Proposal (clear question + viable dataset)               | 10      |
-| Exploratory analysis (3+ visualizations, interpretation) | 20      |
-| Inferential analysis (correct method, interpretation)    | 25      |
-| Writing quality (clarity, structure, flow)               | 15      |
-| Reproducibility (renders without errors, code shown)     | 15      |
-| Presentation (clarity, visuals, Q&A)                     | 15      |
-| **Total**                                                | **100** |
-
-------------------------------------------------------------------------
-
-## Report Template
-
-Start from this template to ensure your report has the required structure.
-
-```` markdown
----
-title: "Your Project Title"
-author: "Your Name"
-date: today
-format:
-  html:
-    toc: true
-    code-fold: false
-    echo: true
-execute:
-  warning: false
-  message: false
----
-
-## Introduction
-
-[Describe your research question and why it is interesting.]
-
-## Data
-
-```{{r}}
-library(tidyverse)
-data <- read_csv("your_data.csv")
-glimpse(data)
-```
-
-[Describe the dataset: source, variables, observations.]
-
-## Exploratory Analysis
-
-```{{r}}
-# Visualization 1
-```
-
-[Interpret the plot.]
-
-## Inferential Analysis
-
-```{{r}}
-# Your statistical test or model
-```
-
-[Interpret results in context.]
-
-## Conclusion
-
-[Summarize findings, discuss limitations, suggest future work.]
-
-## References
-
-- Dataset: [Source name and URL]
-````
-
-------------------------------------------------------------------------
-
-## Proposal Guidelines
-
-Your one-page proposal should answer:
-
-1.  **What is your research question?** Be specific (e.g., "Is there a relationship between sleep hours and GPA among college students?" rather than "I want to study sleep").
-2.  **What dataset will you use?** Provide the source URL and describe the key variables.
-3.  **What statistical methods do you plan to use?** Reference specific methods from class.
-
-Submit as a PDF on Canvas by **March 28 at 11:59pm**.
-
-------------------------------------------------------------------------
-
-::: callout-important
-## Academic Integrity
-
-All analysis must be your own work. Properly cite your data source. If you use code from external sources (Stack Overflow, documentation, etc.), include a comment with the URL. Passing off others' analysis or AI-generated code as your own is a violation of the academic integrity policy.
-:::
-
-------------------------------------------------------------------------
-
-## Past Project Examples
-
-Below are a few examples of strong projects from previous semesters (shared with permission):
-
--   *Predicting Avocado Prices with Linear Regression* — used USDA retail price data
--   *Racial Disparities in Traffic Stops: A Hypothesis Testing Approach* — used Stanford Open Policing Project data
--   *Does Weather Affect Bike-Share Ridership?* — used Chicago Divvy trip data with NOAA weather data
-
--->
-
+<

@@ -23,9 +23,11 @@ Download these three files and put in their own folder. Assuming you have R and 
 
 [Week 1 Project](ClassCode/Day 1 - Intro/Week 1.Rproj){download="Week 1.Rproj"}
 
-[R Markdown](ClassCode/Day 1 - Intro/1 Intro.Rmd){download="1 Intro.Rmd"}
 
 [Data](ClassCode/Day 1 - Intro/wbdata.RData){download="wbdata.RData"}
+
+
+<a href="ClassCode/Day 1 - Intro/1 Intro.Rmd" download>Updated 1_Intro.Rmd</a>
 
 ## Day 2: Data Management and more R basics
 
@@ -33,7 +35,12 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 [Quarto day 2](ClassCode/Day 2 - Basics/Day2_Basics.qmd){download="Day2_Basics.qmd"}
 
+<a href="ClassCode/Day 2 - Basics/Day2_Basics.qmd" download>Updated Day 2 Quarto</a>
 
+*uses gapminder data so no need for rproject or dataset today
+
+
+## Day 3: Getting to know your data
 <!--
 
 ``` r
