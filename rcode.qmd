@@ -46,7 +46,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 <a href="ClassCode/Day 3 - /Class 3 code.Rmd" download>Class 3 code</a>
 
-[Pew Data](ClassCode/Day 3/PewData.csv){download="PewData.csv"}
+[Pew Data](ClassCode/Day 3 - /PewData.csv){download="PewData.csv"}
 
 
 
