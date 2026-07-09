@@ -53,7 +53,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 <a href="ClassCode/Day 4/4 Concepts and Cleaning.Rmd" download>Class 4</a>
 
-[Energy Data](ClassCode/Day 4/energysurv.xlsx){download="energysurv.xlsx"}
+[Energy Data](ClassCode/Day 4/energsurv.xlsx){download="energysurv.xlsx"}
 
 [Energy Codebook](ClassCode/Day 4/Codebook.pdf){download="Codebook.pdf"}
 
