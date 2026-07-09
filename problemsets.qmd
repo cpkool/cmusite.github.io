@@ -22,7 +22,7 @@ Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a
 
 # Problem Set #1
 
-[Problem Set1](problemsets/ProblemSet1.qmd)   
+<a href="ClassCode/ProblemSet1.qmd" download>ProblemSet1</a> 
 
 [Data](problemsets/development.Rdata)    
 

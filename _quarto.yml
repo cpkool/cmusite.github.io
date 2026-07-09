@@ -3,7 +3,7 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    - "!files/"
+    - "!ClassCode/"
 
 website:
   title: "Research for Public Policy"
@@ -39,3 +39,4 @@ format:
 editor: visual
 resources:
     - "/ClassCode"
+    - "/problemsets"
