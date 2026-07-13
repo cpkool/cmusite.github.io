@@ -1,4 +1,3 @@
-
 ---
 title: "Class 5"
 author: "Colin Kuehl"
@@ -11,7 +10,7 @@ editor_options:
 Today we're going to use data from wbstats package. This package allows us to pull data directly from online data provided by the world bank. Find more information [here](https://cran.r-project.org/web/packages/wbstats/vignettes/wbstats.html)
 ```{r}
 # install.packages("wbstats")
-# install. 
+# install.packages("tidyr") 
 
 library(wbstats)
 library(dplyr)
