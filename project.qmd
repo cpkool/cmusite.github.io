@@ -78,7 +78,7 @@ Otherwise look through the data below and find variables that align with your in
 
 [WVS Data](Data/WVSData.csv)
 
-[WVS Codebook](Data/WVS_Thailand_codebook.docx)
+[WVS Codebook](Data/WVS_Thailand_codebook.pdf)
 
 
 - Thailand Provincial Level data - Local government data within Thailand is hard to find (especially for a non-native speaker). This is constructed dataset of 77 Thai provinces combining registered population counts from the Department of Provincial Administration's civil registration system with gross provincial product per capita  from NESDC's 2023 preliminary provincial accounts. *If you have access to additional provincial data please let me know*
