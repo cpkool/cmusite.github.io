@@ -105,20 +105,20 @@ The tentative schedule for the course is below. Some topics will take just a wee
 | *Week 1* |  |  |  |
 | 6-Jul | Introductions, syllabus, Research | R download and basics, writing code |  |
 | 7-Jul | The Importance of Research: Causality and Inference | Data Management, R basics |  |
-| 8-Jul | Research Questions and Literature reviews: Standing on the shoulders of giants | Getting to know your data: types, recoding, creating variables | Problem Set #1 |
+| 8-Jul | Research Questions and Literature reviews: Standing on the shoulders of giants | Getting to know your data: types, recoding, creating variables |  |
 | 9-Jul | Measurement 1: Concepts and variables | Descriptive Statistics: measures of central tendency, histograms |  |
-| 10-Jul | Student independent Study |  | Problem Set #2/ Research Proposal |
+| 10-Jul | Student independent Study |  | Problem Set #1  |
 | *Week 2* |  |  |  |
-| 13-Jul | Measurement 2: Validity and Reliability | Visualization 1: Univariate, boxplots |  |
-| 14-Jul | Probability and Confidence Intervals | Visualization 2: Scatterplots, Trend lines |  |
-| 15-Jul | Thinking about Relationships and Regression | Regression | Problem Set #3 |
+| 13-Jul | Measurement 2: Validity and Reliability | Visualization 1: Univariate, boxplots | Research Proposal |
+| 14-Jul | Probability and Confidence Intervals | Visualization 2: Scatterplots, Trend lines | Problem Set #2 |
+| 15-Jul | Thinking about Relationships and Regression | Regression |  |
 | 16-Jul | Midterm Exam | More Regression, Merging |  |
-| 17-Jul | Student independent Study |  | Problem Set #4 |
+| 17-Jul | Student independent Study |  | Problem Set #3 |
 |  |  |  |  |
 | *Week 3* |  |  |  |
 | 20-Jul | Experiments and Causation | Quarto Presentations, professional tables and figures, and more | Initial Analysis |
-| 21-Jul | Qualitative Methods | Mixed Methods, Mapping Intro |  |
-| 22-Jul | Surveys and Interviews | Student Choice 1 | Problem Set #5 |
+| 21-Jul | Qualitative Methods | Mixed Methods, Mapping Intro | Problem Set #4 |
+| 22-Jul | Surveys and Interviews | Student Choice 1 |  |
 | 23-Jul | Research Ethics and Bonus Material | Student Choice 2 |  |
 | 24-Jul | Final Project Presentations |  | Project Presentations and Paper |
 

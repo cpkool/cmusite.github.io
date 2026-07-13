@@ -1,0 +1,85 @@
+
+---
+title: "Class 5"
+author: "Colin Kuehl"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: pdf_document
+editor_options: 
+  chunk_output_type: console
+---
+
+Measures of central tendency, variance, Standard deviation, boxplots
+exploring a single variable
+
+
+
+# We'll start out illustrating concepts from discussion using R
+
+
+## Distribution of the Mean     
+```{r}
+getmean=function(N, mean, sd){
+  opinion=rnorm(n = N, mean=mean,sd=sd)
+  meanopinion=mean(opinion)
+  return(meanopinion)} 
+#Building a function in R. This is beyond the scope of the class
+
+manymeansa=replicate(n = 10, getmean(20, mean=65, sd=6))
+hist(manymeansa, main="Many Means 10 Draws", sub=mean(manymeansa))
+mean(manymeansa)
+abline(v=mean(manymeansa), col="orange")
+
+#look with different n
+manymeansb=replicate(n = 20, getmean(20, mean=65, sd=6))
+hist(manymeansb, main="Many Means 20 Draws", sub=mean(manymeansb))
+mean(manymeansb)
+abline(v=mean(manymeansb), col="orange")
+
+
+manymeansc=replicate(n = 100, getmean(20, mean=65, sd=6))
+hist(manymeansc, main="Many Means 100 Draws", sub=mean(manymeansc))
+mean(manymeansc)
+abline(v=mean(manymeansc), col="orange")
+
+
+manymeansd=replicate(n = 1000, getmean(20, mean=65, sd=6))
+hist(manymeansd, main="Many Means 1k Draws", sub=mean(manymeansd))
+mean(manymeansd)
+abline(v=mean(manymeansd), col="orange")
+
+manymeanse=replicate(n = 1000, getmean(20, mean=65, sd=6))
+hist(manymeanse, main="Many Means 1000 Draws", sub=mean(manymeanse))
+mean(manymeanse)
+abline(v=mean(manymeanse), col="orange")
+
+manymeansf=replicate(n = 10000, getmean(20, mean=65, sd=6))
+hist(manymeansf, main="Many Means 10k Draws", sub=mean(manymeansf))
+mean(manymeansf)
+abline(v=mean(manymeansf), col="orange")
+
+#Larger sample sizes should be closer to "true mean" but still variation
+abline(v=65, col="blue")
+abline(v=mean(manymeansa), col="darkorange4")
+abline(v=mean(manymeansb), col="darkorange3")
+abline(v=mean(manymeansc), col="darkorange2")
+abline(v=mean(manymeansd), col="darkorange1")
+abline(v=mean(manymeanse), col="darkorange")
+abline(v=65, col="blue")
+
+
+
+mean(manymeansa)
+mean(manymeansb)
+mean(manymeansc)
+mean(manymeansd)
+mean(manymeanse)
+mean(manymeansf) #as n increases will get closer to true mean
+
+sd(manymeansa) # . . . and sd
+sd(manymeansb)
+sd(manymeansc)
+sd(manymeansd)
+sd(manymeanse)
+sd(manymeansf)
+```
+     

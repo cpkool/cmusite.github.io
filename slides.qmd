@@ -11,7 +11,7 @@ Slides are in PDF format. Click a link to open or right-click to download.
 
 [Day 3- Research Questions and Literature Reviews](Slides/lecture03.pdf)
 
-[Day 4- RMeasurement 1: Concepts and Variables](Slides/lecture04.pdf)
+[Day 4- Measurement 1: Concepts and Variables](Slides/lecture04.pdf)
 
 ```{=html}
 ```
