@@ -58,6 +58,8 @@ Keeping it simple - Just one file today - download and put in your class folder
 [Energy Codebook](ClassCode/Day 4/Codebook.pdf){download="Codebook.pdf"}
 
 
+## Day 5
+<a href="ClassCode/Day 5/day5.Rmd" download>Class 5</a>
 
 
 <!--
