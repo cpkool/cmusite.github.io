@@ -7,7 +7,10 @@ editor_options:
   chunk_output_type: console
 ---
 
+# Introduction
+
 Today we're going to use data from wbstats package. This package allows us to pull data directly from online data provided by the world bank. Find more information [here](https://cran.r-project.org/web/packages/wbstats/vignettes/wbstats.html)
+
 ```{r}
 # install.packages("wbstats")
 # install.packages("tidyr") 
@@ -17,12 +20,11 @@ library(dplyr)
 library(tidyr)
 ```
 
+Always setwd, in this case we can save data here.
 
-Always setwd, in this case we can save data here. 
 ```{r}
 setwd("~/Dropbox/POLS 641/CMU Su26/cmucourse26/ClassCode/Day 5")
 ```
-
 
 ```{r}
 
@@ -42,33 +44,42 @@ df <- wb_data(
     remittances_pct   = "BX.TRF.PWKR.DT.GD.ZS",
     enroll_secondary  = "SE.SEC.ENRR",
     enroll_tertiary   = "SE.TER.ENRR",
-    ed_exp_pct_gdp    = "SE.XPD.TOTL.GD.ZS"
+    ed_exp_pct_gdp    = "SE.XPD.TOTL.GD.ZS",
+    soc_net_adeq = "per_sa_allsa.adq_pop_tot"
   ),
   country = "countries_only",
   start_date = 2020, end_date = 2020)
 ```
 
+```{r}
 
 
-Measures of central tendency, variance, Standard deviation, boxplots
-exploring a single variable
+```
 
+```{r}
+education_inds<- wb_search("education")
 
+wb_search("disability")
+
+gendervars <- wb_search("gender")
+```
+
+Measures of central tendency, variance, Standard deviation, boxplots exploring a single variable
 
 First, pick one of the wb indicators from above and get summary statistics
 
-(you're familiar with most of these. Just replace x with your dataset$variablename)
-```{r}
-mean(x, na.rm = TRUE)      # mean
-median(x, na.rm = TRUE)    # median — less pulled by outliers than the mean
-var(x, na.rm = TRUE)       # variance (squared units — hard to interpret directly)
-sd(x, na.rm = TRUE)        # standard deviation (same units as x)
-range(x, na.rm = TRUE)     # min and max
-IQR(x, na.rm = TRUE)       # interquartile range (Q3 - Q1), a robust spread measure
-quantile(x, na.rm = TRUE)  # 0, 25, 50, 75, 100th percentiles
-summary(x)
-```
+(you're familiar with most of these. Just replace x with your dataset\$variablename)
 
+```{r}
+mean(df$remittances_pct, na.rm = TRUE)      # mean
+median(df$remittances_pct, na.rm = TRUE)    # median — less pulled by outliers than the mean
+var(df$remittances_pct, na.rm = TRUE)       # variance (squared units — hard to interpret directly)
+sd(df$remittances_pct, na.rm = TRUE)        # standard deviation (same units as df$remittances_pct)
+range(df$remittances_pct, na.rm = TRUE)     # min and madf$remittances_pct
+IQR(df$remittances_pct, na.rm = TRUE)       # interquartile range (Q3 - Q1), a robust spread measure
+quantile(df$remittances_pct, na.rm = TRUE)  # 0, 25, 50, 75, 100th percentiles
+summary(df$remittances_pct)
+```
 
 ```{r}
 
@@ -79,17 +90,16 @@ hist(df$life_expectancy,
 abline(v = mean(df$life_expectancy, na.rm=T),  col = "red",  lwd = 2)
 abline(v = median(df$life_expectancy, na.rm=T), col = "blue", lwd = 2, lty = 2)
 
+mean(df$life_expectancy)
 
 
 hist(df$gdp_pc,
      breaks = 20,
      main = "GDP Per Capita across countries, 2020",
-     xlab = "Dollary", col = "grey85", border = "white")
+     xlab = "Dollars", col = "grey85", border = "white")
 abline(v = mean(df$gdp_pc, na.rm=T),  col = "red",  lwd = 2)
 abline(v = median(df$gdp_pc, na.rm=T), col = "blue", lwd = 2, lty = 2)
 ```
-
-
 
 ```{r}
 
@@ -103,7 +113,3 @@ boxplot(df$gdp_pc,
         ylab = "Years")
 
 ```
-
-
-
- 

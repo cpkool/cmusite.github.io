@@ -102,7 +102,7 @@
     "href": "problemsets.html",
     "title": "Problem Sets",
     "section": "",
-    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 21st\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2"
+    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 21st\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\n. . . . coming Wednesday morning"
   },
   {
     "objectID": "slides.html",
@@ -250,5 +250,12 @@
     "title": "R Code",
     "section": "Day 5",
     "text": "Day 5\nClass 5"
+  },
+  {
+    "objectID": "rcode.html#day-6",
+    "href": "rcode.html#day-6",
+    "title": "R Code",
+    "section": "Day 6",
+    "text": "Day 6\nClass 6\nBechdel Data"
   }
 ]
