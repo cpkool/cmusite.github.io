@@ -71,7 +71,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 <a href="ClassCode/Day 6/bech.RData" download>Bechdel Data</a>
 
 
-## Day 6
+## Day 7
 <a href="ClassCode/Day 7/7_bivariate.Rmd" download>Class 7 Regression</a>
 
 

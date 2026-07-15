@@ -66,10 +66,6 @@ hist(gap2007$gdpThousands)
 hist(gap2007$lifeExp) #note the two humps. Hold that thought until the barplot section.
 ```
 
-
-
-
-
 ```{r}
 
 gap2007$loggdp <- log(gap2007$gdpPercap) # The "log" command takes the natural log. We do this because the scatterplot above bends: going from $500 to $1,500 does very different things to life expectancy than going from $40,000 to $41,000. Logging income turns "percent change" into a straight line.
@@ -78,7 +74,6 @@ hist(gap2007$loggdp)
 ```
 
 ## Confidence Intervals Barplot
-
 
 #### Life Expectancy by Continent (with 95% Confidence Intervals)
 
@@ -132,7 +127,7 @@ ggplot(continent_stats, aes(x = continent, y = mean_life)) +
 
 How to read this:
 
-Africa: 54.8 years \[52.1, 57.5\]. Europe: 77.6 years \[76.5, 78.8\]. Those intervals don't come anywhere near overlapping, so we can say with confidence that this is not sampling noise 
+Africa: 54.8 years \[52.1, 57.5\]. Europe: 77.6 years \[76.5, 78.8\]. Those intervals don't come anywhere near overlapping, so we can say with confidence that this is not sampling noise
 
 Oceania: 80.7 years \[74.2, 87.3\]. That interval is enormous. Not because Australia and New Zealand disagree with each other (they're within a year of one another), but because n = 2. With 2 observations the t critical value is 12.7 instead of about 2. The bar is the tallest on the chart and it is the one you should trust least. **This is the whole reason we put intervals on bar charts.**
 
@@ -148,9 +143,8 @@ ggplot(gap2007, aes(x = continent, y = lifeExp)) +
   labs(title = "Same Plot, Less Typing", x = "Continent", y = "Life Expectancy (Years)") +
   theme_classic()
 ```
+
 Convenient, but now you can't see the n. Prefer the version where you had to look at your own numbers.
-
-
 
 ## First tests of association
 
@@ -212,14 +206,21 @@ abline(model2) #puts the regression line onto our plot
 #Look at where the points sit relative to the line on the far left and the far right. Systematic misses like that have a name: we'll get to it when we do residuals.
 ```
 
-Our Model: Life Expectancy = $\beta_0$ + $\beta_1$ \* (GDP per Capita/1,000) + e Life Expectancy = 59.566 + 0.6371 \* (GDP per Capita/1,000) + e
+Our Model: Life Expectancy = $\beta_0$ + $\beta_1$ \* (GDP per Capita/1,000) + e
+
+Life Expectancy = 59.566 + 0.6371 \* (GDP per Capita/1,000) + e
 
 Break: Is this causal?
 
 Do it yourself Find a relationship you are interested in testing(use the codebook above, and remember you can log things or subset to a continent). Raise your hand when you're ready to try to interpret it for the the class.(Yes, I'm serious)
 
 ```{r}
+modelmine <- lm(gdpThousands ~ pop, data = gap2007)
 
+summary(modelmine)
+
+plot(gap2007$pop, gap2007$gdpThousands, xlab = "Population", ylab = "GDP per Capita", main = "Population and GDP per capita", pch=10) #creates a scatterplot
+abline(modelmine)
 ```
 
 Can add a confidence interval. It is often not necessary, but it helps us visualize the uncertainty of our estimates.
@@ -263,15 +264,13 @@ abline(h = (model2$fitted.values[which(gap2007$country == "Brazil")]), col="gree
 
 #Brazil actually lived 72.39 years and we predicted 65.34. It beat our model by about 7 years. Is that Brazil doing something right, or our model doing something wrong?
 ```
-`
+
 
 #### Your next challenge
 
 Rerun your analysis for a different year(don't forget about find and replace). 1952 and 1982 are both interesting. How do the results change? \*bonus if you're bored: add country labels to each point
 
 ```{r}
-
-
 
 
 
@@ -311,6 +310,8 @@ p + theme_classic()
 library("ggthemes")
 p + theme_economist()
 
+p +  theme_solarized(light=FALSE) +
+  scale_colour_solarized()
 
 #Show Country Names
 ggplot(gap2007, aes(x = gdpThousands, y = lifeExp, label = country))+   #using ggplot and dataset
@@ -342,7 +343,7 @@ ggplot(gap2007, aes(x = gdpPercap, y = lifeExp, size = pop, color = continent)) 
   scale_x_log10() +   # here's that log transformation again, doing it to the axis instead of the variable
   scale_size(range = c(1,15), guide = "none") +
   labs(title="GDP per Capita & Life Expectancy, 2007", x="GDP per Capita (log scale)", y="Life Expectancy (Years)") +
-  theme_classic()
+  theme_clean()
 
 # Now the relationship is basically a straight line. Which means our original model - the one we spent the whole class interpreting - had the wrong functional form. Everything we said about it was correctly computed and still somewhat wrong. Welcome to regression.
 ```
@@ -358,9 +359,8 @@ library(wbstats) #load the world bank package from Tuesday. Normally you would h
 
 ```
 
-
 ```{r}
-httr::set_config(httr::timeout(120)) 
+
 
 httr::set_config(httr::timeout(160))   # keep this or it dies
 
@@ -386,7 +386,6 @@ wbdf1 <- wb_data(
 #There are some troubles with the API so hopefully this works. 
 ```
 
-
 ```{r}
 wbdf2 <- wb_data(
   indicator = c(
@@ -409,9 +408,7 @@ wbdf2 <- wb_data(
   start_date = 2007, end_date = 2007)
 ```
 
-*grabbing all countries and, like gapminder, just 2007.
-
-
+\*grabbing all countries and, like gapminder, just 2007.
 
 ```{r}
 # install.packages("countrycode")
@@ -431,8 +428,3 @@ merged <- left_join(gap2007, wbdf1, by = "iso3c")
 
 
 ```
-
-
-
-
-
