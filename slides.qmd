@@ -21,7 +21,7 @@ Slides are in PDF format. Click a link to open or right-click to download.
 
 [Day 6- Probability and Confidence Intervals](Slides/lecture06.pdf)
 
-[Day 7- Regession](Slides/lecture07.pdf)
+[Day 7- Regression](Slides/lecture07.pdf)
 
 ```{=html}
 ```
