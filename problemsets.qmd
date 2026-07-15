@@ -35,8 +35,12 @@ Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a
 
 
 # Problem Set #3
+<a href="problemsets/Pset 3.Rmd" download>Problem Set 3</a> 
 
- . . . . coming Wednesday morning
+<a href="problemsets/fl2.xlsx" download>Data Problem Set 3</a> 
+
+[Professor Chaos](problemsets/profchaos.png)
+
 
 
 
