@@ -19,7 +19,7 @@ Slides are in PDF format. Click a link to open or right-click to download.
 
 [Day 5- Measurement 2: Reliability and Validity](Slides/lecture05.pdf)
 
-[Day 6- {Probability and Confidence Intervals}](Slides/lecture05.pdf)
+[Day 6- Probability and Confidence Intervals](Slides/lecture05.pdf)
 
 ```{=html}
 ```
