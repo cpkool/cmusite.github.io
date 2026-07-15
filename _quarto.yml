@@ -40,3 +40,4 @@ editor: visual
 resources:
     - "/ClassCode"
     - "/problemsets"
+    - "/CNAME"
