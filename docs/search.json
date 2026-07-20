@@ -207,6 +207,13 @@
     "href": "slides.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression"
+    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness"
+  },
+  {
+    "objectID": "rcode.html#day-9",
+    "href": "rcode.html#day-9",
+    "title": "R Code",
+    "section": "Day 9",
+    "text": "Day 9\nMultivariate Regression\nPrem Data\n Wages"
   }
 ]

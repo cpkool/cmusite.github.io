@@ -72,7 +72,7 @@ Otherwise look through the data below and find variables that align with your in
 
 [World Bank Data](Data/worldbank_dev_indicators.csv)
 
-[WVS Codebook](Data/worldbank_codebook.csv)
+[World Bank Codebook](Data/worldbank_codebook.csv)
 
 - World Values Survey: Thailand - This extensive survey asks questions about a wide varity of attitudes and preferences among the residents of Thailand. 
 

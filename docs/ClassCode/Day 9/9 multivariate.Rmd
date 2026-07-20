@@ -1,0 +1,305 @@
+---
+title: "8 Multivariate"
+author: "Colin Kuehl"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+Packages
+
+```{r}
+#install.packages("ggcorrplot")
+library("ggcorrplot")
+#install.packages("modelsummary")
+library("modelsummary")
+#install.packages("coefplot")
+library("coefplot")
+
+library(tidyverse)
+
+```
+
+Set your working directory and load the English Premier League data data(prem.Rdata). What is the unit of analysis?
+
+## Explore the data:
+
+```{r}
+setwd("~/Dropbox/POLS 641/CMU Su26/cmucourse26/ClassCode/Day 9")
+load("prem.RData")
+
+table(epl$Season_End_Year)
+table(epl$Squad)
+```
+
+Warm-up: Get a feel for the data and the variables. Check out your favorite team(or the one with the funniest name) and provide some interesting basic descriptive statistics
+
+```{r}
+
+```
+
+```{r}
+cumultable <- epl %>% group_by(Squad)%>% summarise(avgwins=mean(W), avgpoints=mean(Pts))%>% arrange(avgpoints)
+
+ggplot(data=cumultable, aes(x=fct_reorder(Squad, avgpoints), y=avgpoints))+geom_bar(stat="identity")+theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+labs(x="Squad", y="Average Points", title="Premier Leage Average Points", subtitle = "2016-2022 Seasons")
+
+plot(epl$xG, epl$GF)
+abline(lm(epl$GF~epl$xG))
+```
+
+Look at correlation between variables of interet - Look at correlation matrix
+
+```{r}
+cor(epl$W, epl$GF)
+cor(epl$W, epl$GA)
+
+
+mainvars  <- epl %>% select(W, GF, Pts, Age, Poss, Attendance)
+cormat <- cor(mainvars)
+
+ggcorrplot(cormat)#pretty graph, but I usually find the numbers more useful
+
+
+ggcorrplot(cormat, lab=TRUE, method = "circle", type = "lower", ggtheme = theme_void(), colors = c("#6D9EC1", "white", "#E46726"))#looks cooler, but more useful?
+
+```
+
+**Bivariate(Review)** Create a bivariate model predicting goal diff xg=expected goals,a general measure of the quality and quantity of shots the team is producing
+
+```{r}
+bi1 <- lm(Pts ~ xG, data=epl)
+summary(bi1)
+```
+
+1.  How do we interpret this output using text?
+
+2.  How do we show it graphically?
+
+3.  What is the equation? Hint: Use Rmarkdown Symbols
+
+```{r}
+# 2. 
+plot(epl$xG, epl$Pts)
+abline(bi1)
+```
+
+3.  $Y= \beta_{0} + Expected Goals X1 + \epsilon$ $Points= -6.69 + 1.18 X1 + \epsilon$
+
+## Multivariate Regression
+
+Multivariate OLS (Refers to OLS with multiple independent variables) What's the benefit? Reduces biased + increases precision (more accurate parameter estimates), because the coefficient estimates are on average less skewed away from the true value. Ie we know there are other factors besides shooting that matter for winning teams. We are taking these things from the error term and putting them into the model.
+
+When interpreting multivariate OLS regression coefficients: A one unit increase in X is associated with an increase in Y, HOLDING OTHER FACTORS CONSTANT IN THE MODEL/ceteris paribus (all else being equal) (Page 131-132)
+
+4.  Lets create a multivariate model: $Y= \beta_{0} + \beta_{1} X1 + \epsilon$
+
+$Points = \beta_{0} + \beta_{1}expectedgoals + \beta_{2}possession + \epsilon$
+
+```{r}
+multi1 <- lm(Pts ~ xG + Poss, data=epl)
+summary(multi1)
+```
+
+What is your DV? IVs? How do we interpret this table? How has the r-squared changed from the model1. Bonus: What is the points we would expect for a team that had an average(mean) xG and an average possession? (clue: first find the means and then input into your equation)
+
+
+```{r}
+multi2 <- lm(Pts ~ xG + Poss + Age, data=epl)
+summary(multi2)
+```
+
+6.  Maybe the fans matter
+
+```{r}
+multi3 <- lm(Pts ~ xG + Poss + Age + Attendance, data=epl)
+summary(multi3)
+```
+
+7.  Add other variables to the model? How do these affect the Betas and p-values of your existing variables and your r-squared? What is your best model for predicting home team goal diff? Who can create the best model? How would we know?
+
+```{r}
+
+
+```
+
+
+
+## Displaying Multiple Models
+
+Useful tool: Displaying mulitple tables using model summary: [More info] (https://modelsummary.com/vignettes/modelsummary.html)
+
+```{r}
+#summary(multi1, multi2) doesn't work
+#install.packages("modelsummary")
+library("modelsummary")
+
+modelsummary(list(multi1, multi2))
+#copy and paste this output below. Will need to change labels etc. 
+
+modelsummary(list(bi1, multi1, multi2, multi3),stars    = TRUE,title  = "Multivariate Regression Models")
+
+# A nice looking, professional table
+modelsummary(list(bi1, multi1, multi2, multi3),
+             title       = "Multivariate Regression Models (DV: Total Points)",stars    = TRUE,
+             coef_rename = c("xG"         = "Expected Goals",
+                             "Poss" = "Possession",
+                             "age"        = "Age",
+                             "attendance" = "Attendance",
+                             "(Intercept)"= "Intercept"),
+             gof_omit = "AIC|BIC|Log.Lik|RMSE")
+```
+
+
+```{r}
+#modelsummary(list(bi1, multi1, multi2, multi3),
+             title    = "Multivariate Regression Models",
+             stars    = TRUE,
+             gof_omit = "AIC|BIC|Log.Lik",
+             output   = "regression_table.docx")
+```
+
+Other formats work the same way — swap the extension:
+output = "regression_table.html"    # HTML file
+output = "regression_table.tex"     # LaTeX
+output = "regression_table.png"     # image
+output = "regression_table.xlsx"    # Excel
+
+## Coefficient Plots
+
+```{r}
+modelplot(list("Bivariate" = bi1,
+               "Model 1"   = multi1,
+               "Model 2"   = multi2,
+               "Model 3"   = multi3),
+          coef_omit   = "Intercept",
+          coef_rename = c("xG"         = "Expected Goals",
+                          "Poss" = "Possession",
+                          "age"        = "Age",
+                          "attendance" = "Attendance")) +
+  ggplot2::geom_vline(xintercept = 0, linetype = "dashed", color = "grey50") +
+  ggplot2::labs(title = "Coefficient Plot: predictors of total points")
+```
+
+## Adding Spending
+
+That is all great, but we know sports is all about the benjamins(aka money). I want to know how much money predicts squad success but it isn't in this dataset.
+
+```{r}
+wages <- read.csv("wages.csv") #Load wages data(from: https://www.spotrac.com/epl/payroll/2019/) 
+
+#as always there are a couple ways we can merge the data. Note we are just looking at one year now. We will have more examples of merging in a few weeks, but this gives you the basic idea. 
+
+#classic is the merge command. There must be a common column(same units with same exact lable/number etc) between both datasets. In this case that variable is named different things. 
+ep2020 <- epl[which(epl$Season_End_Year==2020),] #just look at 2020 season
+
+epl2 <- merge(ep2020, wages, by.x="Squad", by.y="TEAM")
+#dplyr uses join commands to do the same thing
+epl2d <- left_join(epl, wages, by = c("Squad" = "TEAM"))
+
+#This is about as simple as a merge/join command gets. 
+```
+
+```{r}
+hist(epl2$TRANSFER.FEES, breaks=8)
+
+hist(epl2$TOTALSALARY)
+
+cor(epl2$TRANSFER.FEES, epl2$TOTALSALARY)
+plot(epl2$TRANSFER.FEES, epl2$TOTALSALARY)
+
+
+plot(epl2$TOTALSALARY, epl2$Pts)
+bivariate <- (lm(Pts ~ TOTALSALARY, data=epl2))
+```
+
+```{r}
+# A Beautiful Plot
+
+ggplot(epl2, aes(x = TOTALSALARY, y = Pts)) +
+  geom_point(size = 2, alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, color = "#C8102E") +
+  geom_text(aes(label = Squad), vjust = -0.8, size = 3, check_overlap = TRUE) +
+  scale_x_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M")) +
+  labs(title = "Total salary vs. points, EPL squads 2020",subtitle = ". . .aka Pay Jurgen",
+       x = "Total salary", y = "Points") +
+  theme_minimal()
+ynwa
+
+# To save or export an image - you can click export in the plots viewer or use code as in below
+
+ggsave("YNWA.png", width = 8, height = 5, dpi = 300) #saves last figure in your working directory
+
+
+
+```
+
+```{r}
+
+Model1 <- (lm(Pts ~ TOTALSALARY+TRANSFER.FEES, data=epl2))
+
+Model2 <- (lm(Pts ~ TOTALSALARY+TRANSFER.FEES + xG+ Age + Attendance, data=epl2))
+
+modelsummary(list(bivariate, Model1, Model2),stars    = TRUE,
+             title  = "Multivariate Regression Models")
+
+```
+
+Some fun visualizations
+
+```{r}
+ggplot(epl2, aes(x = reorder(Squad, TOTALSALARY), y = TOTALSALARY)) +
+  geom_col(fill = "steelblue") +
+  geom_text(aes(label = scales::dollar(TOTALSALARY, scale = 1e-6, suffix = "M")), #Fancy rescaling
+            hjust = -0.1, size = 3) +
+  scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M"),
+                     expand = expansion(mult = c(0, 0.15))) +
+  coord_flip() +
+  labs(title = "2020 Total salary by EPL squad",
+       x = NULL, y = "Total salary") +
+  theme_minimal()
+
+ggplot(epl2, aes(x = reorder(Squad, Pts), y = Pts)) +
+  geom_col(fill = "steelblue") +
+  geom_text(aes(label = Pts), hjust = -0.2, size = 3) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.08))) +
+  coord_flip() +
+  labs(title = "Total points by EPL squad",
+       x = NULL, y = "Points") +
+  theme_minimal()
+```
+
+## Create Multiple Models
+
+Your turn. With this new create additional models and create a table and coeficient plot using modelsummary
+
+
+```{r}
+
+```
+
+### Extra code for R nerds: 
+
+Creates a 3d scatterplot of our variables. Ie shows two independent variables and a dependent variable.
+
+```{r}
+#install.packages("scatterplot3d")
+library(scatterplot3d)  
+s3d <-scatterplot3d(epl$Pts, epl$xG,  epl$Poss,
+                    pch=16, highlight.3d=TRUE,  
+type="h", main="3D Regression Scatterplot", xlab="Points", ylab="Expect Goals", zlab="Possession")
+s3d$plane3d(multi1)
+
+```
+
+Bonus: Create multiple models. Is the coefficient for xG robust?
+
+```{r}
+
+```
+
+Bonus 2: Is points really the best measure of how well a team has done? Try alternative DVs
+
+```{r}
+
+```

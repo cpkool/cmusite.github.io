@@ -25,3 +25,7 @@ Slides are in PDF format. Click a link to open or right-click to download.
 
 ```{=html}
 ```
+
+### Week 3
+
+[Day 9- Regression Again - Multivariate, Assumptions, and Robustness](Slides/lecture09.pdf)

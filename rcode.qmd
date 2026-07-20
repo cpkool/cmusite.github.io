@@ -75,6 +75,14 @@ Keeping it simple - Just one file today - download and put in your class folder
 <a href="ClassCode/Day 7/7_bivariate.Rmd" download>Class 7 Regression</a>
 
 
+## Day 9
+<a href="ClassCode/Day 9/9 multivariate.Rmd" download>Multivariate Regression</a>
+
+<a href="ClassCode/Day 9/prem.RData" download>Prem Data</a>
+
+<a href="ClassCode/Day 9/wages.csv" download> Wages </a>
+
+
 
 <!--
 
