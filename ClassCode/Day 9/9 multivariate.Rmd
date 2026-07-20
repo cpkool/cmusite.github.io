@@ -31,11 +31,15 @@ load("prem.RData")
 
 table(epl$Season_End_Year)
 table(epl$Squad)
+
+length(unique(epl$Squad))
 ```
 
 Warm-up: Get a feel for the data and the variables. Check out your favorite team(or the one with the funniest name) and provide some interesting basic descriptive statistics
 
 ```{r}
+
+
 
 ```
 
@@ -57,6 +61,7 @@ cor(epl$W, epl$GA)
 
 mainvars  <- epl %>% select(W, GF, Pts, Age, Poss, Attendance)
 cormat <- cor(mainvars)
+cormat
 
 ggcorrplot(cormat)#pretty graph, but I usually find the numbers more useful
 
@@ -120,7 +125,8 @@ summary(multi3)
 
 ```{r}
 
-
+mymodel <- lm(Pts ~ Poss + Num_Players +  CrdY, data=epl)
+summary(mymodel)
 ```
 
 
@@ -151,8 +157,8 @@ modelsummary(list(bi1, multi1, multi2, multi3),
 ```
 
 
-```{r}
-#modelsummary(list(bi1, multi1, multi2, multi3),
+```{r
+# modelsummary(list(bi1, multi1, multi2, multi3),
              title    = "Multivariate Regression Models",
              stars    = TRUE,
              gof_omit = "AIC|BIC|Log.Lik",

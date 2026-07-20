@@ -41,7 +41,10 @@ Please submit all files [HERE](https://niuits-my.sharepoint.com/:f:/g/personal/a
 
 [Professor Chaos](problemsets/profchaos.png)
 
+# Problem Set #4
+<a href="problemsets/Pset 4.Rmd" download>Problem Set 3</a> 
 
+<a href="problemsets/barks23.csv" download>Data Problem Set 3</a> 
 
 
 :::
