@@ -23,9 +23,13 @@ Slides are in PDF format. Click a link to open or right-click to download.
 
 [Day 7- Regression](Slides/lecture07.pdf)
 
+Day 8 - Midterm
+
 ```{=html}
 ```
 
 ### Week 3
 
 [Day 9- Regression Again - Multivariate, Assumptions, and Robustness](Slides/lecture09.pdf)
+
+[Day 10- Regression Assumptions and Transformations + Experiments ](Slides/lecture10.pdf)

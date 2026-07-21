@@ -12,7 +12,7 @@ subtitle: "Problems sets are your opportunity to work on the skills discussed in
  - **Problem Set #1:** July 10th
  - **Problem Set #2:** July 14th
  - **Problem Set #3:** July 17th
- - **Problem Set #4:** July 21st
+ - **Problem Set #4:** July 22nd
    
 
 Problem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered `.html` Quarto file by **11:59pm** on the due date.

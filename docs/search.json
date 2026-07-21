@@ -95,7 +95,7 @@
     "href": "project.html#suggested-slides-for-presentation",
     "title": "Final Project - Policy Brief",
     "section": "Suggested Slides for Presentation",
-    "text": "Suggested Slides for Presentation\n\nTitle Page\nResearch Puzzle\nExisting Literature\nHypotheses\nDescriptive Statistics x 2\nPrimary Regression Results\nRegression Robustness Checks\nContributions and Qualitative Research Proposal\nConclusion and Thank you"
+    "text": "Suggested Slides for Presentation\n\nTitle Page\nResearch Puzzle\nExisting Literature\nHypotheses\nDescriptive Statistics x 2\nPrimary Regression Results\nRegression Robustness Checks\nContributions and Qualitative Research Proposal\nConclusion and Thank you\n\nPresentation QMD Template"
   },
   {
     "objectID": "project.html#authorship-and-plagiarism",
@@ -116,7 +116,7 @@
     "href": "problemsets.html",
     "title": "Problem Sets",
     "section": "",
-    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 21st\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
+    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 22nd\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
   },
   {
     "objectID": "about.html",
@@ -207,7 +207,7 @@
     "href": "slides.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness"
+    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
   },
   {
     "objectID": "rcode.html#day-9",
@@ -243,5 +243,12 @@
     "title": "R Code",
     "section": "Day 9: Multivariate Regression",
     "text": "Day 9: Multivariate Regression\nMultivariate Regression\nPrem Data\n Wages"
+  },
+  {
+    "objectID": "rcode.html#day-10-more-regression-and-some-experiments",
+    "href": "rcode.html#day-10-more-regression-and-some-experiments",
+    "title": "R Code",
+    "section": "Day 10: More Regression and some Experiments",
+    "text": "Day 10: More Regression and some Experiments\nMore Regression\nMore Regression HeightandWage\nGerberGreen"
   }
 ]
