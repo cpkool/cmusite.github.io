@@ -89,6 +89,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 
 <a href="ClassCode/Day 10/10moreReg.Rmd" download>More Regression</a>
+
 <a href="ClassCode/Day 10/HeightWage_MenWomenUS_HW.csv" download>HeightandWage</a>
 
 <a href="ClassCode/Day 10/GerberGreenData.csv"download>GerberGreen</a>

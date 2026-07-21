@@ -67,7 +67,7 @@
     "href": "syllabus.html#section",
     "title": "Research Methodology for Public Policy",
     "section": "",
-    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: July 15, 2026"
+    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: July 21, 2026"
   },
   {
     "objectID": "resources.html",
@@ -109,21 +109,14 @@
     "href": "project.html#key-dates",
     "title": "Final Project - Policy Brief",
     "section": "Key Dates",
-    "text": "Key Dates\n\n\n\nComponent\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nFriday, July 24\n\n\nPresentations\nFriday, July 24\n\n\n\n&lt;"
+    "text": "Key Dates\n\n\n\nComponent\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nSaturday, July 25\n\n\nPresentations\nFriday, July 24\n\n\n\n&lt;"
   },
   {
-    "objectID": "problemsets.html",
-    "href": "problemsets.html",
-    "title": "Problem Sets",
+    "objectID": "problemsets/ProblemSet1.html",
+    "href": "problemsets/ProblemSet1.html",
+    "title": "Problem Set 1",
     "section": "",
-    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 22nd\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Introduction\nWelcome to your first problem set. It consists of two sections. The first asks you to analyze data on international development. The second asks conceptual questions about political science methods. Please be sure that you answer every question(and each subquestion)thoroughly.\nGive yourself plenty of time to complete the assignment (You will need to build in time for R frustration, freakouts, celebrations, etc.) Please fill in your answers to each question below where it is written. For questions that require coding with R complete your coding in the sections provided and write out answers, if necessary, in the text section. Remember to render as you go and be sure the work you turn in is your own.\n*Please submit both your html file and the quarto file on the course website before the deadline of 23:59 on Friday, July 10th. Label your file with pset#_name (ie pset1_colin.html) *\n\n\nPart 1 - Data Analysis\nThis week we are going to look at some development data from the world bank and other sources.\nThe datset is development.Rdata and the codebook(development_codebook.csv) gives information on each variable. Most data are from 2022. This is a large dataset you can consider using for your final project.\n\nSet up: Load the world bank dataset.\n\n\nA first look at the data: a) Show the first few rows of the data b) How many observations are in this dataset? c) How many variables? d) show the names of each of the variables.\n\n\nDescriptive statistics: Lets look at the variable wbl_index. This is a composite measure that summarizes how legal frameworks shape women’s economic opportunities\n\na) Find the mean, median, variance, max, and min for this indicator. In cases where a variable has missing values R will return an NA. Just add , na.rm=T (ie mean(dataset$variablename, na.rm=T)) to your command to tell it to ignore these values. b) Produce a histogram of wbl_index (Be sure that it is properly labeled) The use of colors etc. is encouraged.\n\nLook through the codebook and find a variable you find interesting. Repeat 3a and 3b above. What do you find interesting or surprising\n\n\nLooking at relationships: We might hypothesize that as women’s economic opportunities increase, the fertility rate goes down. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?  Bonus: Use country code instead of dots in the scatterplot in the scatterplot\n\n\nAlternative Explanations: Using variables from the dataset think of your own alternative hypothesis for the rate of fertility rate a) What is the new independent variable b)Create a scatter plot of the relationship c) add a trend line for the hypothesized relationship d) How would you describe the relationship? Does it support your theory. f)Is the relationship causal? why or why not?\n\n\nReturning to the relationship in question 5. You question if the same relationship holds in East Asia & Pacific. Run the same analysis just using East Asia and Pacific countries.\n\n\nNew Question: We’re interested in how the aging population shapes health care spengin. a) Create a new variable that is the percentage of the population that is over 64 years old (hint: check the codebook).b) find the mean, median, and variation of this new variable c) create a boxplot comparing the percentage of old folks in different regions of the world measure?\n\n7.Your turn - Please take your time here.\nWe might hypothesize that as the percent of older folks increase health care spending increases. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?\n\nUsing the data come up with your question and hypothesis.a) Explore each variable you chose (make sure we haven’t used them yet and that they are different from your friends) b) graph the relationship and tell me what it means.\n\n\n\nPart 2 - Conceptual Questions\n1.In ways your friends would understand, explain why quality research is important for public policy.\n\nIn ways your parents would understand,under what conditions can we claim causality.\nIn ways your neighbors would understand, what is the value of descriptive research?\n\n4.Imagine you are running a research project on the effect of education on youth political participation. List some of the factors (at least 3) that could lead to an endogeneity problem.\n\nWhat is a possible mechanism for the observed relationship between women’s economic opportunities and fertility rate? What is a mechanism in public policy research?\nHow long(hours) did this problem set take you?And who else in the class did you work with while completing it?\nAnything else Dr. Colin should know about you, this class, CMU, life, etc? Feel free to vent"
   },
   {
     "objectID": "index.html",
@@ -133,11 +126,200 @@
     "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
   },
   {
-    "objectID": "problemsets/ProblemSet1.html",
-    "href": "problemsets/ProblemSet1.html",
-    "title": "Problem Set 1",
+    "objectID": "Data/presentation_template.html#title-slide",
+    "href": "Data/presentation_template.html#title-slide",
+    "title": "Research Title Here",
+    "section": "Title Slide",
+    "text": "Title Slide"
+  },
+  {
+    "objectID": "Data/presentation_template.html#research-puzzle",
+    "href": "Data/presentation_template.html#research-puzzle",
+    "title": "Research Title Here",
+    "section": "Research Puzzle",
+    "text": "Research Puzzle\n\n\nMotivating Question\nThis is a bulleted list - First bullet - Second bullet - Third Bullet in Bold"
+  },
+  {
+    "objectID": "Data/presentation_template.html#background-and-literature",
+    "href": "Data/presentation_template.html#background-and-literature",
+    "title": "Research Title Here",
+    "section": "Background and Literature",
+    "text": "Background and Literature\nWhat we know\nWhat remains unresolved\n\nGap 1 — brief description\nGap 2 — brief description\n\nThis paper’s answers this question\n\nSpeaker notes: These don’t show up on the screen, but can be useful when building"
+  },
+  {
+    "objectID": "Data/presentation_template.html#hypotheses",
+    "href": "Data/presentation_template.html#hypotheses",
+    "title": "Research Title Here",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nBased on [theory / mechanism], I derive the following expectations:\n\nH1 (Main): As X increases, Y increases, because [mechanism].\nNull Hypothesis If [rival theory] holds, we would instead expect [alternative pattern]."
+  },
+  {
+    "objectID": "Data/presentation_template.html#measurement",
+    "href": "Data/presentation_template.html#measurement",
+    "title": "Research Title Here",
+    "section": "Measurement",
+    "text": "Measurement"
+  },
+  {
+    "objectID": "Data/presentation_template.html#descriptive-statistics",
+    "href": "Data/presentation_template.html#descriptive-statistics",
+    "title": "Research Title Here",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n\n\n\nTable 1: Summary Statistics\n\n\n\n\n\n\n\nUnique\nMissing Pct.\nMean\nSD\nMin\nMedian\nMax\n\n\n\n\nGDP per Capita\n200\n0\n12411.55\n14157.34\n406.23\n7971.36\n120799.93\n\n\nDemocracy\n2\n0\n0.44\n0.50\n0.00\n0.00\n1.00\n\n\nTrade Openness\n200\n0\n55.61\n24.90\n10.81\n54.01\n99.31\n\n\nOutcome\n200\n0\n5.55\n1.19\n2.59\n5.53\n9.11"
+  },
+  {
+    "objectID": "Data/presentation_template.html#descriptive-statistics-cont.",
+    "href": "Data/presentation_template.html#descriptive-statistics-cont.",
+    "title": "Research Title Here",
+    "section": "Descriptive Statistics (cont.)",
+    "text": "Descriptive Statistics (cont.)\n\n\nFigure 1: Distribution of Outcome by Regime Type"
+  },
+  {
+    "objectID": "Data/presentation_template.html#primary-regression-results",
+    "href": "Data/presentation_template.html#primary-regression-results",
+    "title": "Research Title Here",
+    "section": "Primary Regression Results",
+    "text": "Primary Regression Results\n\n\n\n\nTable 2: OLS Regression — Main Results\n\n\n\n\n\n\n\nBivariate\n+ Controls\nFull Model\n\n\n\n\n(Intercept)\n5.132***\n2.746***\n2.418***\n\n\n\n(0.104)\n(0.705)\n(0.695)\n\n\nDemocracy\n0.930***\n0.915***\n0.923***\n\n\n\n(0.157)\n(0.153)\n(0.149)\n\n\nln GDP per Capita\n\n0.267***\n0.241***\n\n\n\n\n(0.078)\n(0.076)\n\n\nTrade Openness\n\n\n0.010***\n\n\n\n\n\n(0.003)\n\n\nNum.Obs.\n200\n200\n200\n\n\nR2\n0.151\n0.199\n0.241\n\n\nR2 Adj.\n0.147\n0.191\n0.230\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey finding: Democracy is positively and significantly associated with the outcome across all specifications."
+  },
+  {
+    "objectID": "Data/presentation_template.html#regression-robustness-checks",
+    "href": "Data/presentation_template.html#regression-robustness-checks",
+    "title": "Research Title Here",
+    "section": "Regression Robustness Checks",
+    "text": "Regression Robustness Checks\n\n\nFigure 2: Coefficient Plot — Robustness Across Specifications\nThe positive effect of democracy is stable across sample splits and alternative specifications."
+  },
+  {
+    "objectID": "Data/presentation_template.html#contributions-qualitative-research-proposal",
+    "href": "Data/presentation_template.html#contributions-qualitative-research-proposal",
+    "title": "Research Title Here",
+    "section": "Contributions & Qualitative Research Proposal",
+    "text": "Contributions & Qualitative Research Proposal\nTheoretical Contributions\n\nContribution 1 — how this paper advances existing theory\nContribution 2 — novel mechanism or scope condition identified\n\nEmpirical Contributions\n\nContribution 3 — new data, identification strategy, or case coverage\n\nQualitative Follow-Up\nTo probe the mechanism, future work should conduct [case studies / interviews / process tracing] in:\n\n\n\nCase\nRationale\n\n\n\n\nCountry A\nMost-likely case for H1\n\n\nCountry B\nLeast-likely case — hard test\n\n\nCountry C\nDeviant case — unexplained by model"
+  },
+  {
+    "objectID": "Data/presentation_template.html#discussion",
+    "href": "Data/presentation_template.html#discussion",
+    "title": "Research Title Here",
+    "section": "Discussion",
+    "text": "Discussion\nImplications\nBriefly state what these findings mean for theory and / or policy.\nLimitations and future research\n\nLimitation 1\nLimitation 2"
+  },
+  {
+    "objectID": "Data/presentation_template.html#conclusion",
+    "href": "Data/presentation_template.html#conclusion",
+    "title": "Research Title Here",
+    "section": "Conclusion",
+    "text": "Conclusion\nSummary of findings\n\nFinding 1 — one sentence\nFinding 2 — one sentence\nFinding 3 — one sentence"
+  },
+  {
+    "objectID": "Data/presentation_template.html#section",
+    "href": "Data/presentation_template.html#section",
+    "title": "Research Title Here",
     "section": "",
-    "text": "Introduction\nWelcome to your first problem set. It consists of two sections. The first asks you to analyze data on international development. The second asks conceptual questions about political science methods. Please be sure that you answer every question(and each subquestion)thoroughly.\nGive yourself plenty of time to complete the assignment (You will need to build in time for R frustration, freakouts, celebrations, etc.) Please fill in your answers to each question below where it is written. For questions that require coding with R complete your coding in the sections provided and write out answers, if necessary, in the text section. Remember to render as you go and be sure the work you turn in is your own.\n*Please submit both your html file and the quarto file on the course website before the deadline of 23:59 on Friday, July 10th. Label your file with pset#_name (ie pset1_colin.html) *\n\n\nPart 1 - Data Analysis\nThis week we are going to look at some development data from the world bank and other sources.\nThe datset is development.Rdata and the codebook(development_codebook.csv) gives information on each variable. Most data are from 2022. This is a large dataset you can consider using for your final project.\n\nSet up: Load the world bank dataset.\n\n\nA first look at the data: a) Show the first few rows of the data b) How many observations are in this dataset? c) How many variables? d) show the names of each of the variables.\n\n\nDescriptive statistics: Lets look at the variable wbl_index. This is a composite measure that summarizes how legal frameworks shape women’s economic opportunities\n\na) Find the mean, median, variance, max, and min for this indicator. In cases where a variable has missing values R will return an NA. Just add , na.rm=T (ie mean(dataset$variablename, na.rm=T)) to your command to tell it to ignore these values. b) Produce a histogram of wbl_index (Be sure that it is properly labeled) The use of colors etc. is encouraged.\n\nLook through the codebook and find a variable you find interesting. Repeat 3a and 3b above. What do you find interesting or surprising\n\n\nLooking at relationships: We might hypothesize that as women’s economic opportunities increase, the fertility rate goes down. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?  Bonus: Use country code instead of dots in the scatterplot in the scatterplot\n\n\nAlternative Explanations: Using variables from the dataset think of your own alternative hypothesis for the rate of fertility rate a) What is the new independent variable b)Create a scatter plot of the relationship c) add a trend line for the hypothesized relationship d) How would you describe the relationship? Does it support your theory. f)Is the relationship causal? why or why not?\n\n\nReturning to the relationship in question 5. You question if the same relationship holds in East Asia & Pacific. Run the same analysis just using East Asia and Pacific countries.\n\n\nNew Question: We’re interested in how the aging population shapes health care spengin. a) Create a new variable that is the percentage of the population that is over 64 years old (hint: check the codebook).b) find the mean, median, and variation of this new variable c) create a boxplot comparing the percentage of old folks in different regions of the world measure?\n\n7.Your turn - Please take your time here.\nWe might hypothesize that as the percent of older folks increase health care spending increases. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?\n\nUsing the data come up with your question and hypothesis.a) Explore each variable you chose (make sure we haven’t used them yet and that they are different from your friends) b) graph the relationship and tell me what it means.\n\n\n\nPart 2 - Conceptual Questions\n1.In ways your friends would understand, explain why quality research is important for public policy.\n\nIn ways your parents would understand,under what conditions can we claim causality.\nIn ways your neighbors would understand, what is the value of descriptive research?\n\n4.Imagine you are running a research project on the effect of education on youth political participation. List some of the factors (at least 3) that could lead to an endogeneity problem.\n\nWhat is a possible mechanism for the observed relationship between women’s economic opportunities and fertility rate? What is a mechanism in public policy research?\nHow long(hours) did this problem set take you?And who else in the class did you work with while completing it?\nAnything else Dr. Colin should know about you, this class, CMU, life, etc? Feel free to vent"
+    "text": "Thank You\n[Your Name] [your.email@university.edu]\nSlides and replication materials available at [link]\n\n\n\nQuestions and comments welcome"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "problemsets.html",
+    "href": "problemsets.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 22nd\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#title-slide",
+    "href": "problemsets/presentation_template.html#title-slide",
+    "title": "Research Title Here",
+    "section": "Title Slide",
+    "text": "Title Slide"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#research-puzzle",
+    "href": "problemsets/presentation_template.html#research-puzzle",
+    "title": "Research Title Here",
+    "section": "Research Puzzle",
+    "text": "Research Puzzle\n\n\nMotivating Question\nThis is a bulleted list - First bullet - Second bullet - Third Bullet in Bold"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#background-and-literature",
+    "href": "problemsets/presentation_template.html#background-and-literature",
+    "title": "Research Title Here",
+    "section": "Background and Literature",
+    "text": "Background and Literature\nWhat we know\nWhat remains unresolved\n\nGap 1 — brief description\nGap 2 — brief description\n\nThis paper’s answers this question\n\nSpeaker notes: These don’t show up on the screen, but can be useful when building"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#hypotheses",
+    "href": "problemsets/presentation_template.html#hypotheses",
+    "title": "Research Title Here",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nBased on [theory / mechanism], I derive the following expectations:\n\nH1 (Main): As X increases, Y increases, because [mechanism].\nNull Hypothesis If [rival theory] holds, we would instead expect [alternative pattern]."
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#measurement",
+    "href": "problemsets/presentation_template.html#measurement",
+    "title": "Research Title Here",
+    "section": "Measurement",
+    "text": "Measurement"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#descriptive-statistics",
+    "href": "problemsets/presentation_template.html#descriptive-statistics",
+    "title": "Research Title Here",
+    "section": "Descriptive Statistics",
+    "text": "Descriptive Statistics\n\n\n\n\nTable 1: Summary Statistics\n\n\n\n\n\n\n\nUnique\nMissing Pct.\nMean\nSD\nMin\nMedian\nMax\n\n\n\n\nGDP per Capita\n200\n0\n12411.55\n14157.34\n406.23\n7971.36\n120799.93\n\n\nDemocracy\n2\n0\n0.44\n0.50\n0.00\n0.00\n1.00\n\n\nTrade Openness\n200\n0\n55.61\n24.90\n10.81\n54.01\n99.31\n\n\nOutcome\n200\n0\n5.55\n1.19\n2.59\n5.53\n9.11"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#descriptive-statistics-cont.",
+    "href": "problemsets/presentation_template.html#descriptive-statistics-cont.",
+    "title": "Research Title Here",
+    "section": "Descriptive Statistics (cont.)",
+    "text": "Descriptive Statistics (cont.)\n\n\nFigure 1: Distribution of Outcome by Regime Type"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#primary-regression-results",
+    "href": "problemsets/presentation_template.html#primary-regression-results",
+    "title": "Research Title Here",
+    "section": "Primary Regression Results",
+    "text": "Primary Regression Results\n\n\n\n\nTable 2: OLS Regression — Main Results\n\n\n\n\n\n\n\nBivariate\n+ Controls\nFull Model\n\n\n\n\n(Intercept)\n5.132***\n2.746***\n2.418***\n\n\n\n(0.104)\n(0.705)\n(0.695)\n\n\nDemocracy\n0.930***\n0.915***\n0.923***\n\n\n\n(0.157)\n(0.153)\n(0.149)\n\n\nln GDP per Capita\n\n0.267***\n0.241***\n\n\n\n\n(0.078)\n(0.076)\n\n\nTrade Openness\n\n\n0.010***\n\n\n\n\n\n(0.003)\n\n\nNum.Obs.\n200\n200\n200\n\n\nR2\n0.151\n0.199\n0.241\n\n\nR2 Adj.\n0.147\n0.191\n0.230\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey finding: Democracy is positively and significantly associated with the outcome across all specifications."
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#regression-robustness-checks",
+    "href": "problemsets/presentation_template.html#regression-robustness-checks",
+    "title": "Research Title Here",
+    "section": "Regression Robustness Checks",
+    "text": "Regression Robustness Checks\n\n\nFigure 2: Coefficient Plot — Robustness Across Specifications\nThe positive effect of democracy is stable across sample splits and alternative specifications."
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#contributions-qualitative-research-proposal",
+    "href": "problemsets/presentation_template.html#contributions-qualitative-research-proposal",
+    "title": "Research Title Here",
+    "section": "Contributions & Qualitative Research Proposal",
+    "text": "Contributions & Qualitative Research Proposal\nTheoretical Contributions\n\nContribution 1 — how this paper advances existing theory\nContribution 2 — novel mechanism or scope condition identified\n\nEmpirical Contributions\n\nContribution 3 — new data, identification strategy, or case coverage\n\nQualitative Follow-Up\nTo probe the mechanism, future work should conduct [case studies / interviews / process tracing] in:\n\n\n\nCase\nRationale\n\n\n\n\nCountry A\nMost-likely case for H1\n\n\nCountry B\nLeast-likely case — hard test\n\n\nCountry C\nDeviant case — unexplained by model"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#discussion",
+    "href": "problemsets/presentation_template.html#discussion",
+    "title": "Research Title Here",
+    "section": "Discussion",
+    "text": "Discussion\nImplications\nBriefly state what these findings mean for theory and / or policy.\nLimitations and future research\n\nLimitation 1\nLimitation 2"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#conclusion",
+    "href": "problemsets/presentation_template.html#conclusion",
+    "title": "Research Title Here",
+    "section": "Conclusion",
+    "text": "Conclusion\nSummary of findings\n\nFinding 1 — one sentence\nFinding 2 — one sentence\nFinding 3 — one sentence"
+  },
+  {
+    "objectID": "problemsets/presentation_template.html#section",
+    "href": "problemsets/presentation_template.html#section",
+    "title": "Research Title Here",
+    "section": "",
+    "text": "Thank You\n[Your Name] [your.email@university.edu]\nSlides and replication materials available at [link]\n\n\n\nQuestions and comments welcome"
   },
   {
     "objectID": "rcode.html",
@@ -182,41 +364,6 @@
     "text": "Day 4: Concepts and Cleaning\nClass 4\nEnergy Opinion Data\nEnergy Codebook"
   },
   {
-    "objectID": "rcode.html#day-5",
-    "href": "rcode.html#day-5",
-    "title": "R Code",
-    "section": "Day 5",
-    "text": "Day 5\nClass 5"
-  },
-  {
-    "objectID": "rcode.html#day-6",
-    "href": "rcode.html#day-6",
-    "title": "R Code",
-    "section": "Day 6",
-    "text": "Day 6\nClass 6\nBechdel Data"
-  },
-  {
-    "objectID": "rcode.html#day-7",
-    "href": "rcode.html#day-7",
-    "title": "R Code",
-    "section": "Day 7",
-    "text": "Day 7\nClass 7 Regression"
-  },
-  {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Lecture Slides",
-    "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
-  },
-  {
-    "objectID": "rcode.html#day-9",
-    "href": "rcode.html#day-9",
-    "title": "R Code",
-    "section": "Day 9",
-    "text": "Day 9\nMultivariate Regression\nPrem Data\n Wages"
-  },
-  {
     "objectID": "rcode.html#day-5-r-is-my-friend",
     "href": "rcode.html#day-5-r-is-my-friend",
     "title": "R Code",
@@ -249,6 +396,13 @@
     "href": "rcode.html#day-10-more-regression-and-some-experiments",
     "title": "R Code",
     "section": "Day 10: More Regression and some Experiments",
-    "text": "Day 10: More Regression and some Experiments\nMore Regression\nMore Regression HeightandWage\nGerberGreen"
+    "text": "Day 10: More Regression and some Experiments\nMore Regression\nMore Regression\nHeightandWage\nGerberGreen"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
   }
 ]
