@@ -9,7 +9,7 @@ format:
 [**Please submit all files here**](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAMppTdzcqfR5YG-Bn5lvumAV_wGzcCHr_qibmUFrVvBrU)
 
 
-## Presentation Resources
+*Presentation Resources*
 
 <a href="ClassCode/project/mocktalk.qmd" download>Mock Talk</a>
 
