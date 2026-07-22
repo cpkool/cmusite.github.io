@@ -94,7 +94,9 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 <a href="ClassCode/Day 10/GerberGreenData.csv"download>GerberGreen</a>
 
+## Day 11 Thoughts on Visualization
 
+<a href="ClassCode/Day 11/day11visualization.Rmd" download>Some Data Visualization</a>
 
 <!--
 
