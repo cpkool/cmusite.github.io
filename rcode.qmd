@@ -96,5 +96,9 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 ## Day 11 Thoughts on Visualization
 
-<a href="ClassCode/Day 11/day11visualization.Rmd" download>Some Data Visualization</a>
+<a href="ClassCode/Day 11/day11visualization.qmd" download>Some Data Visualization</a>
 
+
+
+
+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
