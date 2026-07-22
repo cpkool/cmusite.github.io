@@ -39,8 +39,6 @@ gwd <- read.csv("gwd.csv")
 
 ```
 
-
-
 ## Research Puzzle
 
 ::::: columns
@@ -54,43 +52,36 @@ gwd <- read.csv("gwd.csv")
 :::
 
 ::: {.column width="45%"}
-
 ![](images/taylor.webp)
 :::
 :::::
 
 ------------------------------------------------------------------------
 
-## Research Question 
+## Research Question
 
 ::::: columns
 ::: {.column width="55%"}
 **Motivating Question**
 
 - Emissions are unequal within countries
-  - Oxfam: The world's richest 1% are responsible for more carbon emissions than the poorest 66% 
-
+  - Oxfam: The world's richest 1% are responsible for more carbon emissions than the poorest 66%
 - **Do more unequal countries do less to mitigate climate change?**
 :::
 
 ::: {.column width="45%"}
-
 ![](images/oxfam.png)
 :::
 :::::
-
 
 ## Background and Literature
 
 **What we know**
 
-
 - There is wide varition in global emissions
-- Much is driven by wealth 
-  - Wealth -> Consumption -> Emissions
+- Much is driven by wealth
+  - Wealth -\> Consumption -\> Emissions
 - Generally, people are supportive of climate policies, but pushback from rich elites can hinder climate action
-
-
 
 ::: notes
 Speaker notes: These don't show up on the screen, but can be useful when building
@@ -99,14 +90,14 @@ Speaker notes: These don't show up on the screen, but can be useful when buildin
 ------------------------------------------------------------------------
 
 ## Hypotheses
+
 I derive the following expectations:
 
 ::: incremental
-- **H1 (Main):** Ceterus paribus,  as *Income inequality* increases, *Per Capita carbon emissions* will also increase
+- **H1 (Main):** Ceterus paribus, as *Income inequality* increases, *Per Capita carbon emissions* will also increase
 
 - **Null Hypothesis** There is no relationship between income inequality and carbon emissions.
 :::
-
 
 ## Income Inequality - Various Measures
 
@@ -147,18 +138,16 @@ gwd |>
 
 ```
 
-
 ## Primary Independent Variable
+
 ::::: columns
 ::: {.column width="55%"}
 - Primary IV: Income Inequality - The distribution of wealth within a country
   - Operationalized using the share of income to the top 10% within each country
   - Date from the World Income Database
-
 :::
 
 ::: {.column width="45%"}
-
 ```{r}
 #| label: fig-distribution
 #| fig-height: 6
@@ -192,19 +181,13 @@ ggplot(gwd, aes(x = wealth_top10_share)) +
 :::
 :::::
 
-
-
-
-
 ## Dependent Variable
+
 ::::: columns
 ::: {.column width="55%"}
-Carbon Emissions - The per capita contribution to climate change
-  - Operationalized as CO2 Emissions in metric tons per capita
-  - Data from the world bank
-  
-*All data are from 2023 or most recent*  
+Carbon Emissions - The per capita contribution to climate change - Operationalized as CO2 Emissions in metric tons per capita - Data from the world bank
 
+*All data are from 2023 or most recent*
 :::
 
 ::: {.column width="45%"}
@@ -241,9 +224,6 @@ gwd <- gwd[!gwd$co2_per_cap %in% tail(sort(gwd$co2_per_cap, na.last = NA), 2), ]
 ```
 :::
 :::::
-
-
-
 
 ## Descriptive Statistics and Controls
 
@@ -323,8 +303,8 @@ ggcorrplot(cor_data,
            ggtheme = theme_minimal())
 ```
 
-
 ## Initial Scatter Plot
+
 ```{r}
 
 
@@ -344,10 +324,6 @@ ggplot(gwd, aes(x = wealth_top10_share, y = co2_per_cap)) +
   ) +
   theme_minimal()
 ```
-
-
-
-
 
 ## Primary Regression Results
 
@@ -377,11 +353,12 @@ modelsummary(
   row_spec(0, bold = TRUE)
 ```
 
-
 ------------------------------------------------------------------------
 
 ## Logged Regression Results
+
 Logging GDP per Capita and CO2 per Capita
+
 ```{r}
 
 gwd$log_co2_per_cap <- log(gwd$co2_per_cap)
@@ -432,7 +409,6 @@ ggplot(gwd, aes(x = wealth_top10_share, y = log_co2_per_cap)) +
   theme_minimal()
 ```
 
-
 ## Standardized Regression
 
 ```{r}
@@ -476,7 +452,9 @@ modelplot(
 ```
 
 ## Alternative Measures of Wealth Inequality
+
 Includes all control variables
+
 ```{r}
 gwd$log_co2_per_cap <- ifelse(gwd$co2_per_cap > 0, log(gwd$co2_per_cap), NA)
 
@@ -515,11 +493,9 @@ modelsummary(
   row_spec(0, bold = TRUE)
 ```
 
-
-
 ------------------------------------------------------------------------
 
-## Contributions & Further Research 
+## Contributions & Further Research
 
 **There does not appear to be a strong relationship between wealth inquality and CO2 Emissions**
 
@@ -529,11 +505,11 @@ modelsummary(
   - Regional Differences
 - Could look at climate policy as DV, rather than emissions
 
+## Contributions & Further Research
 
-## Contributions & Further Research 
 **Qualitative Follow-Up**
 
-To probe the mechanism, future work should conduct process tracing to better understand if or how economic elites shape climate policy.  
+To probe the mechanism, future work should conduct process tracing to better understand if or how economic elites shape climate policy.
 
 - United States as a most crucial case
 - Thailand as "typical" case
@@ -552,15 +528,11 @@ These results suggest wealth inequality is not a meaningful impediment to effect
 - Country Level of analysis
 - Aggrgate Numbers
 
-
-
 ##  {.center}
 
 ### Thank You
 
 **I look forward to your questions**
-
-
 
 ::: {.callout-tip appearance="minimal"}
 *Slides code available on course website*

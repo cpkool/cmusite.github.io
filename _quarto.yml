@@ -41,3 +41,5 @@ resources:
     - "/ClassCode"
     - "/problemsets"
     - "/CNAME"
+    - "problemsets/mocktalk.qmd"
+    - "problemsets/presentation_template.qmd"

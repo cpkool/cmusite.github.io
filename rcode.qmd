@@ -88,8 +88,6 @@ Keeping it simple - Just one file today - download and put in your class folder
 <a href="ClassCode/Day 10/10moreReg.Rmd" download>More Regression</a>
 
 
-<a href="ClassCode/Day 10/10moreReg.Rmd" download>More Regression</a>
-
 <a href="ClassCode/Day 10/HeightWage_MenWomenUS_HW.csv" download>HeightandWage</a>
 
 <a href="ClassCode/Day 10/GerberGreenData.csv"download>GerberGreen</a>
@@ -98,7 +96,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 <a href="ClassCode/Day 11/day11visualization.qmd" download>Some Data Visualization with Quarto</a>
 
+[Some Data Visualization with Quarto](ClassCode/Day 11/day11visualization.qmd){download="day11visualization.qmd"}
 
 
 
-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

@@ -41,39 +41,26 @@ df <- tibble(
 
 ## Title Slide {.center}
 
-
-
-
----
+------------------------------------------------------------------------
 
 ## Research Puzzle
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="55%"}
 **Motivating Question**
 
-
-This is a bulleted list
-- First bullet
-- Second bullet
-- **Third Bullet in Bold** 
-
+This is a bulleted list - First bullet - Second bullet - **Third Bullet in Bold**
 :::
 
 ::: {.column width="45%"}
-
 :::
+:::::
 
-::::
-
----
+------------------------------------------------------------------------
 
 ## Background and Literature
 
 **What we know**
-
-
 
 **What remains unresolved**
 
@@ -82,26 +69,23 @@ This is a bulleted list
 
 **This paper's answers this question**
 
-
-
-::: {.notes}
+::: notes
 Speaker notes: These don't show up on the screen, but can be useful when building
 :::
 
----
+------------------------------------------------------------------------
 
 ## Hypotheses
 
-Based on [theory / mechanism], I derive the following expectations:
+Based on \[theory / mechanism\], I derive the following expectations:
 
-::: {.incremental}
-- **H1 (Main):** As *X* increases, *Y* increases, because [mechanism].
+::: incremental
+- **H1 (Main):** As *X* increases, *Y* increases, because \[mechanism\].
 
-
-- **Null Hypothesis** If [rival theory] holds, we would instead expect [alternative pattern].
+- **Null Hypothesis** If \[rival theory\] holds, we would instead expect \[alternative pattern\].
 :::
 
----
+------------------------------------------------------------------------
 
 ## Measurement
 
@@ -131,7 +115,7 @@ datasummary_skim(
   )
 ```
 
----
+------------------------------------------------------------------------
 
 ## Descriptive Statistics (cont.)
 
@@ -155,7 +139,7 @@ df |>
   theme(legend.position = "top")
 ```
 
----
+------------------------------------------------------------------------
 
 ## Primary Regression Results
 
@@ -183,11 +167,11 @@ modelsummary(
   row_spec(0, bold = TRUE)
 ```
 
-::: {.fragment}
+::: fragment
 **Key finding:** Democracy is positively and significantly associated with the outcome across all specifications.
 :::
 
----
+------------------------------------------------------------------------
 
 ## Regression Robustness Checks
 
@@ -218,7 +202,7 @@ modelplot(
 
 The positive effect of democracy is stable across sample splits and alternative specifications.
 
----
+------------------------------------------------------------------------
 
 ## Contributions & Qualitative Research Proposal
 
@@ -233,15 +217,15 @@ The positive effect of democracy is stable across sample splits and alternative 
 
 **Qualitative Follow-Up**
 
-To probe the mechanism, future work should conduct [case studies / interviews / process tracing] in:
+To probe the mechanism, future work should conduct \[case studies / interviews / process tracing\] in:
 
-| Case | Rationale |
-|------|-----------|
-| Country A | Most-likely case for H1 |
-| Country B | Least-likely case — hard test |
+| Case      | Rationale                           |
+|-----------|-------------------------------------|
+| Country A | Most-likely case for H1             |
+| Country B | Least-likely case — hard test       |
 | Country C | Deviant case — unexplained by model |
 
----
+------------------------------------------------------------------------
 
 ## Discussion
 
@@ -254,7 +238,6 @@ Briefly state what these findings mean for theory and / or policy.
 - Limitation 1
 - Limitation 2
 
-
 ## Conclusion
 
 **Summary of findings**
@@ -263,16 +246,15 @@ Briefly state what these findings mean for theory and / or policy.
 - Finding 2 — one sentence
 - Finding 3 — one sentence
 
----
+------------------------------------------------------------------------
 
-## {.center}
+##  {.center}
 
 ### Thank You
 
-**[Your Name]**
-[your.email@university.edu]
+**\[Your Name\]** \[your.email\@university.edu\]
 
-*Slides and replication materials available at [link]*
+*Slides and replication materials available at \[link\]*
 
 ::: {.callout-tip appearance="minimal"}
 Questions and comments welcome

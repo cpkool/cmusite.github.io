@@ -67,7 +67,7 @@
     "href": "syllabus.html#section",
     "title": "Research Methodology for Public Policy",
     "section": "",
-    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: July 21, 2026"
+    "text": "Please come talk to me if you would like recommendations on these books or the myriad of online resources available to help you teach yourself to code or other aspects of data science\n\nSyllabus Last Updated: July 22, 2026"
   },
   {
     "objectID": "resources.html",
@@ -95,7 +95,7 @@
     "href": "project.html#suggested-slides-for-presentation",
     "title": "Final Project - Policy Brief",
     "section": "Suggested Slides for Presentation",
-    "text": "Suggested Slides for Presentation\n\nTitle Page\nResearch Puzzle\nExisting Literature\nHypotheses\nDescriptive Statistics x 2\nPrimary Regression Results\nRegression Robustness Checks\nContributions and Qualitative Research Proposal\nConclusion and Thank you\n\nPresentation QMD Template\nMock Talk Quarto\nMock Talk"
+    "text": "Suggested Slides for Presentation\n\nTitle Page\nResearch Puzzle\nExisting Literature\nHypotheses\nDescriptive Statistics x 2\nPrimary Regression Results\nRegression Robustness Checks\nContributions and Qualitative Research Proposal\nConclusion and Thank you"
   },
   {
     "objectID": "project.html#authorship-and-plagiarism",
@@ -112,18 +112,151 @@
     "text": "Key Dates\n\n\n\nComponent\nDue Date\n\n\n\n\nResearch Proposal\nFriday, July 10\n\n\nInitial Analysis\nMonday, July 20\n\n\nFinal report\nSaturday, July 25\n\n\nPresentations\nFriday, July 24\n\n\n\n&lt;"
   },
   {
-    "objectID": "problemsets/ProblemSet1.html",
-    "href": "problemsets/ProblemSet1.html",
-    "title": "Problem Set 1",
-    "section": "",
-    "text": "Introduction\nWelcome to your first problem set. It consists of two sections. The first asks you to analyze data on international development. The second asks conceptual questions about political science methods. Please be sure that you answer every question(and each subquestion)thoroughly.\nGive yourself plenty of time to complete the assignment (You will need to build in time for R frustration, freakouts, celebrations, etc.) Please fill in your answers to each question below where it is written. For questions that require coding with R complete your coding in the sections provided and write out answers, if necessary, in the text section. Remember to render as you go and be sure the work you turn in is your own.\n*Please submit both your html file and the quarto file on the course website before the deadline of 23:59 on Friday, July 10th. Label your file with pset#_name (ie pset1_colin.html) *\n\n\nPart 1 - Data Analysis\nThis week we are going to look at some development data from the world bank and other sources.\nThe datset is development.Rdata and the codebook(development_codebook.csv) gives information on each variable. Most data are from 2022. This is a large dataset you can consider using for your final project.\n\nSet up: Load the world bank dataset.\n\n\nA first look at the data: a) Show the first few rows of the data b) How many observations are in this dataset? c) How many variables? d) show the names of each of the variables.\n\n\nDescriptive statistics: Lets look at the variable wbl_index. This is a composite measure that summarizes how legal frameworks shape women’s economic opportunities\n\na) Find the mean, median, variance, max, and min for this indicator. In cases where a variable has missing values R will return an NA. Just add , na.rm=T (ie mean(dataset$variablename, na.rm=T)) to your command to tell it to ignore these values. b) Produce a histogram of wbl_index (Be sure that it is properly labeled) The use of colors etc. is encouraged.\n\nLook through the codebook and find a variable you find interesting. Repeat 3a and 3b above. What do you find interesting or surprising\n\n\nLooking at relationships: We might hypothesize that as women’s economic opportunities increase, the fertility rate goes down. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?  Bonus: Use country code instead of dots in the scatterplot in the scatterplot\n\n\nAlternative Explanations: Using variables from the dataset think of your own alternative hypothesis for the rate of fertility rate a) What is the new independent variable b)Create a scatter plot of the relationship c) add a trend line for the hypothesized relationship d) How would you describe the relationship? Does it support your theory. f)Is the relationship causal? why or why not?\n\n\nReturning to the relationship in question 5. You question if the same relationship holds in East Asia & Pacific. Run the same analysis just using East Asia and Pacific countries.\n\n\nNew Question: We’re interested in how the aging population shapes health care spengin. a) Create a new variable that is the percentage of the population that is over 64 years old (hint: check the codebook).b) find the mean, median, and variation of this new variable c) create a boxplot comparing the percentage of old folks in different regions of the world measure?\n\n7.Your turn - Please take your time here.\nWe might hypothesize that as the percent of older folks increase health care spending increases. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?\n\nUsing the data come up with your question and hypothesis.a) Explore each variable you chose (make sure we haven’t used them yet and that they are different from your friends) b) graph the relationship and tell me what it means.\n\n\n\nPart 2 - Conceptual Questions\n1.In ways your friends would understand, explain why quality research is important for public policy.\n\nIn ways your parents would understand,under what conditions can we claim causality.\nIn ways your neighbors would understand, what is the value of descriptive research?\n\n4.Imagine you are running a research project on the effect of education on youth political participation. List some of the factors (at least 3) that could lead to an endogeneity problem.\n\nWhat is a possible mechanism for the observed relationship between women’s economic opportunities and fertility rate? What is a mechanism in public policy research?\nHow long(hours) did this problem set take you?And who else in the class did you work with while completing it?\nAnything else Dr. Colin should know about you, this class, CMU, life, etc? Feel free to vent"
+    "objectID": "problemsets/mocktalk.html#research-puzzle",
+    "href": "problemsets/mocktalk.html#research-puzzle",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Research Puzzle",
+    "text": "Research Puzzle\n\n\nMotivating Question\n\nClimate Change is an existential global challenge\nCountries and people need to reduce their emissions yesterday\nEconomic inequality leads to elites having more political power\nNational climate policies have a large impact on emissions"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Research for Public Policy - Dr. Colin Kuehl",
+    "objectID": "problemsets/mocktalk.html#research-question",
+    "href": "problemsets/mocktalk.html#research-question",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Research Question",
+    "text": "Research Question\n\n\nMotivating Question\n\nEmissions are unequal within countries\n\nOxfam: The world’s richest 1% are responsible for more carbon emissions than the poorest 66%\n\nDo more unequal countries do less to mitigate climate change?"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#background-and-literature",
+    "href": "problemsets/mocktalk.html#background-and-literature",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Background and Literature",
+    "text": "Background and Literature\nWhat we know\n\nThere is wide varition in global emissions\nMuch is driven by wealth\n\nWealth -&gt; Consumption -&gt; Emissions\n\nGenerally, people are supportive of climate policies, but pushback from rich elites can hinder climate action\n\n\nSpeaker notes: These don’t show up on the screen, but can be useful when building"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#hypotheses",
+    "href": "problemsets/mocktalk.html#hypotheses",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Hypotheses",
+    "text": "Hypotheses\nI derive the following expectations:\n\nH1 (Main): Ceterus paribus, as Income inequality increases, Per Capita carbon emissions will also increase\nNull Hypothesis There is no relationship between income inequality and carbon emissions."
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#income-inequality---various-measures",
+    "href": "problemsets/mocktalk.html#income-inequality---various-measures",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Income Inequality - Various Measures",
+    "text": "Income Inequality - Various Measures\n\n\nFigure 1"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#primary-independent-variable",
+    "href": "problemsets/mocktalk.html#primary-independent-variable",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Primary Independent Variable",
+    "text": "Primary Independent Variable\n\n\n\nPrimary IV: Income Inequality - The distribution of wealth within a country\n\nOperationalized using the share of income to the top 10% within each country\nDate from the World Income Database\n\n\n\n\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#dependent-variable",
+    "href": "problemsets/mocktalk.html#dependent-variable",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Dependent Variable",
+    "text": "Dependent Variable\n\n\nCarbon Emissions - The per capita contribution to climate change - Operationalized as CO2 Emissions in metric tons per capita - Data from the world bank\nAll data are from 2023 or most recent"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#descriptive-statistics-and-controls",
+    "href": "problemsets/mocktalk.html#descriptive-statistics-and-controls",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Descriptive Statistics and Controls",
+    "text": "Descriptive Statistics and Controls\n\n\n\n\nTable 1: Summary Statistics\n\n\n\n\nTable 1: Descriptive Statistics\n\n\nVariable\nMean\nMedian\nSD\nMin\nMax\nN\n\n\n\n\nIncome Share: Top 10%\n28.41\n27.45\n5.16\n19.90\n42.70\n146\n\n\nCO2 per Capita (tonnes)\n3.91\n2.49\n4.66\n0.00\n24.53\n201\n\n\nGDP per Capita (thousands USD)\n22.04\n7.82\n33.47\n0.25\n256.80\n202\n\n\nAgricultural Land (%)\n37.44\n38.12\n22.57\n0.45\n86.48\n207\n\n\nGDP Growth (%)\n3.42\n3.20\n6.84\n-29.43\n75.31\n202\n\n\nElectricity Access (%)\n88.07\n100.00\n22.51\n5.40\n100.00\n213"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#correlation-matrix",
+    "href": "problemsets/mocktalk.html#correlation-matrix",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Correlation Matrix",
+    "text": "Correlation Matrix"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#initial-scatter-plot",
+    "href": "problemsets/mocktalk.html#initial-scatter-plot",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Initial Scatter Plot",
+    "text": "Initial Scatter Plot"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#primary-regression-results",
+    "href": "problemsets/mocktalk.html#primary-regression-results",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Primary Regression Results",
+    "text": "Primary Regression Results\n\n\n\n\nTable 2: OLS Regression — Main Results\n\n\n\n\n\n\n\nBivariate\n+ GDP Per Capta\nFull Model\nAdd Controls\n\n\n\n\n(Intercept)\n10.752***\n5.812***\n6.325***\n1.372\n\n\n\n(1.534)\n(1.454)\n(1.533)\n(1.910)\n\n\nincome_share_top10\n−0.255***\n−0.129***\n−0.121**\n−0.075\n\n\n\n(0.053)\n(0.048)\n(0.048)\n(0.047)\n\n\ngdp_pc\n\n0.079***\n0.079***\n0.069***\n\n\n\n\n(0.010)\n(0.011)\n(0.010)\n\n\nag_land\n\n\n−0.020*\n−0.016\n\n\n\n\n\n(0.011)\n(0.011)\n\n\ngdp_growth\n\n\n0.033\n0.067\n\n\n\n\n\n(0.085)\n(0.081)\n\n\nelectricity_access\n\n\n\n0.041***\n\n\n\n\n\n\n(0.010)\n\n\nNum.Obs.\n141\n140\n140\n140\n\n\nR2\n0.143\n0.411\n0.425\n0.487\n\n\nR2 Adj.\n0.136\n0.402\n0.408\n0.467\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#logged-regression-results",
+    "href": "problemsets/mocktalk.html#logged-regression-results",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Logged Regression Results",
+    "text": "Logged Regression Results\nLogging GDP per Capita and CO2 per Capita\n\n\n\n\n\n\nBivariate\n+ GDP Per Capita\n+ Land & Growth\n+ Electricity\n\n\n\n\n(Intercept)\n3.369***\n−0.440\n−0.796\n−2.205***\n\n\n\n(0.635)\n(0.493)\n(0.529)\n(0.570)\n\n\nIncome Share Top 10%\n−0.098***\n−0.017\n−0.014\n−0.007\n\n\n\n(0.022)\n(0.015)\n(0.015)\n(0.014)\n\n\nln GDP per Capita\n\n0.776***\n0.830***\n0.595***\n\n\n\n\n(0.055)\n(0.059)\n(0.073)\n\n\nAgricultural Land\n\n\n−0.002\n−0.002\n\n\n\n\n\n(0.004)\n(0.003)\n\n\nGDP Growth\n\n\n0.072***\n0.061**\n\n\n\n\n\n(0.027)\n(0.025)\n\n\nElectricity Access\n\n\n\n0.020***\n\n\n\n\n\n\n(0.004)\n\n\nNum.Obs.\n141\n140\n140\n140\n\n\nR2\n0.126\n0.647\n0.665\n0.714\n\n\nR2 Adj.\n0.120\n0.642\n0.655\n0.704\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#plotting-with-co2-logged",
+    "href": "problemsets/mocktalk.html#plotting-with-co2-logged",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Plotting with CO2 Logged",
+    "text": "Plotting with CO2 Logged"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#standardized-regression",
+    "href": "problemsets/mocktalk.html#standardized-regression",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Standardized Regression",
+    "text": "Standardized Regression\n\n\nFigure 3: Coefficient Plot"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#alternative-measures-of-wealth-inequality",
+    "href": "problemsets/mocktalk.html#alternative-measures-of-wealth-inequality",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Alternative Measures of Wealth Inequality",
+    "text": "Alternative Measures of Wealth Inequality\nIncludes all control variables\n\n\n\n\n\n\n&nbsp;Income Share Top 10\nGini (post-tax)\nGini (pre-tax)\n&nbsp;Income Share Top 1\n&nbsp;Wealth Top 10\nWealth Top 1\n\n\n\n\nIncome Share Top 10%\n−0.007\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\n\n\n\n\nGini (post-tax)\n\n0.015*\n\n\n\n\n\n\n\n\n(0.008)\n\n\n\n\n\n\nGini (pre-tax)\n\n\n0.012\n\n\n\n\n\n\n\n\n(0.010)\n\n\n\n\n\nIncome Share Top 1%\n\n\n\n0.016\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\n\nWealth Share Top 10%\n\n\n\n\n0.018\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\nWealth Share Top 1%\n\n\n\n\n\n0.017\n\n\n\n\n\n\n\n\n(0.012)\n\n\nNum.Obs.\n140\n186\n186\n186\n186\n186\n\n\nR2\n0.714\n0.633\n0.630\n0.629\n0.630\n0.631\n\n\nR2 Adj.\n0.704\n0.623\n0.619\n0.619\n0.620\n0.621\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#contributions-further-research",
+    "href": "problemsets/mocktalk.html#contributions-further-research",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Contributions & Further Research",
+    "text": "Contributions & Further Research\nThere does not appear to be a strong relationship between wealth inquality and CO2 Emissions\n\nPotential Omitted Variable Bias\n\nPolitical Insitutions - Democracies and Interest group systems - ie how elites preferences are heard\nOil Dependent Economies\nRegional Differences\n\nCould look at climate policy as DV, rather than emissions"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#contributions-further-research-1",
+    "href": "problemsets/mocktalk.html#contributions-further-research-1",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Contributions & Further Research",
+    "text": "Contributions & Further Research\nQualitative Follow-Up\nTo probe the mechanism, future work should conduct process tracing to better understand if or how economic elites shape climate policy.\n\nUnited States as a most crucial case\nThailand as “typical” case\n\nCase studies of wealthy people/companies in each country"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#discussion",
+    "href": "problemsets/mocktalk.html#discussion",
+    "title": "Inequality and Climate Change Impacts",
+    "section": "Discussion",
+    "text": "Discussion\nPolicy Implications\nThese results suggest wealth inequality is not a meaningful impediment to effective climate policy\nLimitations\n\nOne year snapshot\nCountry Level of analysis\nAggrgate Numbers"
+  },
+  {
+    "objectID": "problemsets/mocktalk.html#section",
+    "href": "problemsets/mocktalk.html#section",
+    "title": "Inequality and Climate Change Impacts",
     "section": "",
-    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
+    "text": "Thank You\nI look forward to your questions\n\n\n\nSlides code available on course website"
+  },
+  {
+    "objectID": "problemsets.html",
+    "href": "problemsets.html",
+    "title": "Problem Sets",
+    "section": "",
+    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 22nd\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "Data/presentation_template.html#title-slide",
@@ -217,18 +350,18 @@
     "text": "Thank You\n[Your Name] [your.email@university.edu]\nSlides and replication materials available at [link]\n\n\n\nQuestions and comments welcome"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Research for Public Policy - Dr. Colin Kuehl",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to the course website for Research Methodology for Public Policy.\nThis course introduces the fundamental concepts of research design and data analysis using R. No prior programming experience required.\nPlease check out the Syllabus for detailed course information. This website will be updated as our first day approaches and then throughout the course.\nIf you have questions please email Dr. Colin at ckuehl@niu.edu"
   },
   {
-    "objectID": "problemsets.html",
-    "href": "problemsets.html",
-    "title": "Problem Sets",
+    "objectID": "problemsets/ProblemSet1.html",
+    "href": "problemsets/ProblemSet1.html",
+    "title": "Problem Set 1",
     "section": "",
-    "text": "Problem Set Due Dates\n\nProblem Set #1: July 10th\nProblem Set #2: July 14th\nProblem Set #3: July 17th\nProblem Set #4: July 22nd\n\nProblem sets are completed individually, but you can work with each other as you complete them. Each includes a data file and a starter R script. Download both, complete your work in RStudio, and submit your rendered .html Quarto file by 11:59pm on the due date.\nPlease submit all files HERE. Label your file with pset#_name (ie pset1_colin.html)\n\n\nProblem Set #1\nProblem Set 1\nData\nCodebook\n\n\nProblem Set #2\nProblem Set 2\n\n\nProblem Set #3\nProblem Set 3\nData Problem Set 3\nProfessor Chaos\n\n\nProblem Set #4\nProblem Set 3\nData Problem Set 3"
+    "text": "Introduction\nWelcome to your first problem set. It consists of two sections. The first asks you to analyze data on international development. The second asks conceptual questions about political science methods. Please be sure that you answer every question(and each subquestion)thoroughly.\nGive yourself plenty of time to complete the assignment (You will need to build in time for R frustration, freakouts, celebrations, etc.) Please fill in your answers to each question below where it is written. For questions that require coding with R complete your coding in the sections provided and write out answers, if necessary, in the text section. Remember to render as you go and be sure the work you turn in is your own.\n*Please submit both your html file and the quarto file on the course website before the deadline of 23:59 on Friday, July 10th. Label your file with pset#_name (ie pset1_colin.html) *\n\n\nPart 1 - Data Analysis\nThis week we are going to look at some development data from the world bank and other sources.\nThe datset is development.Rdata and the codebook(development_codebook.csv) gives information on each variable. Most data are from 2022. This is a large dataset you can consider using for your final project.\n\nSet up: Load the world bank dataset.\n\n\nA first look at the data: a) Show the first few rows of the data b) How many observations are in this dataset? c) How many variables? d) show the names of each of the variables.\n\n\nDescriptive statistics: Lets look at the variable wbl_index. This is a composite measure that summarizes how legal frameworks shape women’s economic opportunities\n\na) Find the mean, median, variance, max, and min for this indicator. In cases where a variable has missing values R will return an NA. Just add , na.rm=T (ie mean(dataset$variablename, na.rm=T)) to your command to tell it to ignore these values. b) Produce a histogram of wbl_index (Be sure that it is properly labeled) The use of colors etc. is encouraged.\n\nLook through the codebook and find a variable you find interesting. Repeat 3a and 3b above. What do you find interesting or surprising\n\n\nLooking at relationships: We might hypothesize that as women’s economic opportunities increase, the fertility rate goes down. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?  Bonus: Use country code instead of dots in the scatterplot in the scatterplot\n\n\nAlternative Explanations: Using variables from the dataset think of your own alternative hypothesis for the rate of fertility rate a) What is the new independent variable b)Create a scatter plot of the relationship c) add a trend line for the hypothesized relationship d) How would you describe the relationship? Does it support your theory. f)Is the relationship causal? why or why not?\n\n\nReturning to the relationship in question 5. You question if the same relationship holds in East Asia & Pacific. Run the same analysis just using East Asia and Pacific countries.\n\n\nNew Question: We’re interested in how the aging population shapes health care spengin. a) Create a new variable that is the percentage of the population that is over 64 years old (hint: check the codebook).b) find the mean, median, and variation of this new variable c) create a boxplot comparing the percentage of old folks in different regions of the world measure?\n\n7.Your turn - Please take your time here.\nWe might hypothesize that as the percent of older folks increase health care spending increases. In this scenario . . . a) What is the independent variable b) What is the dependent variable? c)Create a scatter plot of the relationship(Be sure each is on the correct axis and that everything is labelled) d) add a trend line for the hypothesized relationship e) How would you describe the relationship? f)Is the relationship causal? why or why not?\n\nUsing the data come up with your question and hypothesis.a) Explore each variable you chose (make sure we haven’t used them yet and that they are different from your friends) b) graph the relationship and tell me what it means.\n\n\n\nPart 2 - Conceptual Questions\n1.In ways your friends would understand, explain why quality research is important for public policy.\n\nIn ways your parents would understand,under what conditions can we claim causality.\nIn ways your neighbors would understand, what is the value of descriptive research?\n\n4.Imagine you are running a research project on the effect of education on youth political participation. List some of the factors (at least 3) that could lead to an endogeneity problem.\n\nWhat is a possible mechanism for the observed relationship between women’s economic opportunities and fertility rate? What is a mechanism in public policy research?\nHow long(hours) did this problem set take you?And who else in the class did you work with while completing it?\nAnything else Dr. Colin should know about you, this class, CMU, life, etc? Feel free to vent"
   },
   {
     "objectID": "problemsets/presentation_template.html#title-slide",
@@ -396,7 +529,14 @@
     "href": "rcode.html#day-10-more-regression-and-some-experiments",
     "title": "R Code",
     "section": "Day 10: More Regression and some Experiments",
-    "text": "Day 10: More Regression and some Experiments\nMore Regression\nMore Regression\nHeightandWage\nGerberGreen"
+    "text": "Day 10: More Regression and some Experiments\nMore Regression\nHeightandWage\nGerberGreen"
+  },
+  {
+    "objectID": "rcode.html#day-11-thoughts-on-visualization",
+    "href": "rcode.html#day-11-thoughts-on-visualization",
+    "title": "R Code",
+    "section": "Day 11 Thoughts on Visualization",
+    "text": "Day 11 Thoughts on Visualization\nSome Data Visualization with Quarto\nSome Data Visualization with Quarto"
   },
   {
     "objectID": "slides.html",
@@ -406,143 +546,10 @@
     "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
   },
   {
-    "objectID": "rcode.html#day-11-thoughts-on-visualization",
-    "href": "rcode.html#day-11-thoughts-on-visualization",
-    "title": "R Code",
-    "section": "Day 11 Thoughts on Visualization",
-    "text": "Day 11 Thoughts on Visualization\nSome Data Visualization with Quarto\n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"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#research-puzzle",
-    "href": "problemsets/mocktalk.html#research-puzzle",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Research Puzzle",
-    "text": "Research Puzzle\n\n\nMotivating Question\n\nClimate Change is an existential global challenge\nCountries and people need to reduce their emissions yesterday\nEconomic inequality leads to elites having more political power\nNational climate policies have a large impact on emissions"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#research-question",
-    "href": "problemsets/mocktalk.html#research-question",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Research Question",
-    "text": "Research Question\n\n\nMotivating Question\n\nEmissions are unequal within countries\n\nOxfam: The world’s richest 1% are responsible for more carbon emissions than the poorest 66%\n\nDo more unequal countries do less to mitigate climate change?"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#background-and-literature",
-    "href": "problemsets/mocktalk.html#background-and-literature",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Background and Literature",
-    "text": "Background and Literature\nWhat we know\n\nThere is wide varition in global emissions\nMuch is driven by wealth\n\nWealth -&gt; Consumption -&gt; Emissions\n\nGenerally, people are supportive of climate policies, but pushback from rich elites can hinder climate action\n\n\nSpeaker notes: These don’t show up on the screen, but can be useful when building"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#hypotheses",
-    "href": "problemsets/mocktalk.html#hypotheses",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Hypotheses",
-    "text": "Hypotheses\nI derive the following expectations:\n\nH1 (Main): Ceterus paribus, as Income inequality increases, Per Capita carbon emissions will also increase\nNull Hypothesis There is no relationship between income inequality and carbon emissions."
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#income-inequality---various-measures",
-    "href": "problemsets/mocktalk.html#income-inequality---various-measures",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Income Inequality - Various Measures",
-    "text": "Income Inequality - Various Measures\n\n\nFigure 1"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#primary-independent-variable",
-    "href": "problemsets/mocktalk.html#primary-independent-variable",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Primary Independent Variable",
-    "text": "Primary Independent Variable\n\n\n\nPrimary IV: Income Inequality - The distribution of wealth within a country\n\nOperationalized using the share of income to the top 10% within each country\nDate from the World Income Database\n\n\n\n\n\n\n\n\n\n\n\nFigure 2"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#dependent-variable",
-    "href": "problemsets/mocktalk.html#dependent-variable",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Dependent Variable",
-    "text": "Dependent Variable\n\n\nCarbon Emissions - The per capita contribution to climate change - Operationalized as CO2 Emissions in metric tons per capita - Data from the world bank\nAll data are from 2023 or most recent"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#descriptive-statistics-and-controls",
-    "href": "problemsets/mocktalk.html#descriptive-statistics-and-controls",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Descriptive Statistics and Controls",
-    "text": "Descriptive Statistics and Controls\n\n\n\n\nTable 1: Summary Statistics\n\n\n\n\nTable 1: Descriptive Statistics\n\n\nVariable\nMean\nMedian\nSD\nMin\nMax\nN\n\n\n\n\nIncome Share: Top 10%\n28.41\n27.45\n5.16\n19.90\n42.70\n146\n\n\nCO2 per Capita (tonnes)\n3.91\n2.49\n4.66\n0.00\n24.53\n201\n\n\nGDP per Capita (thousands USD)\n22.04\n7.82\n33.47\n0.25\n256.80\n202\n\n\nAgricultural Land (%)\n37.44\n38.12\n22.57\n0.45\n86.48\n207\n\n\nGDP Growth (%)\n3.42\n3.20\n6.84\n-29.43\n75.31\n202\n\n\nElectricity Access (%)\n88.07\n100.00\n22.51\n5.40\n100.00\n213"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#correlation-matrix",
-    "href": "problemsets/mocktalk.html#correlation-matrix",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Correlation Matrix",
-    "text": "Correlation Matrix"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#initial-scatter-plot",
-    "href": "problemsets/mocktalk.html#initial-scatter-plot",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Initial Scatter Plot",
-    "text": "Initial Scatter Plot"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#primary-regression-results",
-    "href": "problemsets/mocktalk.html#primary-regression-results",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Primary Regression Results",
-    "text": "Primary Regression Results\n\n\n\n\nTable 2: OLS Regression — Main Results\n\n\n\n\n\n\n\nBivariate\n+ GDP Per Capta\nFull Model\nAdd Controls\n\n\n\n\n(Intercept)\n10.752***\n5.812***\n6.325***\n1.372\n\n\n\n(1.534)\n(1.454)\n(1.533)\n(1.910)\n\n\nincome_share_top10\n−0.255***\n−0.129***\n−0.121**\n−0.075\n\n\n\n(0.053)\n(0.048)\n(0.048)\n(0.047)\n\n\ngdp_pc\n\n0.079***\n0.079***\n0.069***\n\n\n\n\n(0.010)\n(0.011)\n(0.010)\n\n\nag_land\n\n\n−0.020*\n−0.016\n\n\n\n\n\n(0.011)\n(0.011)\n\n\ngdp_growth\n\n\n0.033\n0.067\n\n\n\n\n\n(0.085)\n(0.081)\n\n\nelectricity_access\n\n\n\n0.041***\n\n\n\n\n\n\n(0.010)\n\n\nNum.Obs.\n141\n140\n140\n140\n\n\nR2\n0.143\n0.411\n0.425\n0.487\n\n\nR2 Adj.\n0.136\n0.402\n0.408\n0.467\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#logged-regression-results",
-    "href": "problemsets/mocktalk.html#logged-regression-results",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Logged Regression Results",
-    "text": "Logged Regression Results\nLogging GDP per Capita and CO2 per Capita\n\n\n\n\n\n\nBivariate\n+ GDP Per Capita\n+ Land & Growth\n+ Electricity\n\n\n\n\n(Intercept)\n3.369***\n−0.440\n−0.796\n−2.205***\n\n\n\n(0.635)\n(0.493)\n(0.529)\n(0.570)\n\n\nIncome Share Top 10%\n−0.098***\n−0.017\n−0.014\n−0.007\n\n\n\n(0.022)\n(0.015)\n(0.015)\n(0.014)\n\n\nln GDP per Capita\n\n0.776***\n0.830***\n0.595***\n\n\n\n\n(0.055)\n(0.059)\n(0.073)\n\n\nAgricultural Land\n\n\n−0.002\n−0.002\n\n\n\n\n\n(0.004)\n(0.003)\n\n\nGDP Growth\n\n\n0.072***\n0.061**\n\n\n\n\n\n(0.027)\n(0.025)\n\n\nElectricity Access\n\n\n\n0.020***\n\n\n\n\n\n\n(0.004)\n\n\nNum.Obs.\n141\n140\n140\n140\n\n\nR2\n0.126\n0.647\n0.665\n0.714\n\n\nR2 Adj.\n0.120\n0.642\n0.655\n0.704\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#plotting-with-co2-logged",
-    "href": "problemsets/mocktalk.html#plotting-with-co2-logged",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Plotting with CO2 Logged",
-    "text": "Plotting with CO2 Logged"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#standardized-regression",
-    "href": "problemsets/mocktalk.html#standardized-regression",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Standardized Regression",
-    "text": "Standardized Regression\n\n\nFigure 3: Coefficient Plot"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#alternative-measures-of-wealth-inequality",
-    "href": "problemsets/mocktalk.html#alternative-measures-of-wealth-inequality",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Alternative Measures of Wealth Inequality",
-    "text": "Alternative Measures of Wealth Inequality\nIncludes all control variables\n\n\n\n\n\n\n&nbsp;Income Share Top 10\nGini (post-tax)\nGini (pre-tax)\n&nbsp;Income Share Top 1\n&nbsp;Wealth Top 10\nWealth Top 1\n\n\n\n\nIncome Share Top 10%\n−0.007\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\n\n\n\n\nGini (post-tax)\n\n0.015*\n\n\n\n\n\n\n\n\n(0.008)\n\n\n\n\n\n\nGini (pre-tax)\n\n\n0.012\n\n\n\n\n\n\n\n\n(0.010)\n\n\n\n\n\nIncome Share Top 1%\n\n\n\n0.016\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\n\nWealth Share Top 10%\n\n\n\n\n0.018\n\n\n\n\n\n\n\n\n(0.014)\n\n\n\nWealth Share Top 1%\n\n\n\n\n\n0.017\n\n\n\n\n\n\n\n\n(0.012)\n\n\nNum.Obs.\n140\n186\n186\n186\n186\n186\n\n\nR2\n0.714\n0.633\n0.630\n0.629\n0.630\n0.631\n\n\nR2 Adj.\n0.704\n0.623\n0.619\n0.619\n0.620\n0.621\n\n\n\n * p &lt; 0.1, ** p &lt; 0.05, *** p &lt; 0.01"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#contributions-further-research",
-    "href": "problemsets/mocktalk.html#contributions-further-research",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Contributions & Further Research",
-    "text": "Contributions & Further Research\nThere does not appear to be a strong relationship between wealth inquality and CO2 Emissions\n\nPotential Omitted Variable Bias\n\nPolitical Insitutions - Democracies and Interest group systems - ie how elites preferences are heard\nOil Dependent Economies\nRegional Differences\n\nCould look at climate policy as DV, rather than emissions"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#contributions-further-research-1",
-    "href": "problemsets/mocktalk.html#contributions-further-research-1",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Contributions & Further Research",
-    "text": "Contributions & Further Research\nQualitative Follow-Up\nTo probe the mechanism, future work should conduct process tracing to better understand if or how economic elites shape climate policy.\n\nUnited States as a most crucial case\nThailand as “typical” case\n\nCase studies of wealthy people/companies in each country"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#discussion",
-    "href": "problemsets/mocktalk.html#discussion",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "Discussion",
-    "text": "Discussion\nPolicy Implications\nThese results suggest wealth inequality is not a meaningful impediment to effective climate policy\nLimitations\n\nOne year snapshot\nCountry Level of analysis\nAggrgate Numbers"
-  },
-  {
-    "objectID": "problemsets/mocktalk.html#section",
-    "href": "problemsets/mocktalk.html#section",
-    "title": "Inequality and Climate Change Impacts",
-    "section": "",
-    "text": "Thank You\nI look forward to your questions\n\n\n\nSlides code available on course website"
+    "objectID": "project.html#presentation-resources",
+    "href": "project.html#presentation-resources",
+    "title": "Final Project - Policy Brief",
+    "section": "Presentation Resources",
+    "text": "Presentation Resources\nMock Talk\nPresentation Template"
   }
 ]

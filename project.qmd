@@ -8,6 +8,13 @@ format:
 
 [**Please submit all files here**](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAMppTdzcqfR5YG-Bn5lvumAV_wGzcCHr_qibmUFrVvBrU)
 
+
+## Presentation Resources
+
+<a href="ClassCode/project/mocktalk.qmd" download>Mock Talk</a>
+
+<a href="ClassCode/project/presentation_template.qmd" download>Presentation Template</a>
+
 # **Overview**
 
 The aim of your final project is to complete a shortened version of a rigorous researched policy brief with a heavy emphasis on the methodology and results section. The focus will be on of methodology, description of data, and analysis of results. It will rely ability to complete your analysis using the R programming language and to communicate the results of your analysis to a professional audience. In other words, show off everything you've learned in this class. You will spend less time and energy on reviewing previous literature and cases or connections to theory.  Your are not expected to conduct novel research nor make a clear theoretical contribution, but you are expected to uphold social science standards of quantitative analysis. You will also present your results to the class during the final week. This project is worth 40% of your final grade.
@@ -169,11 +176,7 @@ You will also will be expected to turn in the relevant R code and your data. You
 8. Contributions and Qualitative Research Proposal
 9. Conclusion and Thank you
 
-<a href="problemsets/presentation_template.qmd" download="presentation_template.qmd">Presentation QMD Template</a>
 
-<a href="problemsets/mocktalk.qmd" download="mocktalk.qmd">Mock Talk Quarto</a>
-
-<a href="problemsets/mocktalk.html" download>Mock Talk</a>
 
 ## **Authorship and Plagiarism**
 You may use your notes, book, and any other non-human (printed or web-based) resource to complete this final project. However, **you may not work together.** I will gladly help with general tasks such as topic and hypothesis selection, but will not provide help on specifics. I will not help with specific coding tasks, particularly those that were covered in class or on problem sets. If you are really stuck reach out, but the expectation is that the course and problem sets have prepared you to complete the code.
