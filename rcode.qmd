@@ -98,5 +98,10 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 [Some Data Visualization with Quarto](ClassCode/Day 11/day11visualization.qmd){download="day11visualization.qmd"}
 
+## Day 12 Last day play
 
+[Myanmar Conflict Exploration](ClassCode/Day 11/MyanmarConflictExplore.qmd){download="MyanmarConflictExplore.qmd"}
+
+
+[Acled Myanmar Data](https://niuits-my.sharepoint.com/:x:/g/personal/a1837136_mail_niu_edu/IQCm0iyJ3p5kS5jfz1djZdWZARPXjMXJDDIcBqphSMCRpsI?e=AOoMHN)  (Download to csv and load)
 

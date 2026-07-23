@@ -1,0 +1,475 @@
+---
+title: "Initial Analysis of Acled Data in Myanmar"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+These data come from the Armed Conflict Location and Event Data [ACLED](https://acleddata.com/) from Myanmar. The group collects, analyses, and maps data on conflict and protest around the world. Most data collection is through analysis of news reports and local reports. Though far from perfect, the data are widely recognized around the world. A codebook is appended. 
+
+
+#Preamble
+```{r}
+#| echo: false
+library(treemap)
+library(ggplot2)
+library(tidyverse)
+library(RColorBrewer)
+
+
+
+#Set Up
+setwd("~/Dropbox/POLS 641/CMU Su26/New Data/Acled")
+
+acled <- read_csv("ACLED Data July 13 2026.csv")
+
+# New Variables
+acled <- acled %>%
+  mutate(year_month = as.Date(format(event_date, "%Y-%m-01")),
+  civilian_targeting_bi = if_else(civilian_targeting == "Civilian targeting", 1L, 0L, missing=0L))
+
+
+
+
+
+# Relavant Subsets
+#sampled_acled <- acled %>% slice_sample(n = 1000)
+
+#write.csv(sampled_acled, file="sample.csv")
+
+myan2024 <- acled %>% filter(year==2024)
+
+
+```
+
+# What - Event Types
+```{r}
+#| echo: false
+
+prop.table(table(acled$disorder_type))
+
+prop.table(table(acled$event_type))
+
+
+prop.table(table(acled$sub_event_type))
+```
+
+
+```{r}
+#| echo: false
+
+inter1_counts <- as.data.frame(table(acled$sub_event_type)) %>%
+  rename(sub_event_type = Var1, count = Freq)
+
+treemap(inter1_counts,
+        index   = "sub_event_type",
+        vSize   = "count",
+        title   = "ACLED Sub Event Type Categories",
+        palette = "Spectral")
+
+# for color choices check out https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf
+```
+
+
+```{r}
+#| echo: false
+
+interaction_counts <- as.data.frame(table(acled$interaction)) %>%
+  rename(sub_event_type = Var1, count = Freq)
+
+treemap(interaction_counts,
+        index   = "sub_event_type",
+        vSize   = "count",
+        title   = "ACLED Sub Event Type Categories",
+        palette = "Spectral")
+
+```
+
+
+
+# When - Change over Time
+
+### Fatalities over Time
+```{r}
+#| echo: false
+acled %>%
+  group_by(year_month) %>%
+  summarise(fatalities = sum(fatalities, na.rm = TRUE)) %>%  
+  ggplot(aes(x = year_month, y = fatalities)) +
+  geom_line(linewidth = 1) +
+  geom_point() + 
+  labs(title = "Myanmar Monthly Fatalities over time",
+       x = NULL, y = "Fatalities") +
+  theme_minimal() 
+```
+
+### Event Type over Time
+```{r}
+#| echo: false
+
+
+acled %>%
+  mutate(year_month = as.Date(year_month)) %>%
+  count(year_month, sub_event_type) %>%
+  ggplot(aes(x = year_month, y = n, color = sub_event_type)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.2) +
+  scale_color_manual(values = colorRampPalette(brewer.pal(11, "Spectral"))(n_distinct(acled$sub_event_type))) +
+  scale_x_date(date_breaks = "6 months", date_labels = "%b %Y") +
+  labs(
+    title = "Sub Event Type Count Over Time",
+    x = NULL,
+    y = "Event Count",
+    color = "Sub-Event Type"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  ) +
+  guides(color = guide_legend(nrow = 3))
+```
+
+
+
+```{r}
+#| echo: false
+
+
+acled %>%
+  mutate(year_month = as.Date(year_month)) %>%
+  count(year_month, admin1) %>%
+  ggplot(aes(x = year_month, y = n, color = admin1)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.2) +
+  scale_color_manual(values = colorRampPalette(brewer.pal(11, "Paired"))(n_distinct(acled$admin1))) +
+  scale_x_date(date_breaks = "6 months", date_labels = "%b %Y") +
+  labs(
+    title = "Event Count Over Time by Admin1 Region",
+    x = NULL,
+    y = "Event Count",
+    color = "Admin1"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  ) +
+  guides(color = guide_legend(nrow = 3))
+
+```
+
+
+```{r}
+#| echo: false
+
+
+acled %>%
+  mutate(year_month = as.Date(year_month)) %>%
+  group_by(admin1) %>%
+  filter(n() >= 1000) %>%
+  ungroup() %>%
+  count(year_month, admin1) %>%
+  mutate(admin1 = fct_reorder(admin1, n, sum, .desc = TRUE)) %>%
+  ggplot(aes(x = year_month, y = n, color = admin1)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.2) +
+  scale_color_manual(values = colorRampPalette(
+    rev(brewer.pal(11, "Spectral"))
+  )(n_distinct(filter(acled, admin1 %in% (acled %>% group_by(admin1) %>% filter(n() >= 1000) %>% pull(admin1)))$admin1))) +
+  scale_x_date(date_breaks = "6 months", date_labels = "%b %Y") +
+  labs(
+    title = "Event Count Over Time by Admin1 Region",
+    subtitle = "Regions with fewer than 1,000 total events excluded",
+    x = NULL,
+    y = "Event Count",
+    color = "Admin1"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  ) +
+  guides(color = guide_legend(nrow = 3))
+
+```
+
+```{r}
+#| echo: false
+
+
+```
+
+```{r}
+#| echo: false
+
+
+```
+
+
+### Cumulative Fatalities
+```{r}
+#| echo: false
+
+acled %>%
+  mutate(cumulative = cumsum(fatalities)) %>% ggplot(aes(x = year_month, y = cumulative)) +
+  geom_line(linewidth = 1) +
+  geom_point() + 
+  labs(title = "Myanmar Monthly Fatalities over time",
+       x = NULL, y = "Fatalities") +
+  theme_minimal() 
+```
+
+###Battle Fatalities
+```{r}
+#| echo: false
+statemilitbattle <- acled %>%
+  filter(event_type  == "Battles",
+         interaction == "State forces-Political militia")
+
+statemilitbattle %>%
+  group_by(year_month) %>%
+  summarise(battles = n()) %>%  
+  ggplot(aes(x = year_month, y = battles)) +
+  geom_line(linewidth = 1) +
+  geom_point() + 
+  labs(title = "Myanmar Monthly Battles over time", subtitle = "Between State Forces and Political Militia",
+       x = NULL, y = "Fatalities") +
+  theme_minimal() 
+
+```
+
+
+### Civilian Targeting
+```{r}
+#| echo: false
+acled %>%
+  filter(civilian_targeting_bi == 1) %>%
+  mutate(year_month = as.Date(year_month)) %>%
+  count(year_month, inter1) %>%
+  mutate(inter1 = fct_reorder(inter1, n, sum, .desc = TRUE)) %>%
+  ggplot(aes(x = year_month, y = n, color = inter1)) +
+  geom_line(linewidth = 0.8) +
+  geom_point(size = 1.2) +
+  scale_color_manual(values = colorRampPalette(
+    brewer.pal(11, "Spectral")
+  )(n_distinct(acled$inter1[acled$civilian_targeting_bi == 1]))) +
+  scale_x_date(date_breaks = "6 months", date_labels = "%b %Y") +
+  labs(
+    title = "Civilian Targeting Events Over Time by Actor Type (Inter1)",
+    x = NULL,
+    y = "Event Count",
+    color = "Actor Type (Inter1)"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",
+    legend.title = element_text(face = "bold")
+  ) +
+  guides(color = guide_legend(nrow = 2))
+```
+
+
+
+# Who - Actors
+```{r}
+#| echo: false
+top20_actors <- acled %>%
+  pivot_longer(cols = c(actor1, actor2), names_to = "role", values_to = "actor") %>%
+  filter(!is.na(actor)) %>%
+  count(actor, sort = TRUE) %>%
+  slice_head(n = 20) %>%
+  pull(actor)
+
+acled %>%
+  pivot_longer(cols = c(actor1, actor2), names_to = "role", values_to = "actor") %>%
+  filter(!is.na(actor), actor %in% top20_actors) %>%
+  count(actor) %>%
+  mutate(actor = fct_reorder(actor, n)) %>%
+  ggplot(aes(x = n, y = actor, fill = n)) +
+  geom_col() +
+  scale_fill_distiller(palette = "Spectral", direction = -1) +
+  labs(
+    title = "Top 20 Actors by Event Frequency",
+    x = "Event Count",
+    y = NULL,
+    fill = "Count"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+
+
+```{r}
+#| echo: false
+top20_actors <- acled %>%
+  pivot_longer(cols = c(actor1, actor2), names_to = "role", values_to = "actor") %>%
+  filter(!is.na(actor)) %>%
+  count(actor, sort = TRUE) %>%
+  slice_head(n = 20) %>%
+  pull(actor)
+
+acled %>%
+  pivot_longer(cols = c(actor1, actor2), names_to = "role", values_to = "actor") %>%
+  filter(!is.na(actor), actor %in% top20_actors) %>%
+  count(actor) %>%
+  mutate(actor = fct_reorder(actor, n)) %>%
+  ggplot(aes(x = n, y = actor, fill = n)) +
+  geom_col() +
+  scale_fill_distiller(palette = "Spectral", direction = -1) +
+  labs(
+    title = "Top 20 Actors by Event Frequency",
+    x = "Event Count",
+    y = NULL,
+    fill = "Count"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+```
+
+```{r}
+#| echo: false
+
+```
+
+```{r}
+#| echo: false
+acled %>%
+  filter(actor1 %in% top20_actors, actor2 %in% top20_actors) %>%
+  count(actor1, actor2) %>%
+  mutate(
+    actor1 = factor(actor1, levels = top20_actors),
+    actor2 = factor(actor2, levels = top20_actors)
+  ) %>%
+  ggplot(aes(x = actor2, y = actor1, fill = n)) +
+  geom_tile() +
+  scale_fill_distiller(palette = "Spectral", direction = -1) +
+  labs(
+    title = "Actor Dyad Frequency Heatmap",
+    subtitle = "Top 20 actors only",
+    x = "Actor 2",
+    y = "Actor 1",
+    fill = "Count"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank()
+  )
+```
+
+# Where - Mapping
+
+```{r}
+#| echo: false
+acled %>%
+  group_by(admin1) %>%
+  summarise(Events = n(), Percent= n()/nrow(acled), total_fatal=sum(fatalities)) %>%
+  mutate(rank = rank(-Events, ties.method = "min")) %>%
+  arrange(rank) %>%
+  slice_head(n = 15) 
+```
+
+### All Events
+```{r}
+#| echo: false
+library(rnaturalearth)   # install.packages("rnaturalearth")
+library(sf)              # install.packages("sf")
+library(geodata)        #install.packages("geodata")
+#library(rnaturalearthhires)
+
+# Filter to Myanmar and rows with valid coords
+mm <- acled %>%
+  filter(country == "Myanmar",
+         !is.na(latitude), !is.na(longitude))
+
+# Country outline
+myanmar <- ne_countries(country = "Myanmar", scale = "medium", returnclass = "sf")
+
+ggplot() +
+  geom_sf(data = myanmar, fill = "grey95", color = "grey40") +
+  geom_point(data = mm,
+             aes(x = longitude, y = latitude,
+                 color = event_type, size = fatalities),
+             alpha = 0.6) +
+  scale_size_continuous(range = c(0.5, 4)) +
+  labs(title = "ACLED events in Myanmar",
+       color = "Event type", size = "Fatalities",
+       x = NULL, y = NULL) +
+  theme_minimal()
+
+
+```
+
+Interactive
+```{r}
+#| echo: false
+#Interactive, but ugly
+
+library(leaflet)
+leaflet(mm) %>%
+  addTiles() %>%
+  addCircleMarkers(~longitude, ~latitude, radius = 1,
+                   popup = ~paste(event_date, "<br>", location, "<br>",
+                                  fatalities, "fatalities", notes, "<br>"))
+```
+
+
+```{r}
+#| echo: false
+
+```
+
+
+1101 Observations in China - What is going on there?
+```{r}
+#| echo: false
+
+```
+
+# Codebook
+
+## ACLED Data Dictionary {.smaller}
+
+| Variable | Description |
+|---|---|
+| `event_id_cnty` | Unique alphanumeric event identifier by number and country acronym; remains constant even when event details are updated |
+| `event_date` | Date on which the event took place (YYYY-MM-DD) |
+| `year` | Year in which the event took place |
+| `time_precision` | Numeric code (1–3) for date precision; 1 = exact date, 2 = within a week, 3 = within a month |
+| `disorder_type` | Overarching disorder category: Political violence, Demonstrations, or Strategic developments |
+| `event_type` | Type of event: Battles, Explosions/Remote violence, Violence against civilians, Protests, Riots, or Strategic developments |
+| `sub_event_type` | Subcategory of the event type (e.g., Armed clash, Air/drone strike, Attack) |
+| `actor1` | One of two main actors involved; does not necessarily indicate the aggressor |
+| `assoc_actor_1` | Actor(s) involved alongside Actor 1, or designations that further identify Actor 1 |
+| `inter1` | Type of Actor 1 (e.g., State forces, Rebel group, Civilians) |
+| `actor2` | Second main actor involved; does not necessarily indicate the target |
+| `assoc_actor_2` | Actor(s) involved alongside Actor 2, or designations that further identify Actor 2 |
+| `inter2` | Type of Actor 2 (e.g., State forces, Rebel group, Civilians) |
+| `interaction` | Combined text value of inter1 and inter2 indicating the two actor types interacting (e.g., State forces – Rebel group) |
+| `civilian_targeting` | Indicates whether civilians were the main or only target; either "Civilians targeted" or blank |
+| `iso` | Three-digit ISO 3166 numeric country code |
+| `region` | Continental sub-region where the event took place |
+| `country` | Country or territory in which the event took place |
+| `admin1` | Largest sub-national administrative region (e.g., state, province) |
+| `admin2` | Second largest sub-national administrative region |
+| `admin3` | Third largest sub-national administrative region |
+| `location` | Name of the specific location where the event took place |
+| `latitude` | Latitude of the location in four decimal degrees (EPSG:4326) |
+| `longitude` | Longitude of the location in four decimal degrees (EPSG:4326) |
+| `geo_precision` | Numeric code (1–3) for location precision; 1 = named place, 2 = general area, 3 = regional estimate |
+| `source` | Sources used to record the event, separated by semicolons |
+| `source_scale` | Geographic level of the source(s): Local, Subnational, National, Regional, or International |
+| `notes` | Short description summarising the main features of the event |
+| `fatalities` | Number of reported fatalities; most conservative estimate when sources conflict; 0 = none reported |
+| `tags` | Additional structured information about the event, separated by semicolons |
+| `timestamp` | Unix timestamp of when the event was uploaded to the ACLED API |
+| `year_month` | Derived variable; first day of the event month (YYYY-MM-01) |
+
+: ACLED Variable Definitions {tbl-colwidths="[20,80]"}

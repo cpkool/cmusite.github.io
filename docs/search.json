@@ -544,5 +544,12 @@
     "title": "Lecture Slides",
     "section": "",
     "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
+  },
+  {
+    "objectID": "rcode.html#day-12-last-day-play",
+    "href": "rcode.html#day-12-last-day-play",
+    "title": "R Code",
+    "section": "Day 12 Last day play",
+    "text": "Day 12 Last day play\nMyanmar Conflict Exploration\nAcled Myanmar Data (Download to csv and load)"
   }
 ]

@@ -23,7 +23,7 @@ Welcome to data visualization
 
 First, while we have used QMD/Rmarkdown all semester we have not discussed their value as a word processer.
 
-There are all sorts of things you can in Markdown. 
+There are all sorts of things you can in Markdown.
 
 - [Quarto Official Documentation](https://quarto.org/docs/guide/)
 - [Quarto: The Practical Guide](https://quarto-tdg.org/)
@@ -34,14 +34,13 @@ There are all sorts of things you can in Markdown.
 
 Or insert an image
 
-![I love R](https://www.r-project.org/logo/Rlogo.png){width=50%}
+![I love R](https://www.r-project.org/logo/Rlogo.png){width="50%"}
 
 You can write your text *italics* or make things **bold**
 
 You can even use it create citations, but we won't get into that today.
 
 As you've learned (probably the hard way), a key with Rmarkdown is to continuously knit to make sure you are not making mistakes and look at what the output looks like.
-
 
 ```{r}
 #| include: false
@@ -51,8 +50,6 @@ library(ggplot2)
 library(ggthemes)
 ```
 
-
-
 # Some thoughts on Visualization
 
 Visualizing quantitative data is critical to scientific work and moving beyond basics can enhance the quality of any work that you do. Even if you are relying primarily on qualitative work a few well done figures can add tremendous value to your work.
@@ -61,44 +58,33 @@ As you read in the Healy book, there aren't many hard and fast rules when it com
 
 My quick thoughts:[^1]
 
-1. Keep it simple - only display data critical to your argument. Less can be more
-2. Fully label -
-+ Include axis
-+ Interpret in your text
-3. Have a clear idea of what you want your reader to get out of each figure. Remember, they don't know the data like you do.
-4. Be cognizant of scales
-5. Most journals still publish in greyscale and many people are colorblind so you can't rely too much on color variation.
-6. The best way to get good at visualizations is to practice.
-
-
 [^1]: Cool a footnote. These are mostly just my musings.
+
+1.  Keep it simple - only display data critical to your argument. Less can be more
+2.  Fully label -
+
+- Include axis
+- Interpret in your text
+
+3.  Have a clear idea of what you want your reader to get out of each figure. Remember, they don't know the data like you do.
+4.  Be cognizant of scales
+5.  Most journals still publish in greyscale and many people are colorblind so you can't rely too much on color variation.
+6.  The best way to get good at visualizations is to practice.
 
 "The greatest value of a picture is when it forces us to notice what we never expected to see." — John Tukey
 
 You will use data visualizations in two ways. First, is to get know your own data. There will be lots of these graphs and they don't need to be "bedazzled." Second, is the actual figures you want to use for public consumption. As with models, you'll end up using a small portion of all the figures you use so make them good.
 
-
-
 ### GGplot
 
 We've already worked in GGplot this semester and for good reason. It is the premier package for creating figures (even compared to other software systems). Almost all figures I now produce for publication use GGplot. Whether we knew it or not there is underlying *"grammar of graphics"* that [ggplot uses](https://r4ds.had.co.nz/data-visualisation.html#the-layered-grammar-of-graphics).
 
-
-ggplot(data = <DATA>) +
-  <GEOM_FUNCTION>(
-     mapping = aes(<MAPPINGS>),
-     stat = <STAT>,
-     position = <POSITION>
-  ) +
-  <COORDINATE_FUNCTION> +
-  <FACET_FUNCTION>
+ggplot(data = <DATA>) + <GEOM_FUNCTION>( mapping = aes(<MAPPINGS>), stat = <STAT>, position = <POSITION> ) + <COORDINATE_FUNCTION> + <FACET_FUNCTION>
 
 - data is a data frame
-- Aesthetics is used to indicate x and y
-variables. It can also be used to control the color, the size or the shape of points, the height of bars, etc…..
+- Aesthetics is used to indicate x and y variables. It can also be used to control the color, the size or the shape of points, the height of bars, etc…..
 - Geometry corresponds to the type of graphics (histogram, box plot, line plot, density plot, dot plot, ….)
 - Others are optional
-
 
 There are a wide variety of graphs you can create in [ggplot](https://r-graph-gallery.com/). However, the ones we have used throughout the semester histograms or density plots, scatterplots(with and without regression lines), bar plots, and box plots will be 90% of the figures that you use. For each variable of interest you should know its distribution(histogram or boxplot). For each relationship, you should know how it plots.
 
@@ -114,16 +100,15 @@ ggplot(mpg, aes(displ, hwy)) +
 ```
 
 Create a better version:
+
 ```{r}
 
 ```
 
-
-
 # Mapping
 
-
 ## Mapping Specific Locations
+
 ```{r}
 #| echo: false
 
@@ -137,7 +122,9 @@ library(leaflet)
 
 starbucks <- read_csv("https://raw.githubusercontent.com/libjohn/mapping-with-R/master/data/All_Starbucks_Locations_in_the_US_-_Map.csv")
 ```
+
 We can create a map of Starbucks locations
+
 ```{r}
 #| echo: false
 
@@ -145,6 +132,7 @@ mapview(starbucks, xcol = "Longitude", ycol = "Latitude", crs = 4269, grid = FAL
 ```
 
 ## State Maps
+
 ```{r}
 #| echo: false
 
@@ -173,8 +161,8 @@ plot_usmap(data = states, values = "percap")+ scale_fill_continuous(
   ) + theme(legend.position = "right")+labs(title = "Starbucks Per Capita")
 ```
 
-
 # Look at Dunkin Donuts
+
 ```{r}
 #| echo: false
 
@@ -193,10 +181,8 @@ plot_usmap(data = states, values = "n.y")+ scale_fill_continuous(
   ) + theme(legend.position = "right")+ labs(title = "dunkin Across the United States")
 ```
 
-
-
-
 ## Global Maps
+
 ```{r}
 #| echo: false
 #| message: false
@@ -236,8 +222,8 @@ ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
 
 You can also add R code mid-text. For example, the average GDP per capita is `r mean(gapminder$gdpPercap)`
 
-
 Create animation
+
 ```{r}
 #| echo: false
 
