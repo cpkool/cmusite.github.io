@@ -103,5 +103,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 [Myanmar Conflict Exploration](ClassCode/Day 11/MyanmarConflictExplore.qmd){download="MyanmarConflictExplore.qmd"}
 
 
-[Acled Myanmar Data](https://niuits-my.sharepoint.com/:x:/g/personal/a1837136_mail_niu_edu/IQCm0iyJ3p5kS5jfz1djZdWZARPXjMXJDDIcBqphSMCRpsI?e=AOoMHN)  (Download to csv and load)
+[Acled Myanmar Data Full ](https://niuits-my.sharepoint.com/:x:/g/personal/a1837136_mail_niu_edu/IQBjpsWNNuAoR72EMZRzta3_AdLtcOIwkKbj2EkRR1JfEmY?e=fTeoET)  (Save as csv and load)
 
+
+[Acled Myanmar Data Sample](https://niuits-my.sharepoint.com/:x:/g/personal/a1837136_mail_niu_edu/IQCwCLO-0cbDRbVXGWcnUaDQAeEATB0y40COvK464rDzHO0?e=l86ZS6)

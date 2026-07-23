@@ -241,7 +241,7 @@ p1 <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
              ease_aes('linear')
 
 animate(p1)
-#anim_save('plot_gdpPercap_lifeExp.gif')
+anim_save('plot_gdpPercap_lifeExp.gif')
 
 #World Together
 p2 <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +

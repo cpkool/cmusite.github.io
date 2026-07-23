@@ -20,12 +20,16 @@ library(RColorBrewer)
 #Set Up
 setwd("~/Dropbox/POLS 641/CMU Su26/New Data/Acled")
 
-acled <- read_csv("ACLED Data July 13 2026.csv")
+acled <- read.csv("acledupdated.csv")
+
+
 
 # New Variables
 acled <- acled %>%
-  mutate(year_month = as.Date(format(event_date, "%Y-%m-01")),
-  civilian_targeting_bi = if_else(civilian_targeting == "Civilian targeting", 1L, 0L, missing=0L))
+  mutate(
+    year_month = as.Date(paste0(substr(event_date, 1, 7), "-01")),
+    civilian_targeting_bi = if_else(civilian_targeting == "Civilian targeting", 1L, 0L, missing = 0L)
+  )
 
 
 
@@ -427,11 +431,7 @@ leaflet(mm) %>%
 ```
 
 
-1101 Observations in China - What is going on there?
-```{r}
-#| echo: false
 
-```
 
 # Codebook
 
