@@ -33,3 +33,7 @@ Day 8 - Midterm
 [Day 9- Regression Again - Multivariate, Assumptions, and Robustness](Slides/lecture09.pdf)
 
 [Day 10- Regression Assumptions and Transformations + Experiments ](Slides/lecture10.pdf)
+
+[Day 11 - Qualitative Methods and Cases](Slides/lecture11.pdf)
+
+[Day 12 - Research Ethics and Qualitative 2](Slides/lecture12.pdf)

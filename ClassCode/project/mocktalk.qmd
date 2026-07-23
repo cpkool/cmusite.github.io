@@ -5,7 +5,7 @@ author: "Dr. Kuehl"
 institute: "School of Public Policy - Chaing Mai University"
 date: today
 format:
-  revealjs:
+  beamer:
     theme: simple
     slide-number: true
     progress: true

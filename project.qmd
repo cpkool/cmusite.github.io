@@ -15,6 +15,9 @@ format:
 
 <a href="ClassCode/project/presentation_template.qmd" download>Presentation Template</a>
 
+<a href="Slides/mocktalk.pdf" download>Mock Talk PDF</a>
+
+
 # **Overview**
 
 The aim of your final project is to complete a shortened version of a rigorous researched policy brief with a heavy emphasis on the methodology and results section. The focus will be on of methodology, description of data, and analysis of results. It will rely ability to complete your analysis using the R programming language and to communicate the results of your analysis to a professional audience. In other words, show off everything you've learned in this class. You will spend less time and energy on reviewing previous literature and cases or connections to theory.  Your are not expected to conduct novel research nor make a clear theoretical contribution, but you are expected to uphold social science standards of quantitative analysis. You will also present your results to the class during the final week. This project is worth 40% of your final grade.

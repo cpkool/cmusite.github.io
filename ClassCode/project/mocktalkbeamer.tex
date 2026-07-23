@@ -1,0 +1,635 @@
+% Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\newif\ifbibliography
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% remove section numbering
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{section title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{subsection title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+
+\usetheme[]{metropolis}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+
+
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+ 
+
+
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{xltabular}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{siunitx}
+
+    \newcolumntype{d}{S[
+      table-align-text-before=false,
+      table-align-text-after=false,
+      input-symbols={-,\*+()}
+    ]}
+  
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Inequality and Climate Change Impacts},
+  pdfauthor={Dr.~Kuehl},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+
+\title{\texorpdfstring{Inequality and Climate Change
+Impacts}{Inequality and Climate Change Impacts}}
+\subtitle{\texorpdfstring{Does Economic Inequality Increase Country
+Emissions?}{Does Economic Inequality Increase Country Emissions?}}
+\author{Dr.~Kuehl}
+\date{2026-07-23}
+\institute{School of Public Policy - Chiang Mai University}
+
+\begin{document}
+\frame{\titlepage}
+
+
+\begin{frame}{Research Puzzle}
+\protect\phantomsection\label{research-puzzle}
+\begin{columns}[T]
+\begin{column}{0.55\linewidth}
+\textbf{Motivating Question}
+
+\begin{itemize}
+\tightlist
+\item
+  Climate Change is an existential global challenge
+\item
+  Countries and people need to reduce their emissions \emph{yesterday}
+\item
+  Economic inequality leads to elites having more political power
+\item
+  National climate policies have a large impact on emissions
+\end{itemize}
+\end{column}
+
+\begin{column}{0.45\linewidth}
+\pandocbounded{\includegraphics[keepaspectratio]{images/taylor.png}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Research Question}
+\protect\phantomsection\label{research-question}
+\begin{columns}[T]
+\begin{column}{0.55\linewidth}
+\textbf{Motivating Question}
+
+\begin{itemize}
+\tightlist
+\item
+  Emissions are unequal within countries
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Oxfam: The world's richest 1\% are responsible for more carbon
+    emissions than the poorest 66\%
+  \end{itemize}
+\item
+  \textbf{Do more unequal countries do less to mitigate climate change?}
+\end{itemize}
+\end{column}
+
+\begin{column}{0.45\linewidth}
+\pandocbounded{\includegraphics[keepaspectratio]{images/oxfam.png}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Background and Literature}
+\protect\phantomsection\label{background-and-literature}
+\textbf{What we know}
+
+\begin{itemize}
+\tightlist
+\item
+  There is wide varition in global emissions
+\item
+  Much is driven by wealth
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Wealth -\textgreater{} Consumption -\textgreater{} Emissions
+  \end{itemize}
+\item
+  Generally, people are supportive of climate policies, but pushback
+  from rich elites can hinder climate action
+\end{itemize}
+
+\note{Speaker notes: These don't show up on the screen, but can be
+useful when building}
+\end{frame}
+
+\begin{frame}{Hypotheses}
+\protect\phantomsection\label{hypotheses}
+I derive the following expectations:
+
+\begin{itemize}[<+->]
+\item
+  \textbf{H1 (Main):} Ceterus paribus, as \emph{Income inequality}
+  increases, \emph{Per Capita carbon emissions} will also increase
+\item
+  \textbf{Null Hypothesis} There is no relationship between income
+  inequality and carbon emissions.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Income Inequality - Various Measures}
+\protect\phantomsection\label{income-inequality---various-measures}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/fig-distribution_all-1.pdf}}
+
+}
+
+\caption{\label{fig-distribution_all}}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Primary Independent Variable}
+\protect\phantomsection\label{primary-independent-variable}
+\begin{columns}[T]
+\begin{column}{0.55\linewidth}
+\begin{itemize}
+\tightlist
+\item
+  Primary IV: Income Inequality - The distribution of wealth within a
+  country
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Operationalized using the share of income to the top 10\% within
+    each country
+  \item
+    Date from the World Income Database
+  \end{itemize}
+\end{itemize}
+\end{column}
+
+\begin{column}{0.45\linewidth}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/fig-distribution-1.pdf}}
+
+}
+
+\caption{\label{fig-distribution}}
+
+\end{figure}%
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Dependent Variable}
+\protect\phantomsection\label{dependent-variable}
+\begin{columns}[T]
+\begin{column}{0.55\linewidth}
+Carbon Emissions - The per capita contribution to climate change -
+Operationalized as CO2 Emissions in metric tons per capita - Data from
+the world bank
+
+\emph{All data are from 2023 or most recent}
+\end{column}
+
+\begin{column}{0.45\linewidth}
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/unnamed-chunk-1-1.pdf}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Descriptive Statistics and Controls}
+\protect\phantomsection\label{descriptive-statistics-and-controls}
+\begin{table}
+
+\caption{\label{tbl-descriptives}Summary Statistics}
+
+\centering{
+
+\centering
+\caption{\label{tab:tbl-descriptives}Table 1: Descriptive Statistics}
+\centering
+\fontsize{25}{27}\selectfont
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{12em}|c|c|c|c|c|c}
+\hline
+\textbf{Variable} & \textbf{Mean} & \textbf{Median} & \textbf{SD} & \textbf{Min} & \textbf{Max} & \textbf{N}\\
+\hline
+\textbf{Income Share: Top 10\%} & 28.41 & 27.45 & 5.16 & 19.90 & 42.70 & 146\\
+\hline
+\textbf{CO2 per Capita (tonnes)} & 3.91 & 2.49 & 4.66 & 0.00 & 24.53 & 201\\
+\hline
+\textbf{GDP per Capita (thousands USD)} & 22.04 & 7.82 & 33.47 & 0.25 & 256.80 & 202\\
+\hline
+\textbf{Agricultural Land (\%)} & 37.44 & 38.12 & 22.57 & 0.45 & 86.48 & 207\\
+\hline
+\textbf{GDP Growth (\%)} & 3.42 & 3.20 & 6.84 & -29.43 & 75.31 & 202\\
+\hline
+\textbf{Electricity Access (\%)} & 88.07 & 100.00 & 22.51 & 5.40 & 100.00 & 213\\
+\hline
+\end{tabular}
+
+}
+
+\end{table}%
+\end{frame}
+
+\begin{frame}{Correlation Matrix}
+\protect\phantomsection\label{correlation-matrix}
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/corr-1.pdf}}
+\end{frame}
+
+\begin{frame}{Initial Scatter Plot}
+\protect\phantomsection\label{initial-scatter-plot}
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/unnamed-chunk-2-1.pdf}}
+\end{frame}
+
+\begin{frame}{Primary Regression Results}
+\protect\phantomsection\label{primary-regression-results}
+\begin{table}
+
+\caption{\label{tbl-main-results}OLS Regression --- Main Results}
+
+\centering{
+
+\centering\centering
+\fontsize{18}{20}\selectfont
+\begin{tabular}[t]{lcccc}
+\toprule
+\textbf{ } & \textbf{Bivariate} & \textbf{+ GDP Per Capta} & \textbf{Full Model} & \textbf{Add Controls}\\
+\midrule
+(Intercept) & \num{10.752}*** & \num{5.812}*** & \num{6.325}*** & \num{1.372}\\
+ & (\num{1.534}) & (\num{1.454}) & (\num{1.533}) & (\num{1.910})\\
+income\_share\_top10 & \num{-0.255}*** & \num{-0.129}*** & \num{-0.121}** & \num{-0.075}\\
+ & (\num{0.053}) & (\num{0.048}) & (\num{0.048}) & (\num{0.047})\\
+gdp\_pc &  & \num{0.079}*** & \num{0.079}*** & \num{0.069}***\\
+ &  & (\num{0.010}) & (\num{0.011}) & (\num{0.010})\\
+ag\_land &  &  & \num{-0.020}* & \num{-0.016}\\
+ &  &  & (\num{0.011}) & (\num{0.011})\\
+gdp\_growth &  &  & \num{0.033} & \num{0.067}\\
+ &  &  & (\num{0.085}) & (\num{0.081})\\
+electricity\_access &  &  &  & \num{0.041}***\\
+ &  &  &  & (\num{0.010})\\
+\midrule
+Num.Obs. & \num{141} & \num{140} & \num{140} & \num{140}\\
+R2 & \num{0.143} & \num{0.411} & \num{0.425} & \num{0.487}\\
+R2 Adj. & \num{0.136} & \num{0.402} & \num{0.408} & \num{0.467}\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+
+}
+
+\end{table}%
+\end{frame}
+
+\begin{frame}{Logged Regression Results}
+\protect\phantomsection\label{logged-regression-results}
+Logging GDP per Capita and CO2 per Capita
+
+\begin{table}
+\centering\centering
+\fontsize{18}{20}\selectfont
+\begin{tabular}[t]{lcccc}
+\toprule
+\textbf{ } & \textbf{Bivariate} & \textbf{+ GDP Per Capita} & \textbf{+ Land \& Growth} & \textbf{+ Electricity}\\
+\midrule
+(Intercept) & \num{3.369}*** & \num{-0.440} & \num{-0.796} & \num{-2.205}***\\
+ & (\num{0.635}) & (\num{0.493}) & (\num{0.529}) & (\num{0.570})\\
+Income Share Top 10\% & \num{-0.098}*** & \num{-0.017} & \num{-0.014} & \num{-0.007}\\
+ & (\num{0.022}) & (\num{0.015}) & (\num{0.015}) & (\num{0.014})\\
+ln GDP per Capita &  & \num{0.776}*** & \num{0.830}*** & \num{0.595}***\\
+ &  & (\num{0.055}) & (\num{0.059}) & (\num{0.073})\\
+Agricultural Land &  &  & \num{-0.002} & \num{-0.002}\\
+ &  &  & (\num{0.004}) & (\num{0.003})\\
+GDP Growth &  &  & \num{0.072}*** & \num{0.061}**\\
+ &  &  & (\num{0.027}) & (\num{0.025})\\
+Electricity Access &  &  &  & \num{0.020}***\\
+ &  &  &  & (\num{0.004})\\
+\midrule
+Num.Obs. & \num{141} & \num{140} & \num{140} & \num{140}\\
+R2 & \num{0.126} & \num{0.647} & \num{0.665} & \num{0.714}\\
+R2 Adj. & \num{0.120} & \num{0.642} & \num{0.655} & \num{0.704}\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Plotting with CO2 Logged}
+\protect\phantomsection\label{plotting-with-co2-logged}
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/unnamed-chunk-4-1.pdf}}
+\end{frame}
+
+\begin{frame}{Standardized Regression}
+\protect\phantomsection\label{standardized-regression}
+\begin{figure}
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{mocktalkbeamer_files/figure-beamer/fig-coefplot-1.pdf}}
+
+}
+
+\caption{\label{fig-coefplot}Coefficient Plot}
+
+\end{figure}%
+\end{frame}
+
+\begin{frame}{Alternative Measures of Wealth Inequality}
+\protect\phantomsection\label{alternative-measures-of-wealth-inequality}
+Includes all control variables
+
+\begin{table}
+\centering\centering
+\fontsize{18}{20}\selectfont
+\begin{tabular}[t]{lcccccc}
+\toprule
+\textbf{ } & \textbf{Income Share Top 10} & \textbf{Gini (post-tax)} & \textbf{Gini (pre-tax)} & \textbf{Income Share Top 1} & \textbf{Wealth Top 10} & \textbf{Wealth Top 1}\\
+\midrule
+Income Share Top 10\% & \num{-0.007} &  &  &  &  & \\
+ & (\num{0.014}) &  &  &  &  & \\
+Gini (post-tax) &  & \num{0.015}* &  &  &  & \\
+ &  & (\num{0.008}) &  &  &  & \\
+Gini (pre-tax) &  &  & \num{0.012} &  &  & \\
+ &  &  & (\num{0.010}) &  &  & \\
+Income Share Top 1\% &  &  &  & \num{0.016} &  & \\
+ &  &  &  & (\num{0.014}) &  & \\
+Wealth Share Top 10\% &  &  &  &  & \num{0.018} & \\
+ &  &  &  &  & (\num{0.014}) & \\
+Wealth Share Top 1\% &  &  &  &  &  & \num{0.017}\\
+ &  &  &  &  &  & (\num{0.012})\\
+\midrule
+Num.Obs. & \num{140} & \num{186} & \num{186} & \num{186} & \num{186} & \num{186}\\
+R2 & \num{0.714} & \num{0.633} & \num{0.630} & \num{0.629} & \num{0.630} & \num{0.631}\\
+R2 Adj. & \num{0.704} & \num{0.623} & \num{0.619} & \num{0.619} & \num{0.620} & \num{0.621}\\
+\bottomrule
+\multicolumn{7}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Contributions \& Further Research}
+\protect\phantomsection\label{contributions-further-research}
+\textbf{There does not appear to be a strong relationship between wealth
+inquality and CO2 Emissions}
+
+\begin{itemize}
+\tightlist
+\item
+  Potential Omitted Variable Bias
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Political Insitutions - Democracies and Interest group systems - ie
+    how elites preferences are heard
+  \item
+    Oil Dependent Economies
+  \item
+    Regional Differences
+  \end{itemize}
+\item
+  Could look at climate policy as DV, rather than emissions
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Contributions \& Further Research}
+\protect\phantomsection\label{contributions-further-research-1}
+\textbf{Qualitative Follow-Up}
+
+To probe the mechanism, future work should conduct process tracing to
+better understand if or how economic elites shape climate policy.
+
+\begin{itemize}
+\tightlist
+\item
+  United States as a most crucial case
+\item
+  Thailand as ``typical'' case
+\end{itemize}
+
+Case studies of wealthy people/companies in each country
+\end{frame}
+
+\begin{frame}{Discussion}
+\protect\phantomsection\label{discussion}
+\textbf{Policy Implications}
+
+These results suggest wealth inequality is not a meaningful impediment
+to effective climate policy
+
+\textbf{Limitations}
+
+\begin{itemize}
+\tightlist
+\item
+  One year snapshot
+\item
+  Country Level of analysis
+\item
+  Aggrgate Numbers
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\protect\phantomsection\label{section}
+\begin{block}{Thank You}
+\protect\phantomsection\label{thank-you}
+\textbf{I look forward to your questions}
+
+\begin{tcolorbox}[enhanced jigsaw, arc=.35mm, bottomrule=.15mm, breakable, colback=white, colframe=quarto-callout-tip-color-frame, left=2mm, leftrule=.75mm, opacityback=0, rightrule=.15mm, toprule=.15mm]
+
+\emph{Slides code available on course website}
+
+\end{tcolorbox}
+\end{block}
+\end{frame}
+
+
+
+
+\end{document}

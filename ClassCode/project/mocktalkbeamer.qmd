@@ -1,0 +1,537 @@
+
+---
+title: "Inequality and Climate Change Impacts"
+subtitle: "Does Economic Inequality Increase Country Emissions?"
+author: "Dr. Kuehl"
+institute: "School of Public Policy - Chiang Mai University"
+date: today
+format:
+  beamer:
+    theme: metropolis
+execute:
+  echo: false
+  warning: false
+  message: false
+editor_options: 
+  chunk_output_type: console
+---
+---
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(ggplot2)
+library(knitr)
+library(kableExtra)#for tables
+library(modelsummary)
+library(wbstats)
+
+setwd("~/Dropbox/POLS 641/CMU Su26/finalproject/Mock")
+
+
+## Load dataset built in other file
+gwd <- read.csv("gwd.csv")
+
+
+
+```
+
+## Research Puzzle
+
+::::: columns
+::: {.column width="55%"}
+**Motivating Question**
+
+- Climate Change is an existential global challenge
+- Countries and people need to reduce their emissions *yesterday*
+- Economic inequality leads to elites having more political power
+- National climate policies have a large impact on emissions
+:::
+
+::: {.column width="45%"}
+![](images/taylor.png)
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Research Question
+
+::::: columns
+::: {.column width="55%"}
+**Motivating Question**
+
+- Emissions are unequal within countries
+  - Oxfam: The world's richest 1% are responsible for more carbon emissions than the poorest 66%
+- **Do more unequal countries do less to mitigate climate change?**
+:::
+
+::: {.column width="45%"}
+![](images/oxfam.png)
+:::
+:::::
+
+## Background and Literature
+
+**What we know**
+
+- There is wide varition in global emissions
+- Much is driven by wealth
+  - Wealth -\> Consumption -\> Emissions
+- Generally, people are supportive of climate policies, but pushback from rich elites can hinder climate action
+
+::: notes
+Speaker notes: These don't show up on the screen, but can be useful when building
+:::
+
+------------------------------------------------------------------------
+
+## Hypotheses
+
+I derive the following expectations:
+
+::: incremental
+- **H1 (Main):** Ceterus paribus, as *Income inequality* increases, *Per Capita carbon emissions* will also increase
+
+- **Null Hypothesis** There is no relationship between income inequality and carbon emissions.
+:::
+
+## Income Inequality - Various Measures
+
+```{r}
+#| label: fig-distribution_all
+#| fig-height: 4.5
+
+vars_to_plot <- c("gini_posttax", "gini_pretax",
+                  "top10_share", "top1_share",
+                  "wealth_top10_share", "wealth_top1_share")
+
+gwd |>
+  select(iso3c, all_of(vars_to_plot)) |>
+  pivot_longer(-iso3c, names_to = "measure", values_to = "value") |>
+  mutate(measure = case_match(measure,
+                              "gini_pretax"        ~ "Gini (pre-tax income)",
+                              "gini_posttax"       ~ "Gini (post-tax income)",
+                              "top10_share"        ~ "Top 10% income share",
+                              "top1_share"         ~ "Top 1% income share",
+                              "wealth_top10_share" ~ "Top 10% wealth share",
+                              "wealth_top1_share"  ~ "Top 1% wealth share"),
+         measure = factor(measure, levels = c(
+           "Gini (pre-tax income)", "Gini (post-tax income)",
+           "Top 10% income share",  "Top 1% income share",
+           "Top 10% wealth share",  "Top 1% wealth share"))) |>
+  ggplot(aes(x = value, fill = measure)) +
+  geom_density(alpha = 0.55, color = NA) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(title    = "Distribution of inequality measures across countries, 2022",
+       subtitle = "All values on a 0–100 scale",
+       x = "Value", y = "Density", fill = NULL,
+       caption  = "Source: World Inequality Database") +
+  theme_minimal(base_size = 12) +
+  theme(plot.title       = element_text(face = "bold"),
+        plot.subtitle    = element_text(color = "grey40"),
+        legend.position  = "bottom",
+        panel.grid.minor = element_blank())
+
+```
+
+## Primary Independent Variable
+
+::::: columns
+::: {.column width="55%"}
+- Primary IV: Income Inequality - The distribution of wealth within a country
+  - Operationalized using the share of income to the top 10% within each country
+  - Date from the World Income Database
+:::
+
+::: {.column width="45%"}
+```{r}
+#| label: fig-distribution
+#| fig-height: 6
+
+
+# Pull the two countries' values for the annotation
+ggplot(gwd, aes(x = wealth_top10_share)) +
+  geom_histogram(binwidth = 2, fill = "#2c7bb6", color = "white", na.rm = TRUE) +
+  geom_vline(aes(xintercept = mean(wealth_top10_share, na.rm = TRUE)),
+             color = "red", linetype = "dashed", linewidth = 0.8) +
+  geom_vline(aes(xintercept = median(wealth_top10_share, na.rm = TRUE)),
+             color = "orange", linetype = "dashed", linewidth = 0.8) +
+  geom_text(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+            aes(x = wealth_top10_share, y = 0, label = country.x),
+            vjust = -1, angle = 90, size = 3, color = "black") +
+  geom_vline(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+             aes(xintercept = wealth_top10_share),
+             color = "black", linetype = "dotted") +
+  annotate("text", x = mean(gwd$wealth_top10_share, na.rm = TRUE),
+           y = Inf, label = "Mean", color = "red", vjust = 2, hjust = -0.1, size = 3) +
+  annotate("text", x = median(gwd$wealth_top10_share, na.rm = TRUE),
+           y = Inf, label = "Median", color = "orange", vjust = 4, hjust = -0.1, size = 3) +
+  labs(
+    title = "Distribution of Top 10% Wealth Share",
+    x = "Top 10% Wealth Share (%)",
+    y = "Count"
+  ) +
+  theme_minimal()
+
+```
+:::
+:::::
+
+## Dependent Variable
+
+::::: columns
+::: {.column width="55%"}
+Carbon Emissions - The per capita contribution to climate change - Operationalized as CO2 Emissions in metric tons per capita - Data from the world bank
+
+*All data are from 2023 or most recent*
+:::
+
+::: {.column width="45%"}
+```{r}
+
+#| fig-height: 6
+
+
+ggplot(gwd, aes(x = co2_per_cap)) +
+  geom_histogram(binwidth = 1, fill = "#2c7bb6", color = "white", na.rm = TRUE) +
+  geom_vline(aes(xintercept = mean(co2_per_cap, na.rm = TRUE)),
+             color = "red", linetype = "dashed", linewidth = 0.8) +
+  geom_vline(aes(xintercept = median(co2_per_cap, na.rm = TRUE)),
+             color = "orange", linetype = "dashed", linewidth = 0.8) +
+  geom_vline(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+             aes(xintercept = co2_per_cap),
+             color = "black", linetype = "dotted") +
+  geom_text(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+            aes(x = co2_per_cap, y = 0, label = country.x),
+            vjust = -1, angle = 90, size = 3, color = "black") +
+  annotate("text", x = mean(gwd$co2_per_cap, na.rm = TRUE),
+           y = Inf, label = "Mean", color = "red", vjust = 2, hjust = -0.1, size = 3) +
+  annotate("text", x = median(gwd$co2_per_cap, na.rm = TRUE),
+           y = Inf, label = "Median", color = "orange", vjust = 4, hjust = -0.1, size = 3) +
+  labs(
+    title = "Distribution of CO2 Per Capita",
+    x = "CO2 Per Capita (tonnes)",
+    y = "Count"
+  ) +
+  theme_minimal()
+
+
+gwd <- gwd[!gwd$co2_per_cap %in% tail(sort(gwd$co2_per_cap, na.last = NA), 2), ]
+```
+:::
+:::::
+
+## Descriptive Statistics and Controls
+
+```{r}
+#| label: tbl-descriptives
+#| tbl-cap: "Summary Statistics"
+
+
+gwd$gdp_pc <- gwd$gdp_pc/1000 #convert gdp per capita
+
+
+
+
+var_labels <- c(
+  "income_share_top10" = "Income Share: Top 10%",
+  "co2_per_cap"        = "CO2 per Capita (tonnes)",
+  "gdp_pc"             = "GDP per Capita (thousands USD)",
+  "ag_land"            = "Agricultural Land (%)",
+  "gdp_growth"         = "GDP Growth (%)",
+  "electricity_access" = "Electricity Access (%)"
+)
+
+gwd %>%
+  select(income_share_top10, co2_per_cap, gdp_pc, ag_land, gdp_growth, electricity_access) %>%
+  summarise(across(everything(), list(
+    Mean   = ~mean(.x, na.rm = TRUE),
+    Median = ~median(.x, na.rm = TRUE),
+    SD     = ~sd(.x, na.rm = TRUE),
+    Min    = ~min(.x, na.rm = TRUE),
+    Max    = ~max(.x, na.rm = TRUE),
+    N      = ~sum(!is.na(.x))
+  ))) %>%
+  pivot_longer(everything(),
+               names_to  = c("Variable", "Stat"),
+               names_sep = "_(?=[^_]+$)") %>%
+  pivot_wider(names_from = Stat, values_from = value) %>%
+  mutate(
+    Variable = var_labels[Variable],
+    across(c(Mean, Median, SD, Min, Max), ~round(.x, 2)),
+    N = as.integer(N)
+  ) %>%
+  kbl(
+    col.names = c("Variable", "Mean", "Median", "SD", "Min", "Max", "N"),
+    align     = c("l", rep("c", 6)),
+    caption   = "Table 1: Descriptive Statistics"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    full_width        = FALSE,
+    font_size         = 25
+  ) %>%
+  row_spec(0, bold = TRUE) %>%
+  column_spec(1, bold = TRUE, width = "12em")
+```
+
+------------------------------------------------------------------------
+
+## Correlation Matrix
+
+```{r}
+#| label: corr
+#| tbl-cap: "Correlation Matrix"
+
+library(ggcorrplot)
+
+cor_data <- gwd %>%
+  select("income_share_top10", "co2_per_cap", "gdp_pc", "ag_land", "gdp_growth", "electricity_access") %>%
+  cor(use = "pairwise.complete.obs")
+
+ggcorrplot(cor_data,
+           method = "square",
+           type = "lower",
+           lab = TRUE,
+           lab_size = 4,
+           colors = c("#d73027", "white", "#2c7bb6"),
+           title = "Correlation Matrix",
+           ggtheme = theme_minimal())
+```
+
+## Initial Scatter Plot
+
+```{r}
+
+
+ggplot(gwd, aes(x = wealth_top10_share, y = co2_per_cap)) +
+  geom_point(alpha = 0.6, color = "#2c7bb6", na.rm = TRUE) +
+  geom_smooth(method = "lm", se = TRUE, color = "red", na.rm = TRUE) +
+  geom_point(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+             aes(x = wealth_top10_share, y = co2_per_cap),
+             color = "black", size = 3) +
+  geom_text(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+            aes(x = wealth_top10_share, y = co2_per_cap, label = country.x),
+            vjust = -1, size = 3, color = "black") +
+  labs(
+    title = "CO2 Per Capita vs. Top 10% Wealth Share",
+    x = "Top 10% Wealth Share (%)",
+    y = "CO2 Per Capita (tonnes)"
+  ) +
+  theme_minimal()
+```
+
+## Primary Regression Results
+
+```{r}
+#| label: tbl-main-results
+#| tbl-cap: "OLS Regression — Main Results"
+
+m1 <- lm(co2_per_cap ~ income_share_top10, data = gwd)
+m2 <- lm(co2_per_cap ~ income_share_top10 + gdp_pc, data = gwd)
+m3 <- lm(co2_per_cap ~ income_share_top10 + gdp_pc + ag_land + gdp_growth, data = gwd)
+m4 <- lm(co2_per_cap ~ income_share_top10 + gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+
+
+modelsummary(
+  list("Bivariate" = m1, "+ GDP Per Capta" = m2, "Full Model" = m3, "Add Controls"=m4),
+  stars       = c("*" = .1, "**" = .05, "***" = .01),
+  gof_map     = c("nobs", "r.squared", "adj.r.squared"),
+  coef_rename = c(
+    "democracy"    = "Democracy",
+    "log(gdp_pc)"  = "ln GDP per Capita",
+    "trade_open"   = "Trade Openness"
+  ),
+  output      = "kableExtra",
+  fmt         = 3
+) |>
+  kable_styling(font_size = 18, full_width = FALSE) |>
+  row_spec(0, bold = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## Logged Regression Results
+
+Logging GDP per Capita and CO2 per Capita
+
+```{r}
+
+gwd$log_co2_per_cap <- log(gwd$co2_per_cap)
+gwd$log_gdp_pc      <- log(gwd$gdp_pc)
+
+
+m1_log <- lm(log_co2_per_cap ~ income_share_top10, data = gwd)
+m2_log <- lm(log_co2_per_cap ~ income_share_top10 + log_gdp_pc, data = gwd)
+m3_log <- lm(log_co2_per_cap ~ income_share_top10 + log_gdp_pc + ag_land + gdp_growth, data = gwd)
+m4_log <- lm(log_co2_per_cap ~ income_share_top10 + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+
+modelsummary(
+  list("Bivariate" = m1_log, "+ GDP Per Capita" = m2_log, "+ Land & Growth" = m3_log, "+ Electricity" = m4_log),
+  stars       = c("*" = .1, "**" = .05, "***" = .01),
+  gof_map     = c("nobs", "r.squared", "adj.r.squared"),
+  coef_rename = c(
+    "income_share_top10" = "Income Share Top 10%",
+    "log_gdp_pc"         = "ln GDP per Capita",
+    "ag_land"            = "Agricultural Land",
+    "gdp_growth"         = "GDP Growth",
+    "electricity_access" = "Electricity Access"
+  ),
+  output      = "kableExtra",
+  fmt         = 3
+) |>
+  kable_styling(font_size = 18, full_width = FALSE) |>
+  row_spec(0, bold = TRUE)
+```
+
+## Plotting with CO2 Logged
+
+```{r}
+
+ggplot(gwd, aes(x = wealth_top10_share, y = log_co2_per_cap)) +
+  geom_point(alpha = 0.6, color = "#2c7bb6", na.rm = TRUE) +
+  geom_smooth(method = "lm", se = TRUE, color = "red", na.rm = TRUE) +
+  geom_point(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+             aes(x = wealth_top10_share, y = log_co2_per_cap),
+             color = "black", size = 3) +
+  geom_text(data = subset(gwd, country.x %in% c("United States", "Thailand")),
+            aes(x = wealth_top10_share, y = log_co2_per_cap, label = country.x),
+            vjust = -1, size = 3, color = "black") +
+  labs(
+    title = "CO2 Per Capita vs. Top 10% Wealth Share",
+    x = "Top 10% Wealth Share (%)",
+    y = "Logged CO2 Per Capita (tonnes)"
+  ) +
+  theme_minimal()
+```
+
+## Standardized Regression
+
+```{r}
+#| label: fig-coefplot
+#| fig-cap: "Coefficient Plot "
+#| fig-height: 4
+
+# Z-score independent variables
+gwd$z_income_share_top10  <- scale(gwd$income_share_top10)
+gwd$z_log_gdp_pc          <- scale(gwd$log_gdp_pc)
+gwd$z_ag_land             <- scale(gwd$ag_land)
+gwd$z_gdp_growth          <- scale(gwd$gdp_growth)
+gwd$z_electricity_access  <- scale(gwd$electricity_access)
+
+# Rerun models with standardized IVs
+m1_z <- lm(log_co2_per_cap ~ z_income_share_top10, data = gwd)
+m2_z <- lm(log_co2_per_cap ~ z_income_share_top10 + z_log_gdp_pc, data = gwd)
+m3_z <- lm(log_co2_per_cap ~ z_income_share_top10 + z_log_gdp_pc + z_ag_land + z_gdp_growth, data = gwd)
+m4_z <- lm(log_co2_per_cap ~ z_income_share_top10 + z_log_gdp_pc + z_ag_land + z_gdp_growth + z_electricity_access, data = gwd)
+
+# Coefficient plot
+modelplot(
+  list("Bivariate" = m1_z, "+ GDP Per Capita" = m2_z, "+ Land & Growth" = m3_z, "+ Electricity" = m4_z),
+  coef_omit  = "Intercept",
+  coef_rename = c(
+    "z_income_share_top10" = "Income Share Top 10%",
+    "z_log_gdp_pc"         = "ln GDP per Capita",
+    "z_ag_land"            = "Agricultural Land",
+    "z_gdp_growth"         = "GDP Growth",
+    "z_electricity_access" = "Electricity Access"
+  )
+) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  labs(
+    title = "Coefficient Plot — DV: ln CO2 per Capita (Standardized IVs)",
+    x     = "Coefficient (SD units)",
+    color = "Model"
+  ) +
+  theme_minimal()
+
+```
+
+## Alternative Measures of Wealth Inequality
+
+Includes all control variables
+
+```{r}
+gwd$log_co2_per_cap <- ifelse(gwd$co2_per_cap > 0, log(gwd$co2_per_cap), NA)
+
+m4_log        <- lm(log_co2_per_cap ~ income_share_top10 + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+m4_gini_post  <- lm(log_co2_per_cap ~ gini_posttax       + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+m4_gini_pre   <- lm(log_co2_per_cap ~ gini_pretax        + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+m4_top1       <- lm(log_co2_per_cap ~ top1_share         + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+m4_wealth10   <- lm(log_co2_per_cap ~ wealth_top10_share + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+m4_wealth1    <- lm(log_co2_per_cap ~ wealth_top1_share  + log_gdp_pc + ag_land + gdp_growth + electricity_access, data = gwd)
+
+
+modelsummary(
+  list(
+    "Income Share Top 10" = m4_log,
+    "Gini (post-tax)"    = m4_gini_post,
+    "Gini (pre-tax)"     = m4_gini_pre,
+    "Income Share Top 1"  = m4_top1,
+    "Wealth Top 10"     = m4_wealth10,
+    "Wealth Top 1"      = m4_wealth1
+  ),
+  stars       = c("*" = .1, "**" = .05, "***" = .01),
+  gof_map     = c("nobs", "r.squared", "adj.r.squared"),
+  coef_omit   = "log_gdp_pc|ag_land|gdp_growth|electricity_access|Intercept",
+  coef_rename = c(
+    "income_share_top10" = "Income Share Top 10%",
+    "gini_posttax"       = "Gini (post-tax)",
+    "gini_pretax"        = "Gini (pre-tax)",
+    "top1_share"         = "Income Share Top 1%",
+    "wealth_top10_share" = "Wealth Share Top 10%",
+    "wealth_top1_share"  = "Wealth Share Top 1%"
+  ),
+  output = "kableExtra",
+  fmt    = 3
+) |>
+  kable_styling(font_size = 18, full_width = FALSE) |>
+  row_spec(0, bold = TRUE)
+```
+
+------------------------------------------------------------------------
+
+## Contributions & Further Research
+
+**There does not appear to be a strong relationship between wealth inquality and CO2 Emissions**
+
+- Potential Omitted Variable Bias
+  - Political Insitutions - Democracies and Interest group systems - ie how elites preferences are heard
+  - Oil Dependent Economies
+  - Regional Differences
+- Could look at climate policy as DV, rather than emissions
+
+## Contributions & Further Research
+
+**Qualitative Follow-Up**
+
+To probe the mechanism, future work should conduct process tracing to better understand if or how economic elites shape climate policy.
+
+- United States as a most crucial case
+- Thailand as "typical" case
+
+Case studies of wealthy people/companies in each country
+
+## Discussion
+
+**Policy Implications**
+
+These results suggest wealth inequality is not a meaningful impediment to effective climate policy
+
+**Limitations**
+
+- One year snapshot
+- Country Level of analysis
+- Aggrgate Numbers
+
+##  {.center}
+
+### Thank You
+
+**I look forward to your questions**
+
+::: {.callout-tip appearance="minimal"}
+*Slides code available on course website*
+:::
