@@ -543,7 +543,7 @@
     "href": "slides.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments"
+    "text": "Slides are in PDF format. Click a link to open or right-click to download.\n\nWeek 1\nDay 1- Introductions\nDay 2- The Importance of Research: Causality and Inference\nDay 3- Research Questions and Literature Reviews\nDay 4- Measurement 1: Concepts and Variables\n\n\nWeek 2\nDay 5- Measurement 2: Reliability and Validity\nDay 6- Probability and Confidence Intervals\nDay 7- Regression\nDay 8 - Midterm\n\n\n\nWeek 3\nDay 9- Regression Again - Multivariate, Assumptions, and Robustness\nDay 10- Regression Assumptions and Transformations + Experiments\nDay 11 - Qualitative Methods and Cases\nDay 12 - Research Ethics and Qualitative 2"
   },
   {
     "objectID": "rcode.html#day-12-last-day-play",
@@ -551,5 +551,12 @@
     "title": "R Code",
     "section": "Day 12 Last day play",
     "text": "Day 12 Last day play\nMyanmar Conflict Exploration\nAcled Myanmar Data Full (Save as csv and load)\nAcled Myanmar Data Sample"
+  },
+  {
+    "objectID": "rcode.html#day-12-last-day-r-play",
+    "href": "rcode.html#day-12-last-day-r-play",
+    "title": "R Code",
+    "section": "Day 12 Last Day R Play",
+    "text": "Day 12 Last Day R Play\nMyanmar Conflict Exploration\nAcled Myanmar Data Full (Save as csv and load)\nAcled Myanmar Data Sample"
   }
 ]

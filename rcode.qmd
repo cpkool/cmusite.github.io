@@ -98,7 +98,7 @@ Keeping it simple - Just one file today - download and put in your class folder
 
 [Some Data Visualization with Quarto](ClassCode/Day 11/day11visualization.qmd){download="day11visualization.qmd"}
 
-## Day 12 Last day play
+## Day 12 Last Day R Play
 
 [Myanmar Conflict Exploration](ClassCode/Day 11/MyanmarConflictExplore.qmd){download="MyanmarConflictExplore.qmd"}
 

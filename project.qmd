@@ -9,14 +9,17 @@ format:
 [**Please submit all files here**](https://niuits-my.sharepoint.com/:f:/g/personal/a1837136_mail_niu_edu/IgAMppTdzcqfR5YG-Bn5lvumAV_wGzcCHr_qibmUFrVvBrU)
 
 
+
+
 *Presentation Resources*
 
-<a href="ClassCode/project/mocktalk.qmd" download>Mock Talk</a>
+
 
 <a href="ClassCode/project/presentation_template.qmd" download>Presentation Template</a>
 
 <a href="Slides/mocktalk.pdf" download>Mock Talk PDF</a>
 
+<a href="ClassCode/project/mocktalk.qmd" download>Mock Talk</a>
 
 # **Overview**
 
@@ -209,4 +212,3 @@ You may use your notes, book, and any other non-human (printed or web-based) res
 | Presentations     | Friday, July 24 |
 
 
-<
